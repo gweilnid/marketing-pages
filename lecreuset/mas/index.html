@@ -3,360 +3,451 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Le Creuset Signature je smaltovaná litina se špičkovým vedením a udržením tepla pro pomalé vaření. Velikosti 0,95–13 l, odolnost v troubě až do 260 °C, více než 20 barev.">
-<title>Le Creuset Signature litinový hrnec | 9 490 Kč | francouzská litina na celý život</title>
+<title>Le Creuset Signature litinový hrnec | smaltovaná francouzská litina na celý život</title>
+<meta name="description" content="Le Creuset Signature litinový hrnec za 9 490 Kč z francouzské smaltované litiny pro pomalé vaření. Individuálně vyráběno francouzskými řemeslníky, velikosti 0,95–13 l, přes 20 barev, až do 260 °C.">
 <style>
-  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-  html{scroll-behavior:smooth}
-  body{
-    font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
-    background:#f5f5f5;
-    color:#000000;
-    font-size:16px;
-    line-height:1.6;
-    -webkit-font-smoothing:antialiased;
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: system-ui, Arial, Helvetica, sans-serif;
+    background: #f5f5f5;
+    color: #000000;
+    line-height: 1.6;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
   }
-  img{display:block;max-width:100%;height:auto}
-  a{color:#1e40af;text-decoration:underline;text-underline-offset:2px}
+  img { display: block; max-width: 100%; height: auto; }
 
-  /* Header / Nav */
-  header{
-    background:#ffffff;
-    border-bottom:1px solid #e5e5e5;
-    position:sticky;top:0;z-index:10;
-  }
-  nav{
-    max-width:1080px;margin:0 auto;
-    padding:14px 24px;
-    display:flex;align-items:center;justify-content:space-between;gap:16px;
-    font-size:14px;
-  }
-  .brand{font-weight:600;letter-spacing:.02em;color:#000000;text-decoration:none}
-  .brand small{color:#666666;font-weight:400;margin-left:8px}
-  nav .links{display:flex;gap:20px;flex-wrap:wrap}
-  nav .links a{color:#000000;text-decoration:none}
-  nav .links a:hover{color:#1e40af}
-  nav .price{color:#666666;font-variant-numeric:tabular-nums}
+  /* Layout helpers */
+  .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+  .container-narrow { max-width: 760px; margin: 0 auto; padding: 0 24px; }
 
-  main{display:block}
+  /* Header / nav */
+  header {
+    background: #ffffff;
+    border-bottom: 1px solid #e6e6e6;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 18px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+  }
+  .brand {
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #000000;
+  }
+  .brand span { color: #1e40af; }
+  .nav-meta {
+    font-size: 12px;
+    color: #666666;
+    line-height: 1.4;
+    text-align: right;
+  }
+  .nav-meta strong { color: #000000; font-weight: 700; }
+
+  /* Typography scale */
+  .eyebrow {
+    font-size: 12px;
+    line-height: 1.4;
+    color: #1e40af;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+  h1, h2 {
+    font-size: 32px;
+    line-height: 1.1;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    color: #000000;
+  }
+  h1 { font-size: 40px; }
+  .lead {
+    font-size: 20px;
+    line-height: 1.3;
+    color: #000000;
+    font-weight: 600;
+  }
+  p { font-size: 16px; line-height: 1.6; color: #666666; }
+  p.body { color: #000000; }
+  .small { font-size: 14px; line-height: 1.5; color: #666666; }
 
   /* Section base */
-  section{
-    padding:64px 24px;
-  }
-  .wrap{max-width:1080px;margin:0 auto}
-  .narrow{max-width:680px;margin:0 auto}
-  h1{
-    font-size:20px;
-    font-weight:600;
-    letter-spacing:-.01em;
-    line-height:1.3;
-  }
-  h2{
-    font-size:20px;
-    font-weight:600;
-    letter-spacing:-.01em;
-    line-height:1.3;
-    margin-bottom:16px;
-  }
-  p{color:#000000;font-size:16px}
-  .muted{color:#666666}
-  .label{
-    display:block;
-    font-size:12px;
-    text-transform:uppercase;
-    letter-spacing:.12em;
-    color:#666666;
-    margin-bottom:16px;
-  }
+  section { padding: 96px 0; border-top: 1px solid #ececec; }
+  section:first-of-type { border-top: none; }
 
-  /* Hero — system notice, centered, compact */
-  .hero{
-    text-align:center;
-    padding:96px 24px;
-    background:#f5f5f5;
+  /* Hero */
+  #hero { padding: 0; }
+  .hero-full {
+    position: relative;
+    min-height: 88vh;
+    display: flex;
+    align-items: flex-end;
+    background: #000000;
+    overflow: hidden;
   }
-  .hero .label{margin-bottom:20px}
-  .hero h1{font-size:20px;max-width:640px;margin:0 auto 20px}
-  .hero p{max-width:580px;margin:0 auto 28px;color:#000000}
-  .hero .cta-link{
-    display:inline-block;
-    font-size:14px;
-    color:#1e40af;
-    text-decoration:underline;
-    text-underline-offset:3px;
+  .hero-full img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.78;
   }
-  .hero-figure{max-width:1080px;margin:48px auto 0}
-  .hero-figure img{width:100%}
+  .hero-overlay {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    padding: 64px 24px 72px;
+    background: linear-gradient(to top, rgba(0,0,0,0.75), rgba(0,0,0,0));
+  }
+  .hero-overlay .container { padding: 0; }
+  .hero-overlay h1 { color: #ffffff; max-width: 880px; }
+  .hero-overlay .lead { color: #f0f0f0; margin-top: 20px; max-width: 720px; }
+  .hero-incident {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: #ffffff;
+    color: #000000;
+    border: 1px solid #e6e6e6;
+    padding: 8px 14px;
+    font-size: 12px;
+    line-height: 1.4;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+  }
+  .hero-incident::before {
+    content: "";
+    width: 8px; height: 8px;
+    background: #1e40af;
+    border-radius: 50%;
+  }
+  .hero-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    margin-top: 36px;
+    color: #ffffff;
+    font-size: 12px;
+    line-height: 1.4;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+  .hero-meta span strong { display: block; font-size: 14px; margin-top: 4px; letter-spacing: 0; text-transform: none; }
 
   /* Split screen */
-  .split{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:48px;
-    align-items:center;
+  .split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    align-items: center;
   }
-  .split.reverse .text{order:2}
-  @media (max-width:760px){
-    .split{grid-template-columns:1fr;gap:32px}
-    .split.reverse .text{order:0}
+  .split img {
+    width: 100%;
+    border: 1px solid #e6e6e6;
+    background: #ffffff;
   }
-  .split .text p{color:#000000}
+  .split .text-block { max-width: 460px; }
+  .text-block h2 { margin-bottom: 24px; }
+  .text-block p { margin-bottom: 16px; }
 
-  /* Feature right image */
-  .feature-right{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:48px;
-    align-items:center;
+  /* Feature left / right */
+  .feature {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 56px;
+    align-items: center;
   }
-  .feature-right .text{order:1}
-  .feature-right .media{order:2}
-  @media (max-width:760px){
-    .feature-right{grid-template-columns:1fr;gap:32px}
-    .feature-right .media{order:0}
+  .feature.right .feature-img { order: 2; }
+  .feature img {
+    width: 100%;
+    border: 1px solid #e6e6e6;
+    background: #ffffff;
   }
+  .feature .text-block { max-width: 480px; }
 
-  /* Full bleed image with overlay */
-  .fullbleed{
-    position:relative;
-    max-width:1280px;margin:0 auto;
-    border-radius:2px;
-    overflow:hidden;
+  /* Full bleed text overlay */
+  #slow_cooking { padding: 0; }
+  .fullbleed {
+    position: relative;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
   }
-  .fullbleed img{width:100%}
-  .fullbleed .overlay{
-    position:absolute;inset:0;
-    background:linear-gradient(180deg, rgba(0,0,0,.05) 0%, rgba(0,0,0,.55) 100%);
-    display:flex;align-items:flex-end;
-    padding:48px;
+  .fullbleed img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
-  .fullbleed .overlay .inner{
-    max-width:560px;
-    color:#ffffff;
-  }
-  .fullbleed .overlay .label{color:#cccccc}
-  .fullbleed .overlay h2{color:#ffffff}
-  .fullbleed .overlay p{color:#ffffff}
-  @media (max-width:760px){
-    .fullbleed .overlay{padding:28px}
+  .fullbleed .overlay-card {
+    position: relative;
+    z-index: 2;
+    margin: 64px 24px 64px auto;
+    max-width: 560px;
+    background: #ffffff;
+    border: 1px solid #e6e6e6;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.18);
+    padding: 48px;
   }
 
   /* Bento grid */
-  .bento{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:20px;
+  .bento {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 20px;
   }
-  .bento .cell{
-    background:#ffffff;
-    border:1px solid #e5e5e5;
-    padding:24px;
-    border-radius:2px;
-  }
-  .bento .cell.image-cell{
-    padding:0;
-    overflow:hidden;
-    grid-column:span 2;
-    grid-row:span 2;
-  }
-  .bento .cell.image-cell img{width:100%;height:100%;object-fit:cover}
-  @media (max-width:760px){
-    .bento{grid-template-columns:1fr}
-    .bento .cell.image-cell{grid-column:auto;grid-row:auto;aspect-ratio:4/3}
-  }
-  .bento .cell h3{font-size:14px;font-weight:600;margin-bottom:8px}
-  .bento .cell p{font-size:14px;color:#666666}
+  .bento .b-main { grid-row: span 2; }
+  .bento figure { background: #ffffff; border: 1px solid #e6e6e6; overflow: hidden; }
+  .bento img { width: 100%; height: 100%; object-fit: cover; }
+  .bento-intro { max-width: 640px; margin-bottom: 40px; }
 
-  /* CTA fullbleed warm */
-  .cta-section{
-    background:#000000;
-    color:#ffffff;
-    position:relative;
-    overflow:hidden;
+  /* Editorial full */
+  .editorial { display: grid; grid-template-columns: 1fr; gap: 40px; }
+  .editorial img { width: 100%; border: 1px solid #e6e6e6; }
+  .editorial .text-block { max-width: 720px; margin: 0 auto; text-align: left; }
+
+  /* Centered CTA */
+  #cta { background: #ffffff; }
+  .cta-wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 56px;
+    align-items: center;
   }
-  .cta-section .bg{
-    position:absolute;inset:0;opacity:.42;
+  .cta-wrap img { width: 100%; border: 1px solid #e6e6e6; }
+  .cta-content { max-width: 480px; }
+  .btn {
+    display: inline-block;
+    background: #1e40af;
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 700;
+    padding: 16px 28px;
+    border: 1px solid #1e40af;
+    text-decoration: none;
+    margin-top: 24px;
+    transition: background 0.15s ease;
   }
-  .cta-section .bg img{width:100%;height:100%;object-fit:cover}
-  .cta-section .inner{
-    position:relative;
-    max-width:680px;margin:0 auto;
-    text-align:center;
-    padding:96px 24px;
+  .btn:hover { background: #16337f; border-color: #16337f; }
+  .price-tag {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 10px;
+    margin-top: 28px;
+    padding: 14px 18px;
+    background: #f5f5f5;
+    border: 1px solid #e6e6e6;
   }
-  .cta-section .label{color:#cccccc}
-  .cta-section h2{color:#ffffff;font-size:20px;margin-bottom:20px}
-  .cta-section p{color:#ffffff;max-width:560px;margin:0 auto 32px}
-  .cta-button{
-    display:inline-block;
-    background:#1e40af;
-    color:#ffffff;
-    padding:14px 28px;
-    font-size:14px;
-    font-weight:600;
-    text-decoration:none;
-    border-radius:2px;
-    letter-spacing:.02em;
-  }
-  .cta-button:hover{background:#16307c}
+  .price-tag .label { font-size: 12px; color: #666666; text-transform: uppercase; letter-spacing: 0.06em; }
+  .price-tag .value { font-size: 20px; line-height: 1.3; font-weight: 700; color: #000000; }
 
   /* Footer */
-  footer{
-    background:#ffffff;
-    border-top:1px solid #e5e5e5;
-    padding:32px 24px;
-    font-size:12px;
-    color:#666666;
+  footer {
+    background: #ffffff;
+    border-top: 1px solid #e6e6e6;
+    padding: 40px 24px;
   }
-  footer .wrap{
-    display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;
+  .footer-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 16px;
+    font-size: 12px;
+    line-height: 1.4;
+    color: #666666;
   }
-  footer a{color:#666666;text-decoration:none}
-  footer a:hover{color:#000000}
+  .footer-inner strong { color: #000000; }
 
-  /* Section spacing tightening */
-  .section-tight{padding:48px 24px}
+  /* Responsive */
+  @media (max-width: 860px) {
+    section { padding: 64px 0; }
+    h1 { font-size: 30px; }
+    h2 { font-size: 26px; }
+    .split, .feature, .cta-wrap { grid-template-columns: 1fr; gap: 32px; }
+    .feature.right .feature-img { order: 0; }
+    .bento { grid-template-columns: 1fr; }
+    .bento .b-main { grid-row: auto; }
+    .fullbleed .overlay-card { margin: 48px 24px; padding: 32px; max-width: none; }
+    .hero-meta { gap: 20px; }
+    nav { flex-direction: column; align-items: flex-start; gap: 8px; }
+    .nav-meta { text-align: left; }
+  }
 </style>
 </head>
 <body>
 
 <header>
   <nav>
-    <a class="brand" href="#">Le Creuset Signature <small>litinový hrnec</small></a>
-    <div class="links">
-      <a href="#philosophy">Filozofie</a>
-      <a href="#craft">Výroba</a>
-      <a href="#versatility">Využití</a>
-      <a href="#longevity">Trvanlivost</a>
+    <div class="brand">Le Creuset <span>Signature</span></div>
+    <div class="nav-meta">
+      Litinový hrnec · <strong>9 490 Kč</strong><br>
+      Francouzská smaltovaná litina
     </div>
-    <span class="price">9 490 Kč</span>
   </nav>
 </header>
 
 <main>
 
   <!-- HERO -->
-  <section class="hero" id="hero">
-    <div class="narrow">
-      <span class="label">Le Creuset Signature</span>
-      <h1>Francouzská litina na celý život</h1>
-      <p>Le Creuset Signature: barevná francouzská litina na celý život.</p>
-      <p>Le Creuset Signature je barevná francouzská řemeslná klasika pro ty, kdo milují pomalé vaření a hledají nádobí na celý život. Smaltovaná litina se špičkovým vedením a udržením tepla dává vaření klid, jistotu a výborný výsledek každý den.</p>
-      <a class="cta-link" href="#cta">Objednat Le Creuset Signature litinový hrnec za 9 490 Kč →</a>
-    </div>
-    <div class="hero-figure">
-      <img src="images/img_hero.jpg" alt="Francouzská litina na celý život — Le Creuset Signature litinový hrnec" width="1200" height="900" loading="eager">
+  <section id="hero">
+    <div class="hero-full">
+      <img src="images/img_hero.jpg" alt="Francouzská litina na celý život — Le Creuset Signature litinový hrnec" width="1600" height="900" loading="eager">
+      <div class="hero-overlay">
+        <div class="container">
+          <div class="hero-incident">Le Creuset Signature · litinový hrnec</div>
+          <h1>Francouzská litina na celý život</h1>
+          <p class="lead">Litinový hrnec na celý život. Francouzské řemeslo, které si pamatuje každé vaření.</p>
+          <p class="lead" style="font-size:16px; font-weight:400; color:#d9d9d9; max-width:680px;">Le Creuset Signature je barevná francouzská řemeslná klasika pro vášnivé domácí kuchaře a milovníky pomalého vaření. Sytě smaltovaná litina se zaoblenou rozpoznatelnou siluetou přináší do kuchyně nádobí na celý život, které působí stejně výrazně při vaření i při servírování.</p>
+          <div class="hero-meta">
+            <span>Materiál<strong>Smaltovaná litina</strong></span>
+            <span>Teplota<strong>Až 260 °C</strong></span>
+            <span>Velikosti<strong>0,95–13 l</strong></span>
+            <span>Barev<strong>Přes 20 odstínů</strong></span>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- PHILOSOPHY -->
   <section id="philosophy">
-    <div class="wrap split">
-      <div class="text">
-        <span class="label">Filozofie</span>
-        <h2>Nekupujete hrnec. Investujete do kuchyně.</h2>
-        <p class="muted">Francouzská litina a smalt tvoří základ, na který se můžete spolehnout při každodenním vaření i při dlouhém pomalém dušení. Le Creuset Signature spojuje výkon, krásu a řemeslnou výrobu v jednom hrnci, který je stvořený pro kuchaře, kteří chtějí vařit poctivě a bez kompromisů.</p>
-      </div>
-      <div class="text">
-        <p style="font-size:14px;color:#666666;border-left:2px solid #1e40af;padding-left:16px;">
-          Smaltovaná litina · špičkové vedení tepla · udržení teploty · odolnost v troubě do 260 °C · více než 20 barev · velikosti 0,95–13 l.
-        </p>
+    <div class="container">
+      <div class="split">
+        <div class="text-block">
+          <div class="eyebrow">Filozofie</div>
+          <h2>Hrnec, který se nekupuje. Pořizuje.</h2>
+          <p>Vaření má svůj rytmus a Le Creuset Signature mu dává pevný základ. Smaltovaná litina se špičkovým vedením a udržením tepla pracuje rovnoměrně, takže pomalé vaření získává klid, přesnost i hloubku chuti.</p>
+        </div>
+        <img src="images/img_philosophy.jpg" alt="Hrnec, který se nekupuje. Pořizuje. — Le Creuset Signature litinový hrnec" width="1200" height="900" loading="lazy">
       </div>
     </div>
   </section>
 
   <!-- CRAFT -->
-  <section id="craft" style="background:#ffffff;">
-    <div class="wrap feature-right">
-      <div class="text">
-        <span class="label">Výroba</span>
-        <h2>Řemeslná výroba z francouzské litiny</h2>
-        <p>Každý hrnec je individuálně vyráběn francouzskými řemeslníky. Světlý smaltovaný vnitřek usnadňuje kontrolu vaření, široká oušková madla zlepšují manipulaci a odolnost v troubě až do 260 °C včetně knoflíku rozšiřuje možnosti použití.</p>
-      </div>
-      <div class="media">
+  <section id="craft">
+    <div class="container">
+      <div class="feature left">
         <img src="images/img_craft.jpg" alt="Řemeslná výroba z francouzské litiny — Le Creuset Signature litinový hrnec" width="1200" height="900" loading="lazy">
+        <div class="text-block">
+          <div class="eyebrow">Řemeslo</div>
+          <h2>Řemeslná výroba z francouzské litiny</h2>
+          <p>Každý hrnec je individuálně vyráběn francouzskými řemeslníky. Precizní řemeslná výroba se projeví v každém detailu, zatímco široká oušková madla zajišťují pohodlnou manipulaci.</p>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- SLOW COOKING -->
-  <section id="slow_cooking" class="section-tight">
+  <section id="slow_cooking">
     <div class="fullbleed">
-      <img src="images/img_slow_cooking.jpg" alt="Stvořeno pro pomalé vaření — Le Creuset Signature litinový hrnec" width="1200" height="900" loading="lazy">
-      <div class="overlay">
-        <div class="inner">
-          <span class="label">Pomalé vaření</span>
-          <h2>Stvořeno pro pomalé vaření</h2>
-          <p>Při pomalém vaření rozhoduje stabilita. Smaltovaná litina se špičkovým vedením a udržením tepla pomáhá vařit rovnoměrně, držet teplotu a mít nad průběhem vaření lepší kontrolu. Díky tomu je Le Creuset Signature ideální volbou pro pomalé vaření, kdy chcete dát surovinám čas.</p>
+      <img src="images/img_slow_cooking.jpg" alt="Stvořeno pro pomalé vaření — Le Creuset Signature litinový hrnec" width="1600" height="900" loading="lazy">
+      <div class="overlay-card">
+        <div class="eyebrow">Pomalé vaření</div>
+        <h2>Stvořeno pro pomalé vaření</h2>
+        <p style="margin-top:18px;">Pro pomalé vaření je důležitá kontrola i stabilita. Světlý smaltovaný vnitřek pro snadnou kontrolu vaření usnadňuje sledování pokrmu, zatímco odolnost v troubě až do 260 °C včetně knoflíku rozšiřuje možnosti od dušení po pečení.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- BEAUTY -->
+  <section id="beauty">
+    <div class="container">
+      <div class="bento-intro">
+        <div class="eyebrow">Design</div>
+        <h2>Příliš krásný na to, aby byl schovaný</h2>
+        <p style="margin-top:18px;">Le Creuset Signature vyniká přes 20 barevnými variantami, takže si snadno vyberete odstín, který bude ladit s vaší kuchyní. Rozpoznatelná silueta a sytý smalt dávají hrnci výraz, který je na pohled stejně jistý jako při používání.</p>
+      </div>
+      <div class="bento">
+        <figure class="b-main">
+          <img src="images/img_beauty_1.jpg" alt="Příliš krásný na to, aby byl schovaný — Le Creuset Signature litinový hrnec" width="1000" height="1000" loading="lazy">
+        </figure>
+        <figure>
+          <img src="images/img_beauty_2.jpg" alt="Příliš krásný na to, aby byl schovaný — Le Creuset Signature litinový hrnec" width="1000" height="1000" loading="lazy">
+        </figure>
+        <figure>
+          <img src="images/img_beauty_3.jpg" alt="Příliš krásný na to, aby byl schovaný — Le Creuset Signature litinový hrnec" width="1000" height="1000" loading="lazy">
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- MATERIALS -->
+  <section id="materials">
+    <div class="container">
+      <div class="feature right">
+        <div class="feature-img">
+          <img src="images/img_materials.jpg" alt="Smalt a litina: dva materiály, jedna jistota — Le Creuset Signature litinový hrnec" width="1200" height="900" loading="lazy">
+        </div>
+        <div class="text-block">
+          <div class="eyebrow">Materiály</div>
+          <h2>Smalt a litina: dva materiály, jedna jistota</h2>
+          <p>Základem je francouzská smaltovaná litina, dostupná ve velikostech od 0,95 do 13 litrů. Spojuje trvanlivost, špičkové vedení a udržení tepla, světlý smaltovaný vnitřek pro snadnou kontrolu vaření a široká oušková madla pro jistý úchop.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- VERSATILITY -->
-  <section id="versatility" style="background:#ffffff;">
-    <div class="wrap">
-      <span class="label">Univerzálnost</span>
-      <h2>Jeden hrnec, nekonečné možnosti</h2>
-      <div class="bento" style="margin-top:24px;">
-        <div class="cell image-cell">
-          <img src="images/img_versatility.jpg" alt="Jeden hrnec, nekonečné možnosti — Le Creuset Signature litinový hrnec" width="1200" height="900" loading="lazy">
+  <!-- LIFESTYLE -->
+  <section id="lifestyle">
+    <div class="container-narrow">
+      <div class="editorial">
+        <div class="text-block">
+          <div class="eyebrow">Lifestyle</div>
+          <h2>Součást vaší kuchyně. Součást vás.</h2>
+          <p style="margin-top:18px;">Je to hrnec pro ty, kteří chtějí vařit poctivě, s klidem a s respektem k času. Le Creuset Signature je navržen pro každodenní vaření i dlouhé recepty, které si žádají trvanlivé nádobí na celý život.</p>
         </div>
-        <div class="cell">
-          <h3>Velikosti 0,95–13 l</h3>
-          <p>Vybrat si můžete z velikostí od 0,95 do 13 litrů, takže snadno najdete variantu pro menší i větší vaření.</p>
-        </div>
-        <div class="cell">
-          <h3>Více než 20 barev</h3>
-          <p>Přes 20 barevných variant dává hrnci výraz a umožňuje sladit ho s vaší kuchyní i stylem.</p>
-        </div>
+        <img src="images/img_lifestyle.jpg" alt="Součást vaší kuchyně. Součást vás. — Le Creuset Signature litinový hrnec" width="1200" height="900" loading="lazy">
       </div>
-    </div>
-  </section>
-
-  <!-- DESIGN -->
-  <section id="design">
-    <div class="wrap split">
-      <div class="media">
-        <img src="images/img_design.jpg" alt="Ikonická silueta, která patří na stůl — Le Creuset Signature litinový hrnec" width="1200" height="900" loading="lazy">
-      </div>
-      <div class="text">
-        <span class="label">Design</span>
-        <h2>Ikonická silueta, která patří na stůl</h2>
-        <p>Zaoblená rozpoznatelná silueta a sytě smaltovaná litina dělají z Le Creuset Signature nepřehlédnutelný kus nádobí. Je to francouzská klasika, která vynikne v kuchyni i na stole a zároveň zůstává praktická při každém vaření.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- LONGEVITY -->
-  <section id="longevity" style="background:#ffffff;">
-    <div class="narrow" style="text-align:center;">
-      <span class="label">Trvanlivost</span>
-      <h2>Vydrží vám celý život. A pak ještě dál.</h2>
-      <p class="muted">Když hledáte francouzskou litinu na celý život, Le Creuset Signature nabízí trvanlivost, řemeslnou výrobu i nadčasový vzhled v jednom. Je to hrnec pro vášnivé domácí kuchaře, kteří chtějí investovat do kvality, která vydrží.</p>
     </div>
   </section>
 
   <!-- CTA -->
-  <section class="cta-section" id="cta">
-    <div class="bg">
-      <img src="images/img_cta.jpg" alt="Pořiďte si hrnec, který se předává dál — Le Creuset Signature litinový hrnec" width="1200" height="900" loading="lazy">
-    </div>
-    <div class="inner">
-      <span class="label">Závěr</span>
-      <h2>Pořiďte si hrnec, který se předává dál</h2>
-      <p>Le Creuset Signature litinový hrnec za 9 490 Kč. Vyberte si velikost od 0,95 do 13 litrů a z více než 20 barevných variant ten, který bude patřit do vaší kuchyně na celý život.</p>
-      <a class="cta-button" href="#">Objednat Le Creuset Signature litinový hrnec za 9 490 Kč</a>
+  <section id="cta">
+    <div class="container">
+      <div class="cta-wrap">
+        <div class="cta-content">
+          <div class="eyebrow">Investice</div>
+          <h2>Jedna investice. Na celý život.</h2>
+          <p style="margin-top:18px;">Le Creuset Signature litinový hrnec za 9 490 Kč je připraven stát se stálou součástí vaší kuchyně. Zajistit si Le Creuset Signature litinový hrnec za 9 490 Kč.</p>
+          <div class="price-tag">
+            <span class="label">Cena</span>
+            <span class="value">9 490 Kč</span>
+          </div>
+          <div>
+            <a href="#" class="btn">Zajistit si Le Creuset Signature litinový hrnec za 9 490 Kč</a>
+          </div>
+        </div>
+        <img src="images/img_cta.jpg" alt="Jedna investice. Na celý život. — Le Creuset Signature litinový hrnec" width="1680" height="720" loading="lazy">
+      </div>
     </div>
   </section>
 
 </main>
 
 <footer>
-  <div class="wrap">
-    <span>Le Creuset Signature — francouzská litina na celý život</span>
-    <span>9 490 Kč · velikosti 0,95–13 l · více než 20 barev</span>
+  <div class="footer-inner">
+    <div><strong>Le Creuset Signature</strong> — litinový hrnec ze smaltované francouzské litiny</div>
+    <div>9 490 Kč · Velikosti 0,95–13 l · Až 260 °C · Přes 20 barev</div>
   </div>
 </footer>
 

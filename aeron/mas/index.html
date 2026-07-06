@@ -3,596 +3,769 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Herman Miller Aeron Chair za 49 990 Kč | ergonomie, síťovina a podpora páteře</title>
-<meta name="description" content="Herman Miller Aeron Chair pro náročné kanceláře, domácí kancelář i profesionály. Ikonický design, síťovina 8Z Pellicle, Harmonic Tilt, 12letá záruka.">
+<title>Herman Miller Aeron Chair | Ergonomie, síťovina a 12letá záruka | 49 990 Kč</title>
+<meta name="description" content="Herman Miller Aeron Chair pro náročné kanceláře, domácí pracovny i profesionály, kteří tráví dlouhé hodiny u počítače. Sedák i opěrák z 8Z Pellicle, 3 velikosti, Harmonic Tilt, více než 50 % recyklovaných materiálů a 12letá záruka.">
 <style>
-  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  :root{
+    --bg:#000000;
+    --surface:#1a1a1a;
+    --text:#ffffff;
+    --muted:#999999;
+    --accent:#ff9900;
+    --border:#2a2a2a;
+    --font:'Helvetica Neue','Helvetica','Arial',sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
   body{
-    background:#000000;color:#ffffff;font-family:'Helvetica Neue',Arial,system-ui,sans-serif;
-    font-size:16px;line-height:24px;-webkit-font-smoothing:antialiased;
+    background:var(--bg);
+    color:var(--text);
+    font-family:var(--font);
+    font-size:15px;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
   }
   img{display:block;max-width:100%;height:auto}
   a{color:inherit;text-decoration:none}
-  .wrap{max-width:1320px;margin:0 auto;padding:0 32px}
-  .label{font-size:12px;line-height:16px;letter-spacing:.18em;text-transform:uppercase;color:#999}
-  .meta{font-size:14px;line-height:20px;color:#999}
+  button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
+  .wrap{max-width:1320px;margin:0 auto;padding:0 24px}
 
-  /* NAV */
-  header.site{position:sticky;top:0;z-index:50;background:#000000;border-bottom:1px solid #1a1a1a}
-  .nav{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:14px 32px;max-width:1320px;margin:0 auto}
-  .brand{font-size:14px;font-weight:700;letter-spacing:.04em;text-transform:uppercase}
-  .brand span{color:#ff9500}
-  .nav-links{display:flex;gap:28px;list-style:none}
-  .nav-links a{font-size:14px;line-height:20px;color:#ffffff;opacity:.85;transition:opacity .2s}
-  .nav-links a:hover{opacity:1;color:#ff9500}
-  .nav-cta{display:flex;align-items:center;gap:20px}
-  .nav-phone{font-size:14px;color:#999}
-  .cart-btn{font-size:14px;padding:8px 14px;border:1px solid #ffffff;background:transparent;color:#ffffff;cursor:pointer;transition:.2s}
-  .cart-btn:hover{background:#ffffff;color:#000000}
-  .menu-toggle{display:none;background:none;border:none;color:#fff;cursor:pointer;font-size:20px}
-
-  /* BREADCRUMB */
-  .breadcrumb{border-bottom:1px solid #1a1a1a}
-  .breadcrumb .wrap{padding:14px 32px}
-  .breadcrumb ol{list-style:none;display:flex;gap:8px;flex-wrap:wrap;font-size:14px;line-height:20px;color:#999}
-  .breadcrumb li::after{content:"/";margin-left:8px;color:#555}
-  .breadcrumb li:last-child::after{content:""}
-  .breadcrumb li:last-child{color:#ffffff}
-
-  /* HERO */
-  .hero{padding:48px 0 96px}
-  .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
-  .hero-media img{width:100%;height:auto;border:1px solid #1a1a1a}
-  .hero-content .label{margin-bottom:20px}
-  .hero h1{font-size:48px;line-height:52px;font-weight:700;letter-spacing:-.01em;margin-bottom:24px}
-  .price-row{display:flex;align-items:baseline;gap:16px;margin-bottom:24px;padding-bottom:24px;border-bottom:1px solid #1a1a1a}
-  .price{font-size:32px;line-height:36px;font-weight:700}
-  .price-meta{font-size:14px;color:#999}
-  .hero p{font-size:16px;line-height:24px;color:#cccccc;margin-bottom:32px;max-width:560px}
-  .btn-primary{display:inline-block;background:#ff9500;color:#000000;font-size:14px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;padding:16px 28px;border:none;cursor:pointer;transition:.2s}
-  .btn-primary:hover{background:#ffffff}
-  .btn-outline{display:inline-block;background:transparent;color:#ffffff;font-size:14px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;padding:15px 26px;border:1px solid #ffffff;cursor:pointer;transition:.2s}
-  .btn-outline:hover{background:#ffffff;color:#000000}
-  .hero-actions{display:flex;gap:14px;flex-wrap:wrap}
-
-  /* GALLERY */
-  .gallery{padding:96px 0;border-top:1px solid #1a1a1a}
-  .section-head{margin-bottom:48px;max-width:760px}
-  .section-head .label{margin-bottom:16px}
-  .section-head h2{font-size:32px;line-height:36px;font-weight:700;letter-spacing:-.01em}
-  .gallery-main{position:relative;border:1px solid #1a1a1a;overflow:hidden}
-  .gallery-main img{width:100%;height:auto;transition:transform .4s}
-  .gallery-main:hover img{transform:scale(1.04)}
-  .gallery-thumbs{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:12px}
-  .gallery-thumbs button{background:#1a1a1a;border:1px solid #1a1a1a;padding:14px;font-size:12px;line-height:16px;color:#999;cursor:pointer;text-align:left;transition:.2s;font-family:inherit}
-  .gallery-thumbs button:hover,.gallery-thumbs button.active{border-color:#ff9500;color:#ffffff}
-
-  /* SUMMARY PANEL */
-  .summary{padding:96px 0;border-top:1px solid #1a1a1a}
-  .summary-grid{display:grid;grid-template-columns:1fr 420px;gap:48px;align-items:start}
-  .summary-info h2{font-size:32px;line-height:36px;font-weight:700;margin-bottom:20px}
-  .summary-info p{font-size:16px;line-height:24px;color:#cccccc;margin-bottom:16px}
-  .panel{position:sticky;top:88px;background:#1a1a1a;border:1px solid #2a2a2a;padding:32px}
-  .panel h3{font-size:20px;line-height:28px;font-weight:700;margin-bottom:20px}
-  .opt-group{margin-bottom:24px}
-  .opt-label{display:flex;justify-content:space-between;font-size:12px;line-height:16px;text-transform:uppercase;letter-spacing:.12em;color:#999;margin-bottom:10px}
-  .opt-chips{display:flex;gap:8px;flex-wrap:wrap}
-  .chip{min-width:44px;padding:10px 14px;background:#000;border:1px solid #333;color:#fff;font-size:14px;cursor:pointer;transition:.2s;text-align:center;font-family:inherit}
-  .chip:hover{border-color:#ff9500}
-  .chip.active{background:#ff9500;color:#000;border-color:#ff9500;font-weight:700}
-  .swatch{width:36px;height:36px;border-radius:50%;cursor:pointer;border:2px solid #333;transition:.2s}
-  .swatch.active{border-color:#ff9500}
-  .swatch.s1{background:#2a2a2a}
-  .swatch.s2{background:#5a4a3a}
-  .swatch.s3{background:#1a3a3a}
-  .panel-price{display:flex;align-items:baseline;justify-content:space-between;padding:20px 0;border-top:1px solid #333;border-bottom:1px solid #333;margin:24px 0}
-  .panel-price .p{font-size:32px;font-weight:700}
-  .panel .btn-primary{width:100%;text-align:center}
-
-  /* SPLIT SCREEN */
-  .split{padding:96px 0;border-top:1px solid #1a1a1a}
-  .split-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;align-items:stretch}
-  .split-media{position:relative;overflow:hidden}
-  .split-media img{width:100%;height:100%;object-fit:cover}
-  .split-content{padding:64px 48px;display:flex;flex-direction:column;justify-content:center}
-  .split-content .label{margin-bottom:16px}
-  .split-content h2{font-size:32px;line-height:36px;font-weight:700;margin-bottom:24px}
-  .split-content p{font-size:16px;line-height:24px;color:#cccccc;margin-bottom:24px}
-  .feature-list{list-style:none;display:flex;flex-direction:column;gap:16px}
-  .feature-list li{display:flex;gap:14px;font-size:14px;line-height:20px;color:#fff;padding-bottom:16px;border-bottom:1px solid #1a1a1a}
-  .feature-list li::before{content:"";flex:0 0 8px;height:8px;background:#ff9500;margin-top:6px}
-
-  /* MESH FULL BLEED */
-  .mesh{position:relative;min-height:560px;display:flex;align-items:center;border-top:1px solid #1a1a1a;overflow:hidden}
-  .mesh-bg{position:absolute;inset:0}
-  .mesh-bg img{width:100%;height:100%;object-fit:cover;opacity:.45}
-  .mesh-overlay{position:relative;z-index:2;max-width:1320px;margin:0 auto;padding:96px 32px;width:100%}
-  .mesh-overlay .inner{max-width:640px}
-  .mesh-overlay .label{margin-bottom:20px;color:#ff9500}
-  .mesh-overlay h2{font-size:48px;line-height:52px;font-weight:700;margin-bottom:24px}
-  .mesh-overlay p{font-size:16px;line-height:24px;color:#e5e5e5}
-
-  /* CRAFT BENTO */
-  .craft{padding:96px 0;border-top:1px solid #1a1a1a}
-  .bento{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:48px}
-  .bento .b{background:#1a1a1a;border:1px solid #2a2a2a;padding:28px;display:flex;flex-direction:column;justify-content:space-between;min-height:260px}
-  .bento .b.wide{grid-column:span 2}
-  .bento .b-img{margin:-28px -28px 20px;overflow:hidden}
-  .bento .b-img img{width:100%;height:180px;object-fit:cover}
-  .bento .icon{width:32px;height:32px;border:1px solid #ff9500;display:flex;align-items:center;justify-content:center;color:#ff9500;font-size:14px;margin-bottom:18px}
-  .bento h3{font-size:20px;line-height:28px;font-weight:700;margin-bottom:10px}
-  .bento p{font-size:14px;line-height:20px;color:#999}
-
-  /* SUSTAINABILITY */
-  .sustain{padding:96px 0;border-top:1px solid #1a1a1a}
-  .sustain-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:64px;align-items:center}
-  .sustain-media img{width:100%;height:auto;border:1px solid #1a1a1a}
-  .sustain-content .label{margin-bottom:16px}
-  .sustain-content h2{font-size:32px;line-height:36px;font-weight:700;margin-bottom:24px}
-  .sustain-content p{font-size:16px;line-height:24px;color:#cccccc;margin-bottom:24px}
-  .stat-row{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:32px}
-  .stat{padding:24px;background:#1a1a1a;border:1px solid #2a2a2a}
-  .stat .n{font-size:32px;font-weight:700;color:#ff9500;line-height:36px;margin-bottom:6px}
-  .stat .t{font-size:12px;line-height:16px;text-transform:uppercase;letter-spacing:.1em;color:#999}
-
-  /* TRUST STRIP */
-  .trust{padding:48px 0;border-top:1px solid #1a1a1a;border-bottom:1px solid #1a1a1a;background:#0a0a0a}
-  .trust-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:24px}
-  .trust-item{display:flex;flex-direction:column;gap:8px}
-  .trust-item .ic{width:24px;height:24px;border:1px solid #ff9500;color:#ff9500;font-size:11px;display:flex;align-items:center;justify-content:center}
-  .trust-item .t{font-size:14px;line-height:20px;color:#fff;font-weight:600}
-  .trust-item .s{font-size:12px;line-height:16px;color:#999}
-
-  /* CONTEXT SPLIT */
-  .context{padding:96px 0;border-top:1px solid #1a1a1a}
-  .context-grid{display:grid;grid-template-columns:1fr 1fr;gap:0}
-  .context-media{position:relative;overflow:hidden}
-  .context-media img{width:100%;height:100%;object-fit:cover;min-height:520px}
-  .context-content{padding:64px 48px;display:flex;flex-direction:column;justify-content:center}
-  .context-content .label{margin-bottom:16px}
-  .context-content h2{font-size:32px;line-height:36px;font-weight:700;margin-bottom:24px}
-  .context-content p{font-size:16px;line-height:24px;color:#cccccc;margin-bottom:24px}
-
-  /* CTA */
-  .cta{padding:96px 0;border-top:1px solid #1a1a1a}
-  .cta-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
-  .cta-media img{width:100%;border:1px solid #1a1a1a}
-  .cta-content .label{margin-bottom:20px}
-  .cta-content h2{font-size:48px;line-height:52px;font-weight:700;margin-bottom:24px}
-  .cta-content .price{font-size:32px;font-weight:700;margin-bottom:32px}
-  .cta-content .hero-actions{margin-bottom:24px}
-  .cta-content .meta{margin-top:8px}
-
-  /* CROSSSELL */
-  .crosssell{padding:96px 0;border-top:1px solid #1a1a1a}
-  .crosssell-head{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:48px}
-  .carousel{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-  .card{background:#1a1a1a;border:1px solid #2a2a2a;overflow:hidden;transition:.2s}
-  .card:hover{border-color:#ff9500}
-  .card .ph{height:200px;background:#0a0a0a;display:flex;align-items:center;justify-content:center;border-bottom:1px solid #2a2a2a}
-  .card .ph .ic{width:48px;height:48px;border:1px solid #ff9500;color:#ff9500;font-size:18px;display:flex;align-items:center;justify-content:center}
-  .card-body{padding:24px}
-  .card-body .cat{font-size:12px;text-transform:uppercase;letter-spacing:.1em;color:#999;margin-bottom:8px}
-  .card-body h4{font-size:20px;line-height:28px;font-weight:700;margin-bottom:10px}
-  .card-body p{font-size:14px;line-height:20px;color:#999;margin-bottom:16px}
-  .card-link{font-size:14px;color:#ff9500;font-weight:600;letter-spacing:.02em}
-
-  /* FOOTER */
-  footer.site{border-top:1px solid #1a1a1a;padding:64px 0 32px;background:#000}
-  .foot-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:48px;margin-bottom:48px}
-  .foot-brand{font-size:20px;font-weight:700;letter-spacing:.02em;margin-bottom:16px}
-  .foot-brand span{color:#ff9500}
-  .foot p{font-size:14px;color:#999;max-width:320px}
-  .foot h5{font-size:12px;text-transform:uppercase;letter-spacing:.14em;color:#999;margin-bottom:16px}
-  .foot ul{list-style:none;display:flex;flex-direction:column;gap:10px}
-  .foot ul a{font-size:14px;color:#fff;opacity:.85;transition:.2s}
-  .foot ul a:hover{color:#ff9500;opacity:1}
-  .foot-bottom{display:flex;justify-content:space-between;align-items:center;padding-top:32px;border-top:1px solid #1a1a1a;font-size:12px;color:#555}
-  .social{display:flex;gap:12px}
-  .social a{width:32px;height:32px;border:1px solid #333;display:flex;align-items:center;justify-content:center;color:#999;font-size:12px;transition:.2s}
-  .social a:hover{border-color:#ff9500;color:#ff9500}
-
-  @media (max-width:960px){
-    .hero-grid,.summary-grid,.sustain-grid,.cta-grid{grid-template-columns:1fr;gap:40px}
-    .split-grid,.context-grid{grid-template-columns:1fr}
-    .split-content,.context-content{padding:48px 32px}
-    .bento{grid-template-columns:repeat(2,1fr)}
-    .bento .b.wide{grid-column:span 2}
-    .trust-grid{grid-template-columns:repeat(3,1fr)}
-    .carousel{grid-template-columns:1fr}
-    .foot-grid{grid-template-columns:1fr 1fr;gap:32px}
-    .hero h1,.mesh-overlay h2,.cta-content h2{font-size:36px;line-height:42px}
-    .nav-links{display:none}
-    .nav-cta .nav-phone{display:none}
+  /* Utility bar */
+  .utility{
+    border-bottom:1px solid var(--border);
+    background:#0a0a0a;
+    font-size:12px;
+    letter-spacing:.02em;
   }
-  @media (max-width:600px){
-    .wrap{padding:0 20px}
-    .nav{padding:12px 20px}
-    .gallery-thumbs{grid-template-columns:1fr 1fr}
-    .trust-grid{grid-template-columns:1fr 1fr}
-    .foot-grid{grid-template-columns:1fr}
+  .utility-inner{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:16px;
+    padding:10px 24px;
+    max-width:1320px;
+    margin:0 auto;
+    color:var(--muted);
+  }
+  .utility-left{display:flex;gap:8px;align-items:center}
+  .utility-left strong{color:var(--text);font-weight:500;margin-right:8px}
+  .utility-marks{display:flex;gap:18px;flex-wrap:wrap}
+  .utility-marks span{color:var(--muted)}
+  .utility-marks span::before{content:"•";color:var(--accent);margin-right:6px}
+  .utility-right{display:flex;gap:18px;color:var(--muted)}
+  .utility-right span:hover{color:var(--text)}
+
+  /* Global header */
+  .header{
+    border-bottom:1px solid var(--border);
+    background:var(--bg);
+    position:sticky;top:0;z-index:50;
+  }
+  .header-inner{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:18px 24px;max-width:1320px;margin:0 auto;gap:24px;
+  }
+  .brand{font-size:20px;letter-spacing:.04em;font-weight:500;text-transform:uppercase}
+  .brand span{color:var(--accent)}
+  .nav{display:flex;gap:28px;font-size:13px;letter-spacing:.02em}
+  .nav a{color:var(--muted);transition:color .2s}
+  .nav a:hover{color:var(--text)}
+  .header-actions{display:flex;gap:18px;align-items:center;font-size:13px;color:var(--muted)}
+  .header-actions span:hover{color:var(--text)}
+  .header-tagline{
+    font-size:12px;color:var(--muted);
+    padding:0 24px 14px;max-width:1320px;margin:0 auto;
+    letter-spacing:.02em;
+  }
+
+  /* Hero */
+  .hero{padding:64px 0 72px}
+  .hero-grid{
+    display:grid;grid-template-columns:1.6fr 1fr;gap:48px;align-items:start;
+  }
+  .hero-media{
+    position:relative;background:var(--surface);
+    border:1px solid var(--border);
+  }
+  .hero-media img{width:100%;aspect-ratio:16/9;object-fit:cover}
+  .hero-media-controls{
+    position:absolute;bottom:16px;right:16px;display:flex;gap:8px;
+  }
+  .media-btn{
+    width:40px;height:40px;border-radius:2px;
+    background:rgba(0,0,0,.6);border:1px solid rgba(255,255,255,.2);
+    color:#fff;display:flex;align-items:center;justify-content:center;
+    font-size:14px;backdrop-filter:blur(4px);
+  }
+  .hero-meta-row{
+    display:flex;justify-content:space-between;align-items:center;
+    padding:12px 16px;border-top:1px solid var(--border);
+    font-size:12px;color:var(--muted);letter-spacing:.02em;
+  }
+  .hero-meta-row .accent{color:var(--accent)}
+
+  .hero-buy{display:flex;flex-direction:column;gap:18px;padding-top:8px}
+  .eyebrow{
+    font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);
+  }
+  .hero h1{
+    font-size:34px;line-height:1.15;font-weight:500;letter-spacing:-.01em;
+  }
+  .hero-desc{color:var(--muted);font-size:15px;line-height:1.6}
+  .price-row{
+    display:flex;align-items:baseline;gap:12px;
+    padding:18px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);
+  }
+  .price{font-size:32px;font-weight:500;letter-spacing:-.01em}
+  .price-label{font-size:12px;color:var(--muted);letter-spacing:.04em}
+
+  .size-pick{display:flex;flex-direction:column;gap:10px}
+  .size-pick-label{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+  .sizes{display:flex;gap:10px}
+  .size-btn{
+    flex:1;padding:14px;border:1px solid var(--border);background:transparent;
+    color:var(--text);font-size:14px;letter-spacing:.04em;
+    transition:all .2s;text-align:left;
+  }
+  .size-btn .s-name{font-size:18px;display:block;margin-bottom:2px;font-weight:500}
+  .size-btn .s-desc{font-size:11px;color:var(--muted);letter-spacing:.02em}
+  .size-btn:hover{border-color:var(--accent)}
+  .size-btn.active{border-color:var(--accent);background:rgba(255,153,0,.06)}
+  .size-btn.active .s-name{color:var(--accent)}
+
+  .btn-primary{
+    display:flex;align-items:center;justify-content:space-between;
+    width:100%;padding:18px 22px;background:var(--accent);color:#000;
+    font-size:15px;font-weight:600;letter-spacing:.02em;
+    transition:opacity .2s;
+  }
+  .btn-primary:hover{opacity:.92}
+  .btn-primary .arrow{font-size:18px}
+  .btn-secondary{
+    display:inline-flex;align-items:center;justify-content:center;gap:8px;
+    padding:14px 22px;border:1px solid var(--border);color:var(--text);
+    font-size:13px;letter-spacing:.04em;transition:all .2s;
+  }
+  .btn-secondary:hover{border-color:var(--text)}
+
+  .delivery-info{
+    display:flex;flex-direction:column;gap:6px;font-size:12px;color:var(--muted);
+    padding-top:4px;
+  }
+  .delivery-info span::before{content:"›";color:var(--accent);margin-right:8px}
+
+  /* Gallery */
+  .gallery{padding:72px 0;border-top:1px solid var(--border)}
+  .section-head{
+    display:flex;justify-content:space-between;align-items:flex-end;
+    margin-bottom:36px;gap:24px;flex-wrap:wrap;
+  }
+  .section-head h2{font-size:28px;font-weight:500;letter-spacing:-.01em;max-width:60%}
+  .section-head .label{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent)}
+  .gallery-row{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:20px;
+  }
+  .gallery-item{position:relative;background:var(--surface);border:1px solid var(--border)}
+  .gallery-item img{width:100%;aspect-ratio:1/1;object-fit:cover;transition:transform .6s ease}
+  .gallery-item:hover img{transform:scale(1.03)}
+  .gallery-cap{padding:14px 16px;font-size:12px;color:var(--muted);letter-spacing:.02em;border-top:1px solid var(--border)}
+
+  /* Product summary */
+  .summary{padding:88px 0;border-top:1px solid var(--border)}
+  .summary-grid{display:grid;grid-template-columns:1fr 1.4fr;gap:64px;align-items:start}
+  .summary-grid .left .eyebrow{margin-bottom:16px}
+  .summary-grid .left h2{font-size:36px;font-weight:500;letter-spacing:-.01em;line-height:1.15}
+  .summary-grid .right p{font-size:16px;line-height:1.7;color:#e6e6e6}
+  .summary-stats{display:flex;gap:48px;margin-top:32px;padding-top:32px;border-top:1px solid var(--border)}
+  .stat-num{font-size:30px;font-weight:500;color:var(--accent)}
+  .stat-lbl{font-size:12px;color:var(--muted);letter-spacing:.04em;margin-top:4px}
+
+  /* Price purchase */
+  .purchase{padding:72px 0;border-top:1px solid var(--border);background:#0a0a0a}
+  .purchase-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+  .purchase h2{font-size:30px;font-weight:500;letter-spacing:-.01em;line-height:1.2;margin-bottom:18px}
+  .purchase .eyebrow{margin-bottom:14px}
+  .purchase-desc{color:var(--muted);font-size:15px;line-height:1.6;margin-bottom:28px}
+  .purchase .price{font-size:40px;font-weight:500}
+  .purchase .price-label{font-size:13px;color:var(--muted);margin-bottom:24px}
+  .purchase .sizes{margin-bottom:24px}
+
+  /* Ergonomie grid */
+  .ergo{padding:88px 0;border-top:1px solid var(--border)}
+  .ergo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .ergo-card{background:var(--surface);border:1px solid var(--border);display:flex;flex-direction:column}
+  .ergo-card img{width:100%;aspect-ratio:1/1;object-fit:cover}
+  .ergo-body{padding:24px;display:flex;flex-direction:column;gap:12px}
+  .ergo-num{font-size:12px;color:var(--accent);letter-spacing:.18em}
+  .ergo-card h3{font-size:20px;font-weight:500;letter-spacing:-.01em}
+  .ergo-card p{color:var(--muted);font-size:14px;line-height:1.6}
+
+  /* Sitting context full-bleed */
+  .context{position:relative;min-height:560px;display:flex;align-items:flex-end;overflow:hidden;border-top:1px solid var(--border)}
+  .context img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.6}
+  .context-overlay{position:relative;padding:64px 0;width:100%;background:linear-gradient(180deg,transparent 0%,rgba(0,0,0,.8) 80%,#000 100%)}
+  .context-inner{max-width:760px}
+  .context .eyebrow{margin-bottom:18px}
+  .context h2{font-size:40px;font-weight:500;letter-spacing:-.01em;line-height:1.15;margin-bottom:20px}
+  .context p{color:#dadada;font-size:16px;line-height:1.7;max-width:680px}
+
+  /* Material sustainability */
+  .material{padding:96px 0;border-top:1px solid var(--border)}
+  .material-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+  .material-img{background:var(--surface);border:1px solid var(--border)}
+  .material-img img{width:100%;aspect-ratio:4/3;object-fit:cover}
+  .material-body .eyebrow{margin-bottom:16px}
+  .material-body h2{font-size:36px;font-weight:500;letter-spacing:-.01em;line-height:1.15;margin-bottom:22px}
+  .material-body p{color:#e6e6e6;font-size:16px;line-height:1.7;margin-bottom:32px}
+  .material-marks{display:flex;gap:32px;flex-wrap:wrap}
+  .material-mark{padding:14px 18px;border:1px solid var(--border);background:var(--surface)}
+  .material-mark .m-num{font-size:24px;color:var(--accent);font-weight:500}
+  .material-mark .m-lbl{font-size:12px;color:var(--muted);margin-top:4px;letter-spacing:.02em}
+
+  /* Sizing guide */
+  .sizing{padding:88px 0;border-top:1px solid var(--border)}
+  .sizing-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+  .sizing-img{background:var(--surface);border:1px solid var(--border)}
+  .sizing-img img{width:100%;aspect-ratio:4/3;object-fit:cover}
+  .sizing-body .eyebrow{margin-bottom:14px}
+  .sizing-body h2{font-size:32px;font-weight:500;letter-spacing:-.01em;margin-bottom:18px;line-height:1.2}
+  .sizing-body > p{color:var(--muted);font-size:15px;line-height:1.7;margin-bottom:28px}
+
+  .accordion{display:flex;flex-direction:column;border-top:1px solid var(--border)}
+  .acc-item{border-bottom:1px solid var(--border)}
+  .acc-head{
+    width:100%;display:flex;justify-content:space-between;align-items:center;
+    padding:20px 0;font-size:15px;letter-spacing:.02em;text-align:left;
+    transition:color .2s;
+  }
+  .acc-head:hover{color:var(--accent)}
+  .acc-head .acc-title{display:flex;gap:14px;align-items:baseline}
+  .acc-head .acc-tag{font-size:11px;color:var(--accent);letter-spacing:.1em}
+  .acc-icon{font-size:20px;color:var(--accent);transition:transform .3s}
+  .acc-item.open .acc-icon{transform:rotate(45deg)}
+  .acc-body{
+    overflow:hidden;max-height:0;transition:max-height .4s ease,padding .3s ease;
+    color:var(--muted);font-size:14px;line-height:1.65;
+  }
+  .acc-item.open .acc-body{max-height:400px;padding:0 0 20px}
+
+  /* Support accordions */
+  .support{padding:88px 0;border-top:1px solid var(--border);background:#0a0a0a}
+  .support .section-head{margin-bottom:40px}
+
+  /* CTA footer */
+  .cta{position:relative;border-top:1px solid var(--border);overflow:hidden}
+  .cta img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.35}
+  .cta-inner{position:relative;padding:120px 0;text-align:center}
+  .cta .eyebrow{margin-bottom:20px}
+  .cta h2{font-size:48px;font-weight:500;letter-spacing:-.015em;line-height:1.1;margin:0 auto 28px;max-width:820px}
+  .cta p{color:#d4d4d4;font-size:16px;margin:0 auto 36px;max-width:640px;line-height:1.6}
+  .cta .btn-primary{max-width:520px;margin:0 auto}
+
+  /* Footer */
+  .footer{border-top:1px solid var(--border);padding:48px 0 32px;background:#000}
+  .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;margin-bottom:40px}
+  .footer-brand{font-size:18px;letter-spacing:.04em;text-transform:uppercase;margin-bottom:14px}
+  .footer-brand span{color:var(--accent)}
+  .footer-tagline{color:var(--muted);font-size:13px;max-width:320px;line-height:1.6}
+  .footer-col h4{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:14px}
+  .footer-col ul{list-style:none;display:flex;flex-direction:column;gap:8px}
+  .footer-col a{font-size:13px;color:var(--text);transition:color .2s}
+  .footer-col a:hover{color:var(--accent)}
+  .footer-bottom{
+    border-top:1px solid var(--border);padding-top:24px;
+    display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
+    font-size:12px;color:var(--muted);letter-spacing:.02em;
+  }
+
+  /* Responsive */
+  @media (max-width:980px){
+    .hero-grid,.summary-grid,.purchase-grid,.material-grid,.sizing-grid{grid-template-columns:1fr;gap:36px}
+    .gallery-row,.ergo-grid{grid-template-columns:1fr 1fr}
+    .hero h1{font-size:28px}
+    .summary-grid .left h2,.material-body h2{font-size:28px}
+    .context h2{font-size:30px}
+    .cta h2{font-size:34px}
+    .footer-grid{grid-template-columns:1fr 1fr;gap:32px}
+  }
+  @media (max-width:640px){
+    .nav{display:none}
+    .gallery-row,.ergo-grid{grid-template-columns:1fr}
+    .summary-stats,.material-marks{gap:24px;flex-wrap:wrap}
+    .utility-marks{display:none}
+    .context{min-height:460px}
+    .hero{padding:40px 0 48px}
   }
 </style>
 </head>
 <body>
 
-<header class="site">
-  <nav class="nav" aria-label="Hlavní navigace">
-    <div class="brand">HERMAN <span>MILLER</span></div>
-    <ul class="nav-links">
-      <li><a href="#ergonomics">Ergonomie</a></li>
-      <li><a href="#hero">Ikona designu</a></li>
-      <li><a href="#mesh_philosophy">Síťovina</a></li>
-      <li><a href="#ergonomics">Podpora páteře</a></li>
-      <li><a href="#sustainability">Udržitelnost</a></li>
-    </ul>
-    <div class="nav-cta">
-      <span class="nav-phone">+420 800 000 000</span>
-      <button class="cart-btn">Košík (0)</button>
+<!-- Utility bar -->
+<div class="utility" id="utility_bar">
+  <div class="utility-inner">
+    <div class="utility-left">
+      <strong>Doprava a ověřený originál</strong>
+      <div class="utility-marks">
+        <span>Ergonomie</span>
+        <span>Ikona designu</span>
+        <span>Síťovina</span>
+        <span>Podpora páteře</span>
+        <span>Udržitelný</span>
+      </div>
     </div>
-  </nav>
+    <div class="utility-right">
+      <span>Podpora</span>
+      <span>Doprava</span>
+      <span>CZ / SK</span>
+    </div>
+  </div>
+</div>
+
+<!-- Global header -->
+<header class="header" id="global_header">
+  <div class="header-inner">
+    <div class="brand">Herman <span>Miller</span></div>
+    <nav class="nav" aria-label="Hlavní navigace">
+      <a href="#product_hero">Aeron</a>
+      <a href="#ergonomie_detail">Ergonomie</a>
+      <a href="#material_sustainability">Materiály</a>
+      <a href="#sizing_guide">Velikosti</a>
+      <a href="#support_accordions">Parametry</a>
+    </nav>
+    <div class="header-actions">
+      <span>Hledat</span>
+      <span>Účet</span>
+      <span>Košík (0)</span>
+    </div>
+  </div>
+  <div class="header-tagline">Herman Miller Aeron Chair: Ikona ergonomie pro dlouhé hodiny u počítače.</div>
 </header>
 
 <main>
 
-<section id="breadcrumb" class="breadcrumb" aria-label="Drobečková navigace">
-  <div class="wrap">
-    <ol>
-      <li><a href="#">Domů</a></li>
-      <li><a href="#">Kancelářské židle</a></li>
-      <li>Herman Miller Aeron Chair</li>
-    </ol>
-  </div>
-</section>
-
-<section id="hero" class="hero">
-  <div class="wrap">
-    <div class="hero-grid">
-      <div class="hero-media">
-        <img src="images/img_hero.jpg" alt="Aeron — ikona ergonomie — Herman Miller Aeron Chair" width="1200" height="900" loading="eager">
-      </div>
-      <div class="hero-content">
-        <div class="label">Herman Miller · Aeron Chair</div>
-        <h1>Aeron Chair – ikona designu s ergonomií pro dlouhé hodiny u počítače</h1>
-        <div class="price-row">
-          <span class="price">49 990 Kč</span>
-          <span class="price-meta">včetně DPH · 12letá záruka</span>
-        </div>
-        <p>Herman Miller Aeron Chair je volba pro náročné kanceláře, domácí kancelář i profesionály, kteří tráví u počítače dlouhé hodiny a chtějí ergonomii bez kompromisů. Funkční, rozpoznatelná silueta s prosvětlenou síťovinou působí čistě, technicky a sebevědomě. Sedák i opěrák z pružné síťoviny 8Z Pellicle s osmi zónami podpory pomáhají držet tělo v přirozené a pohodlné poloze.</p>
-        <div class="hero-actions">
-          <a href="#summary_panel" class="btn-primary">Zajistit si Herman Miller Aeron Chair za 49 990 Kč</a>
-          <a href="#ergonomics" class="btn-outline">Prozkoumat ergonomii</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="gallery" class="gallery">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="label">Galerie detailů</div>
-      <h2>Každý detail má důvod</h2>
-    </div>
-    <div class="gallery-main">
-      <img src="images/img_gallery.jpg" alt="Každý detail má důvod — Herman Miller Aeron Chair" width="1200" height="900" loading="lazy">
-    </div>
-    <div class="gallery-thumbs">
-      <button class="active">Ikonická silueta Aeron Chair v prostoru</button>
-      <button>Detail prosvětlené síťoviny 8Z Pellicle</button>
-      <button>Pohled na sedák a opěrák s osmi zónami podpory</button>
-      <button>Mechanismus Harmonic Tilt</button>
-      <button>Tři velikosti A, B, C pro různé postavy</button>
-    </div>
-  </div>
-</section>
-
-<section id="summary_panel" class="summary">
-  <div class="wrap">
-    <div class="summary-grid">
-      <div class="summary-info">
-        <div class="label">Objednávka</div>
-        <h2 style="font-size:32px;line-height:36px;font-weight:700;margin-top:16px;margin-bottom:20px">Konfigurace a objednávka</h2>
-        <p>Sedák i opěrák z pružné síťoviny 8Z Pellicle s osmi zónami podpory. Tři velikosti A, B, C pro postavy zhruba 147 až 198 cm. Nosnost 136 až 181 kg podle velikosti. Mechanismus Harmonic Tilt pro plynulé naklánění. Cena: 49 990 Kč.</p>
-        <p style="margin-top:24px">Vyberte správnou velikost podle své postavy a barevné provedení, které odpovídá vašemu pracovnímu prostoru. Každá konfigurace zahrnuje 12letou záruku.</p>
-      </div>
-      <div class="panel">
-        <h3>Vyberte konfiguraci</h3>
-        <div class="opt-group">
-          <div class="opt-label"><span>Velikost</span><span>A · B · C</span></div>
-          <div class="opt-chips">
-            <button class="chip">A</button>
-            <button class="chip active">B</button>
-            <button class="chip">C</button>
+  <!-- Product hero -->
+  <section class="hero" id="product_hero">
+    <div class="wrap">
+      <div class="hero-grid">
+        <div class="hero-media">
+          <img src="images/img_product_hero.jpg" alt="Aeron — ergonomická ikona designu — Herman Miller Aeron Chair" width="1600" height="900" loading="eager">
+          <div class="hero-media-controls">
+            <button class="media-btn" aria-label="Přiblížit">+</button>
+            <button class="media-btn" aria-label="Přehrát">▶</button>
+          </div>
+          <div class="hero-meta-row">
+            <span>1 / 6 — Aeron Chair</span>
+            <span class="accent">8Z Pellicle · Harmonic Tilt</span>
           </div>
         </div>
-        <div class="opt-group">
-          <div class="opt-label"><span>Barevné provedení</span><span>3 varianty</span></div>
-          <div class="opt-chips">
-            <div class="swatch s1 active" title="Grafit"></div>
-            <div class="swatch s2" title="Hnědý"></div>
-            <div class="swatch s3" title="Zelený"></div>
+
+        <div class="hero-buy">
+          <div class="eyebrow">Herman Miller · Aeron</div>
+          <h1>Aeron — ergonomická ikona designu</h1>
+          <p class="hero-desc">Aeron Chair spojuje ikonický industriálně-ergonomický design s prosvětlenou síťovinou a rozpoznatelnou siluetou. Je navržená pro lidi, kteří chtějí ergonomii, podporu páteře a jistotu, že jejich pracovní židle bude fungovat stejně dobře, jak vypadá.</p>
+
+          <div class="price-row">
+            <div class="price">49 990 Kč</div>
+            <div class="price-label">včetně DPH · 12letá záruka</div>
+          </div>
+
+          <div class="size-pick">
+            <div class="size-pick-label">Vyberte velikost</div>
+            <div class="sizes">
+              <button class="size-btn" data-size="A">
+                <span class="s-name">A</span>
+                <span class="s-desc">147–163 cm</span>
+              </button>
+              <button class="size-btn active" data-size="B">
+                <span class="s-name">B</span>
+                <span class="s-desc">163–185 cm</span>
+              </button>
+              <button class="size-btn" data-size="C">
+                <span class="s-name">C</span>
+                <span class="s-desc">185–198 cm</span>
+              </button>
+            </div>
+          </div>
+
+          <button class="btn-primary">
+            <span>Objednat Herman Miller Aeron Chair za 49 990 Kč</span>
+            <span class="arrow">→</span>
+          </button>
+
+          <div class="delivery-info">
+            <span>Doprava a ověřený originál</span>
+            <span>12letá záruka výrobce</span>
+            <span>3 velikosti A / B / C</span>
           </div>
         </div>
-        <div class="panel-price">
-          <span class="meta">Cena</span>
-          <span class="p">49 990 Kč</span>
-        </div>
-        <a href="#" class="btn-primary">Zajistit si Herman Miller Aeron Chair za 49 990 Kč</a>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section id="ergonomics" class="split">
-  <div class="split-grid">
-    <div class="split-media">
-      <img src="images/img_ergonomics.jpg" alt="Podpora páteře při celodenním sezení — Herman Miller Aeron Chair" width="1200" height="900" loading="lazy">
-    </div>
-    <div class="split-content">
-      <div class="label">Ergonomie</div>
-      <h2>Podpora páteře při celodenním sezení</h2>
-      <p>Aeron Chair je navržená pro pohodlné a soustředěné sezení při dlouhé práci u počítače. Sedák i opěrák z pružné síťoviny 8Z Pellicle s osmi zónami podpory pomáhají rozkládat tlak a podporují páteř v průběhu dne. Mechanismus Harmonic Tilt zajišťuje plynulé naklánění, takže pohyb zůstává přirozený.</p>
-      <ul class="feature-list">
-        <li>PostureFit SL — laterální podpora bederní oblasti</li>
-        <li>Nastavitelné opěrky paží ve více osách</li>
-        <li>Síťovina 8Z Pellicle s osmi zónami podpory</li>
-        <li>Harmonic Tilt pro plynulé naklánění s tělem</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<section id="mesh_philosophy" class="mesh">
-  <div class="mesh-bg">
-    <img src="images/img_mesh_philosophy.jpg" alt="Síťovina, která dýchá s vámi — Herman Miller Aeron Chair" width="1200" height="900" loading="lazy">
-  </div>
-  <div class="mesh-overlay">
-    <div class="inner">
-      <div class="label">8Z Pellicle</div>
-      <h2>Síťovina, která dýchá s vámi</h2>
-      <p>Síťovina je zde klíčovým prvkem funkce i vzhledu. Pružná síťovina 8Z Pellicle na sedáku i opěráku pracuje s osmi zónami podpory a přizpůsobuje se tělu tak, aby sezení působilo lehce, stabilně a jistě. Prosvětlená struktura zároveň podtrhuje ikonu designu, kterou je Aeron Chair známá.</p>
-    </div>
-  </div>
-</section>
-
-<section id="craft" class="craft">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="label">Konstrukce</div>
-      <h2>Precizní funkčnost. Bez kompromisu.</h2>
-      <p style="margin-top:20px;color:#999;max-width:680px">Aeron Chair staví na přesně definované funkci, čisté konstrukci a promyšleném ergonomickém řešení. Tři velikosti A, B, C pomáhají vybrat správné usazení pro postavy zhruba 147 až 198 cm a nosnost 136 až 181 kg podle velikosti dává jistotu při každodenním používání. Výsledkem je židle, která působí technicky i nadčasově.</p>
-    </div>
-    <div class="bento">
-      <div class="b wide">
-        <div class="b-img"><img src="images/img_craft.jpg" alt="Precizní funkčnost. Bez kompromisu. — Herman Miller Aeron Chair" width="1200" height="900" loading="lazy"></div>
+  <!-- Image gallery -->
+  <section class="gallery" id="image_gallery">
+    <div class="wrap">
+      <div class="section-head">
         <div>
-          <div class="icon">H</div>
-          <h3>Harmonic Tilt</h3>
-          <p>Plynulé naklánění v souladu s pohybem těla pro přirozené sezení.</p>
+          <div class="label">Detail a materiál</div>
+          <h2>Prosvětlená síťovina, mechanismus, silueta</h2>
         </div>
+        <a class="btn-secondary" href="#product_hero">Zpět na galerii</a>
       </div>
-      <div class="b">
-        <div class="icon">8Z</div>
-        <div>
-          <h3>Síťovina 8Z Pellicle</h3>
-          <p>Osm zón podpory, které rozkládají tlak a dýchají s vámi.</p>
-        </div>
+      <div class="gallery-row">
+        <figure class="gallery-item">
+          <img src="images/img_image_gallery_1.jpg" alt="Detail a materiál — Herman Miller Aeron Chair" width="1000" height="1000" loading="lazy">
+          <figcaption class="gallery-cap">Detail prosvětlené síťoviny 8Z Pellicle na sedáku i opěráku</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="images/img_image_gallery_2.jpg" alt="Detail a materiál — Herman Miller Aeron Chair" width="1000" height="1000" loading="lazy">
+          <figcaption class="gallery-cap">Osm zón podpory v detailu</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="images/img_image_gallery_3.jpg" alt="Detail a materiál — Herman Miller Aeron Chair" width="1000" height="1000" loading="lazy">
+          <figcaption class="gallery-cap">Profil siluety Aeron Chair · Mechanismus Harmonic Tilt</figcaption>
+        </figure>
       </div>
-      <div class="b">
-        <div class="icon">A·B·C</div>
-        <div>
-          <h3>Tři velikosti</h3>
-          <p>Pro postavy 147–198 cm a nosnost 136–181 kg.</p>
-        </div>
-      </div>
-      <div class="b">
-        <div class="icon">SL</div>
-        <div>
-          <h3>PostureFit SL</h3>
-          <p>Laterální podpora bederní oblasti pro správné držení páteře.</p>
-        </div>
-      </div>
-      <div class="b wide">
-        <div class="icon">12</div>
-        <div>
-          <h3>12letá záruka</h3>
-          <p>Odolná konstrukce s prodlouženou zárukou pro dlouhodobou hodnotu.</p>
-        </div>
+      <div class="gallery-row" style="margin-top:20px">
+        <figure class="gallery-item">
+          <img src="images/img_ergonomie_detail_1.jpg" alt="Detail a materiál — Herman Miller Aeron Chair" width="1000" height="1000" loading="lazy">
+          <figcaption class="gallery-cap">Aeron v náročné kanceláři</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="images/img_ergonomie_detail_2.jpg" alt="Detail a materiál — Herman Miller Aeron Chair" width="1000" height="1000" loading="lazy">
+          <figcaption class="gallery-cap">Aeron v domácí pracovně</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="images/img_ergonomie_detail_3.jpg" alt="Detail a materiál — Herman Miller Aeron Chair" width="1000" height="1000" loading="lazy">
+          <figcaption class="gallery-cap">Mechanismus a nastavení v detailu</figcaption>
+        </figure>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section id="sustainability" class="sustain">
-  <div class="wrap">
-    <div class="sustain-grid">
-      <div class="sustain-media">
-        <img src="images/img_sustainability.jpg" alt="Udržitelná investice s dlouhou hodnotou — Herman Miller Aeron Chair" width="1200" height="900" loading="lazy">
-      </div>
-      <div class="sustain-content">
-        <div class="label">Udržitelnost</div>
-        <h2>Udržitelná investice s dlouhou hodnotou</h2>
-        <p>Aeron Chair je vyrobeno z více než 50 % recyklovaných materiálů a až 91 % je recyklovatelná. Udržitelný přístup zde není doplněk, ale součást celkového řešení. K dlouhodobé hodnotě přispívá i 12letá záruka.</p>
-        <div class="stat-row">
-          <div class="stat">
-            <div class="n">50 %+</div>
-            <div class="t">Recyklované materiály</div>
-          </div>
-          <div class="stat">
-            <div class="n">91 %</div>
-            <div class="t">Recyklovatelná</div>
-          </div>
-          <div class="stat">
-            <div class="n">12 let</div>
-            <div class="t">Záruka</div>
-          </div>
-          <div class="stat">
-            <div class="n">1994</div>
-            <div class="t">Rok vzniku ikony</div>
+  <!-- Product summary -->
+  <section class="summary" id="product_summary">
+    <div class="wrap">
+      <div class="summary-grid">
+        <div class="left">
+          <div class="eyebrow">Produktový přehled</div>
+          <h2>Podpora, která je cítit celý den</h2>
+        </div>
+        <div class="right">
+          <p>Herman Miller Aeron Chair je kancelářská židle pro náročné uživatele, kteří chtějí ergonomii bez kompromisů. Sedák i opěrák jsou z pružné síťoviny 8Z Pellicle s osmi zónami podpory, mechanismus Harmonic Tilt zajišťuje plynulé naklánění a tři velikosti A, B, C sedí na postavy zhruba 147 až 198 cm. Podle velikosti nabízí nosnost 136 až 181 kg.</p>
+          <div class="summary-stats">
+            <div>
+              <div class="stat-num">8Z</div>
+              <div class="stat-lbl">Zóny podpory Pellicle</div>
+            </div>
+            <div>
+              <div class="stat-num">3</div>
+              <div class="stat-lbl">Velikosti A / B / C</div>
+            </div>
+            <div>
+              <div class="stat-num">12 let</div>
+              <div class="stat-lbl">Záruka výrobce</div>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section id="trust_strip" class="trust">
-  <div class="wrap">
-    <div class="trust-grid">
-      <div class="trust-item"><div class="ic">12</div><div class="t">12letá záruka</div><div class="s">Na konstrukci a mechaniku</div></div>
-      <div class="trust-item"><div class="ic">50</div><div class="t">Více než 50 % recyklovaných materiálů</div><div class="s">Odpovědná výroba</div></div>
-      <div class="trust-item"><div class="ic">91</div><div class="t">Až 91 % recyklovatelná</div><div class="s">Konec životnosti</div></div>
-      <div class="trust-item"><div class="ic">ABC</div><div class="t">Tři velikosti A, B, C</div><div class="s">Pro postavy 147–198 cm</div></div>
-      <div class="trust-item"><div class="ic">KG</div><div class="t">Nosnost 136–181 kg</div><div class="s">Podle velikosti</div></div>
-      <div class="trust-item"><div class="ic">HT</div><div class="t">Mechanismus Harmonic Tilt</div><div class="s">Plynulé naklánění</div></div>
-    </div>
-  </div>
-</section>
-
-<section id="context" class="context">
-  <div class="context-grid">
-    <div class="context-media">
-      <img src="images/img_context.jpg" alt="Doma i v kanceláři. Vždy na místě. — Herman Miller Aeron Chair" width="1200" height="900" loading="lazy">
-    </div>
-    <div class="context-content">
-      <div class="label">Prostředí</div>
-      <h2>Doma i v kanceláři. Vždy na místě.</h2>
-      <p>Pro náročné kanceláře, domácí kancelář i profesionály je Aeron Chair řešením, které spojuje ergonomii, podpora páteře, síťovinu a ikonu designu v jednom funkčním celku. Pokud hledáte židli pro dlouhé hodiny u počítače, je to volba, která dává smysl výkonem i vzhledem.</p>
-      <a href="#cta" class="btn-outline">Vybrat velikost</a>
-    </div>
-  </div>
-</section>
-
-<section id="cta" class="cta">
-  <div class="wrap">
-    <div class="cta-grid">
-      <div class="cta-media">
-        <img src="images/img_cta.jpg" alt="Vyberte si svůj Aeron — Herman Miller Aeron Chair" width="1200" height="900" loading="lazy">
-      </div>
-      <div class="cta-content">
-        <div class="label">Závěr</div>
-        <h2>Vyberte si svůj Aeron</h2>
-        <div class="price">49 990 Kč</div>
-        <div class="hero-actions">
-          <a href="#summary_panel" class="btn-primary">Vybrat velikost a zajistit si Herman Miller Aeron Chair za 49 990 Kč</a>
+  <!-- Price purchase -->
+  <section class="purchase" id="price_purchase">
+    <div class="wrap">
+      <div class="purchase-grid">
+        <div>
+          <div class="eyebrow">Cena a konfigurace</div>
+          <h2>49 990 Kč — vyberte velikost a konfiguraci</h2>
+          <p class="purchase-desc">Cena: 49 990 Kč | Herman Miller Aeron Chair za 49 990 Kč. Investice do každodenní ergonomie s 12letou zárukou a více než 50 % recyklovaných materiálů.</p>
+          <div class="sizes" style="max-width:420px">
+            <button class="size-btn" data-size="A">
+              <span class="s-name">A</span>
+              <span class="s-desc">147–163 cm</span>
+            </button>
+            <button class="size-btn active" data-size="B">
+              <span class="s-name">B</span>
+              <span class="s-desc">163–185 cm</span>
+            </button>
+            <button class="size-btn" data-size="C">
+              <span class="s-name">C</span>
+              <span class="s-desc">185–198 cm</span>
+            </button>
+          </div>
         </div>
-        <p class="meta">Potřebujete poradit s výběrem velikosti? Naše poradenské centrum vám pomůže najít správnou konfiguraci.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="crosssell" class="crosssell">
-  <div class="wrap">
-    <div class="crosssell-head">
-      <div class="section-head" style="margin-bottom:0">
-        <div class="label">Doplňky</div>
-        <h2 style="font-size:32px;line-height:36px;font-weight:700">Doplňte svůj pracovní prostor</h2>
-      </div>
-    </div>
-    <p style="color:#999;max-width:680px;margin-bottom:48px">Doplňte pracovní místo o výškově nastavitelný stůl, podnožku nebo kvalitní osvětlení pro ještě pohodlnější práci.</p>
-    <div class="carousel">
-      <div class="card">
-        <div class="ph"><div class="ic">T</div></div>
-        <div class="card-body">
-          <div class="cat">Stoly</div>
-          <h4>Výškově nastavitelný stůl</h4>
-          <p>Ergonomický pracovní stůl pro střídání poloh při celodenní práci.</p>
-          <a href="#" class="card-link">Zobrazit detail →</a>
-        </div>
-      </div>
-      <div class="card">
-        <div class="ph"><div class="ic">A</div></div>
-        <div class="card-body">
-          <div class="cat">Monitor arm</div>
-          <h4>Držák monitoru</h4>
-          <p>Nastavitelný držák pro správnou výšku a úhel obrazovky.</p>
-          <a href="#" class="card-link">Zobrazit detail →</a>
-        </div>
-      </div>
-      <div class="card">
-        <div class="ph"><div class="ic">L</div></div>
-        <div class="card-body">
-          <div class="cat">Osvětlení</div>
-          <h4>Pracovní lampa</h4>
-          <p>Kvalitní osvětlení pro soustředěnou práci bez únavy očí.</p>
-          <a href="#" class="card-link">Zobrazit detail →</a>
+        <div>
+          <div class="price-label">Cena</div>
+          <div class="price" style="margin-bottom:24px">49 990 Kč</div>
+          <button class="btn-primary">
+            <span>Objednat Herman Miller Aeron Chair za 49 990 Kč</span>
+            <span class="arrow">→</span>
+          </button>
+          <div class="delivery-info" style="margin-top:18px">
+            <span>Doprava a ověřený originál</span>
+            <span>12letá záruka výrobce</span>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
+
+  <!-- Ergonomie detail -->
+  <section class="ergo" id="ergonomie_detail">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <div class="label">Ergonomie</div>
+          <h2>Ergonomie navržená pro dlouhé pracovní dny</h2>
+        </div>
+        <p style="max-width:380px;color:var(--muted);font-size:14px">Pružná síťovina 8Z Pellicle na sedáku i opěráku rozděluje oporu do osmi zón, aby podpora páteře fungovala v různých polohách sezení. Mechanismus Harmonic Tilt umožňuje plynulé naklánění a přirozený pohyb při práci.</p>
+      </div>
+      <div class="ergo-grid">
+        <article class="ergo-card">
+          <img src="images/img_ergonomie_detail_1.jpg" alt="Ergonomie navržená pro dlouhé pracovní dny — Herman Miller Aeron Chair" width="1000" height="1000" loading="lazy">
+          <div class="ergo-body">
+            <div class="ergo-num">01 — Podpora páteře</div>
+            <h3>PostureFit SL</h3>
+            <p>Pružná síťovina 8Z Pellicle rozděluje oporu do osmi zón, aby podpora páteře fungovala v různých polohách sezení.</p>
+          </div>
+        </article>
+        <article class="ergo-card">
+          <img src="images/img_ergonomie_detail_2.jpg" alt="Ergonomie navržená pro dlouhé pracovní dny — Herman Miller Aeron Chair" width="1000" height="1000" loading="lazy">
+          <div class="ergo-body">
+            <div class="ergo-num">02 — Síťovina 8Z Pellicle</div>
+            <h3>Osm zón podpory</h3>
+            <p>Sedák i opěrák z pružné síťoviny 8Z Pellicle s osmi zónami podpory rozkládá tlak a udržuje pohodlí i po dlouhých hodinách.</p>
+          </div>
+        </article>
+        <article class="ergo-card">
+          <img src="images/img_ergonomie_detail_3.jpg" alt="Ergonomie navržená pro dlouhé pracovní dny — Herman Miller Aeron Chair" width="1000" height="1000" loading="lazy">
+          <div class="ergo-body">
+            <div class="ergo-num">03 — Rozsah nastavení</div>
+            <h3>Harmonic Tilt</h3>
+            <p>Mechanismus Harmonic Tilt umožňuje plynulé naklánění a přirozený pohyb při práci, včetně širokého rozsahu nastavení výšky a sklonu.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sitting context -->
+  <section class="context" id="sitting_context">
+    <img src="images/img_sitting_context.jpg" alt="Pracovní prostor, který odpovídá vašim nárokům — Herman Miller Aeron Chair" width="1600" height="900" loading="lazy">
+    <div class="context-overlay">
+      <div class="wrap">
+        <div class="context-inner">
+          <div class="eyebrow">Kontext použití</div>
+          <h2>Pracovní prostor, který odpovídá vašim nárokům</h2>
+          <p>Aeron Chair je vhodná pro náročné kanceláře, domácí pracovny i profesionály trávící dlouhé hodiny u počítače. Její funkční, rozpoznatelná silueta a prosvětlená síťovina působí výrazně, ale čistě, takže zapadne do pracovního prostoru, který má být současně reprezentativní i ergonomický.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Material sustainability -->
+  <section class="material" id="material_sustainability">
+    <div class="wrap">
+      <div class="material-grid">
+        <div class="material-img">
+          <img src="images/img_material_sustainability.jpg" alt="Udržitelná volba pro náročné profesionály — Herman Miller Aeron Chair" width="1200" height="900" loading="lazy">
+        </div>
+        <div class="material-body">
+          <div class="eyebrow">Materiály a udržitelnost</div>
+          <h2>Udržitelná volba pro náročné profesionály</h2>
+          <p>Židle je vyrobena z více než 50 % recyklovaných materiálů a až z 91 % je recyklovatelná. Spolu s 12letou zárukou jde o udržitelný výběr, který spojuje dlouhodobé používání s promyšleným přístupem k materiálům.</p>
+          <div class="material-marks">
+            <div class="material-mark">
+              <div class="m-num">50 %+</div>
+              <div class="m-lbl">Recyklované materiály</div>
+            </div>
+            <div class="material-mark">
+              <div class="m-num">91 %</div>
+              <div class="m-lbl">Recyklovatelné</div>
+            </div>
+            <div class="material-mark">
+              <div class="m-num">12 let</div>
+              <div class="m-lbl">Záruka</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sizing guide -->
+  <section class="sizing" id="sizing_guide">
+    <div class="wrap">
+      <div class="sizing-grid">
+        <div class="sizing-img">
+          <img src="images/img_sizing_guide.jpg" alt="Správná velikost pro vaše tělo — Herman Miller Aeron Chair" width="1200" height="900" loading="lazy">
+        </div>
+        <div class="sizing-body">
+          <div class="eyebrow">Průvodce velikostmi</div>
+          <h2>Správná velikost pro vaše tělo</h2>
+          <p>Velikost A je pro postavy zhruba 147 až 163 cm, velikost B pro 163 až 185 cm a velikost C pro 185 až 198 cm. Nosnost podle velikosti je 136 až 181 kg. Správná volba velikosti je klíčová pro pohodlí, ergonomii i podporu páteře.</p>
+
+          <div class="accordion">
+            <div class="acc-item open">
+              <button class="acc-head">
+                <span class="acc-title"><span class="acc-tag">A</span> Velikost A — 147 až 163 cm</span>
+                <span class="acc-icon">+</span>
+              </button>
+              <div class="acc-body">Velikost A je určena pro postavy zhruba 147 až 163 cm. Nosnost pro tuto velikost je 136 kg. Nejmenší z variant Aeron Chair, vhodná pro nižší postavy.</div>
+            </div>
+            <div class="acc-item">
+              <button class="acc-head">
+                <span class="acc-title"><span class="acc-tag">B</span> Velikost B — 163 až 185 cm</span>
+                <span class="acc-icon">+</span>
+              </button>
+              <div class="acc-body">Velikost B pokrývá postavy zhruba 163 až 185 cm a je nejčastěji volenou variantou. Nosnost podle velikosti je až 181 kg.</div>
+            </div>
+            <div class="acc-item">
+              <button class="acc-head">
+                <span class="acc-title"><span class="acc-tag">C</span> Velikost C — 185 až 198 cm</span>
+                <span class="acc-icon">+</span>
+              </button>
+              <div class="acc-body">Velikost C je určena pro vyšší postavy zhruba 185 až 198 cm s nosností až 181 kg. Poskytuje širší sedák a vyšší opěrák.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Support accordions -->
+  <section class="support" id="support_accordions">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <div class="label">Technické parametry</div>
+          <h2>Technické parametry a nastavení</h2>
+        </div>
+        <p style="max-width:380px;color:var(--muted);font-size:14px">Kompletní informace pro zákazníka, který chce před nákupem znát všechny detaily — rozměry, materiály, konfigurace a nastavovací prvky.</p>
+      </div>
+
+      <div class="accordion">
+        <div class="acc-item open">
+          <button class="acc-head">
+            <span class="acc-title"><span class="acc-tag">01</span> Jaké jsou hlavní parametry Aeron Chair?</span>
+            <span class="acc-icon">+</span>
+          </button>
+          <div class="acc-body">Sedák i opěrák z pružné síťoviny 8Z Pellicle s osmi zónami podpory, mechanismus Harmonic Tilt, tři velikosti A, B, C pro postavy zhruba 147 až 198 cm, nosnost 136 až 181 kg podle velikosti, více než 50 % recyklovaných materiálů, až 91 % recyklovatelné.</div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-head">
+            <span class="acc-title"><span class="acc-tag">02</span> Pro koho je Aeron Chair určená?</span>
+            <span class="acc-icon">+</span>
+          </button>
+          <div class="acc-body">Pro náročné kanceláře, domácí pracovny a profesionály, kteří tráví dlouhé hodiny u počítače a chtějí ergonomii.</div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-head">
+            <span class="acc-title"><span class="acc-tag">03</span> Jaká je záruka?</span>
+            <span class="acc-icon">+</span>
+          </button>
+          <div class="acc-body">12 let.</div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-head">
+            <span class="acc-title"><span class="acc-tag">04</span> Dostupné konfigurace a nastavení</span>
+            <span class="acc-icon">+</span>
+          </button>
+          <div class="acc-body">Aeron Chair se dodává ve třech velikostech A, B, C s možností nastavení výšky sedáku, sklonu opěráku, odporu naklánění a výšky podloktníků. Mechanismus Harmonic Tilt umožňuje plynulé naklánění a přirozený pohyb při práci.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA footer -->
+  <section class="cta" id="cta_footer">
+    <img src="images/img_cta_footer.jpg" alt="Investujte do každodenního výkonu — Herman Miller Aeron Chair" width="1680" height="720" loading="lazy">
+    <div class="cta-inner">
+      <div class="wrap">
+        <div class="eyebrow">Závěr</div>
+        <h2>Investujte do každodenního výkonu</h2>
+        <p>Herman Miller Aeron Chair za 49 990 Kč je připravená pro váš pracovní prostor. Objednat Herman Miller Aeron Chair za 49 990 Kč.</p>
+        <button class="btn-primary">
+          <span>Objednat Herman Miller Aeron Chair za 49 990 Kč</span>
+          <span class="arrow">→</span>
+        </button>
+      </div>
+    </div>
+  </section>
 
 </main>
 
-<footer class="site" id="footer">
+<footer class="footer">
   <div class="wrap">
-    <div class="foot-grid">
-      <div class="foot">
-        <div class="foot-brand">HERMAN <span>MILLER</span></div>
-        <p>Herman Miller Aeron Chair — ikona designu a ergonomie pro náročné kanceláře, domácí kancelář i profesionály.</p>
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">Herman <span>Miller</span></div>
+        <p class="footer-tagline">Aeron Chair — ergonomická ikona designu pro náročné kanceláře, domácí pracovny i profesionály, kteří tráví u počítače dlouhé hodiny.</p>
       </div>
-      <div class="foot">
-        <h5>Produkt</h5>
+      <div class="footer-col">
+        <h4>Produkt</h4>
         <ul>
-          <li><a href="#ergonomics">Ergonomie</a></li>
-          <li><a href="#mesh_philosophy">Síťovina</a></li>
-          <li><a href="#sustainability">Udržitelnost</a></li>
-          <li><a href="#summary_panel">Konfigurace</a></li>
+          <li><a href="#product_hero">Aeron Chair</a></li>
+          <li><a href="#ergonomie_detail">Ergonomie</a></li>
+          <li><a href="#material_sustainability">Materiály</a></li>
+          <li><a href="#sizing_guide">Velikosti</a></li>
         </ul>
       </div>
-      <div class="foot">
-        <h5>Navigace</h5>
+      <div class="footer-col">
+        <h4>Nákup</h4>
         <ul>
-          <li><a href="#">Herman Miller</a></li>
-          <li><a href="#">Kontakt</a></li>
-          <li><a href="#">Obchodní podmínky</a></li>
-          <li><a href="#">Ochrana osobních údajů</a></li>
-          <li><a href="#">Péče o produkt</a></li>
+          <li><a href="#price_purchase">Cena 49 990 Kč</a></li>
+          <li><a href="#support_accordions">Parametry</a></li>
+          <li><a href="#cta_footer">Objednat</a></li>
         </ul>
       </div>
-      <div class="foot">
-        <h5>Kontakt</h5>
+      <div class="footer-col">
+        <h4>Kontakt</h4>
         <ul>
-          <li><a href="#">+420 800 000 000</a></li>
-          <li><a href="#">info@example.cz</a></li>
-          <li><a href="#">Poradenské centrum</a></li>
+          <li><a href="#">Zákaznická podpora</a></li>
+          <li><a href="#">Doprava</a></li>
+          <li><a href="#">12letá záruka</a></li>
         </ul>
       </div>
     </div>
-    <div class="foot-bottom">
-      <span>© 2025 Herman Miller. Všechna práva vyhrazena.</span>
-      <div class="social">
-        <a href="#" aria-label="Instagram">IG</a>
-        <a href="#" aria-label="Facebook">FB</a>
-        <a href="#" aria-label="LinkedIn">IN</a>
-        <a href="#" aria-label="YouTube">YT</a>
-      </div>
+    <div class="footer-bottom">
+      <span>© Herman Miller Aeron Chair: Ikona ergonomie pro dlouhé hodiny u počítače.</span>
+      <span>CZ / SK · 49 990 Kč · 12letá záruka</span>
     </div>
   </div>
 </footer>
 
 <script>
-  document.querySelectorAll('.opt-chips .chip').forEach(c=>{
-    c.addEventListener('click',()=>{
-      c.parentElement.querySelectorAll('.chip').forEach(x=>x.classList.remove('active'));
-      c.classList.add('active');
+  // Accordion behavior
+  document.querySelectorAll('.acc-head').forEach(btn=>{
+    btn.addEventListener('click',()=>{
+      const item=btn.parentElement;
+      const wasOpen=item.classList.contains('open');
+      // close siblings within same accordion
+      const parent=item.parentElement;
+      parent.querySelectorAll('.acc-item').forEach(i=>i.classList.remove('open'));
+      if(!wasOpen) item.classList.add('open');
     });
   });
-  document.querySelectorAll('.swatch').forEach(s=>{
-    s.addEventListener('click',()=>{
-      s.parentElement.querySelectorAll('.swatch').forEach(x=>x.classList.remove('active'));
-      s.classList.add('active');
-    });
-  });
-  document.querySelectorAll('.gallery-thumbs button').forEach(b=>{
-    b.addEventListener('click',()=>{
-      b.parentElement.querySelectorAll('button').forEach(x=>x.classList.remove('active'));
-      b.classList.add('active');
+
+  // Size selection sync
+  document.querySelectorAll('.sizes').forEach(group=>{
+    group.querySelectorAll('.size-btn').forEach(b=>{
+      b.addEventListener('click',()=>{
+        group.querySelectorAll('.size-btn').forEach(x=>x.classList.remove('active'));
+        b.classList.add('active');
+        const size=b.dataset.size;
+        // sync other groups
+        document.querySelectorAll('.size-btn[data-size="'+size+'"]').forEach(x=>{
+          x.closest('.sizes').querySelectorAll('.size-btn').forEach(z=>z.classList.remove('active'));
+          x.classList.add('active');
+        });
+      });
     });
   });
 </script>
+
 </body>
 </html>
