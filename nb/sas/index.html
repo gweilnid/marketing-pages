@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>New Balance MADE in USA 990v6 — šedá ikona na každý den</title>
+  <meta name="description" content="New Balance MADE in USA 990v6 v ikonické šedé. FuelCell, semiš a syntetické překryvy na síťovém podkladu, odolná pryžová podešev a výroba v USA s minimálně 70% domácím podílem hodnoty." />
+  <style>
+    :root{
+      --bg:#F4F1EB;
+      --surface:#FFFFFF;
+      --text:#1F2328;
+      --muted:#6B7280;
+      --accent:#495566;
+      --border:rgba(31,35,40,.12);
+      --shadow:0 18px 40px rgba(31,35,40,.06);
+      --radius:28px;
+      --radius-lg:36px;
+      --container:1200px;
+      --gutter:clamp(20px, 3vw, 32px);
+      --section-y:clamp(72px, 8vw, 120px);
+      --section-y-sm:clamp(40px, 5vw, 64px);
+      --transition:180ms ease;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      background:var(--bg);
+      color:var(--text);
+      font-family:"Inter Tight","Inter",system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      line-height:1.5;
+      text-rendering:optimizeLegibility;
+      -webkit-font-smoothing:antialiased;
+    }
+
+    img{
+      display:block;
+      max-width:100%;
+      height:auto;
+    }
+
+    a{
+      color:inherit;
+      text-decoration:none;
+    }
+
+    .skip-link{
+      position:absolute;
+      left:-9999px;
+      top:0;
+      padding:12px 16px;
+      background:var(--surface);
+      border:1px solid var(--border);
+      border-radius:999px;
+      z-index:999;
+    }
+    .skip-link:focus{left:16px; top:16px}
+
+    header{
+      position:sticky;
+      top:0;
+      z-index:50;
+      backdrop-filter:saturate(140%) blur(14px);
+      background:rgba(244,241,235,.82);
+      border-bottom:1px solid rgba(31,35,40,.08);
+    }
+
+    .nav-shell{
+      max-width:var(--container);
+      margin:0 auto;
+      padding:16px var(--gutter);
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:24px;
+    }
+
+    .brand{
+      display:flex;
+      flex-direction:column;
+      gap:2px;
+      min-width:0;
+    }
+
+    .brand strong{
+      font-size:14px;
+      letter-spacing:.06em;
+      text-transform:uppercase;
+    }
+
+    .brand span{
+      font-size:14px;
+      color:var(--muted);
+    }
+
+    nav ul{
+      margin:0;
+      padding:0;
+      list-style:none;
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      justify-content:flex-end;
+    }
+
+    nav a{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:10px 14px;
+      border:1px solid transparent;
+      border-radius:999px;
+      color:var(--muted);
+      transition:all var(--transition);
+      font-size:14px;
+      line-height:1;
+      white-space:nowrap;
+    }
+
+    nav a:hover,
+    nav a:focus-visible{
+      color:var(--text);
+      border-color:var(--border);
+      background:rgba(255,255,255,.55);
+      outline:none;
+    }
+
+    main{
+      width:100%;
+    }
+
+    section{
+      scroll-margin-top:92px;
+    }
+
+    .container{
+      max-width:var(--container);
+      margin:0 auto;
+      padding-left:var(--gutter);
+      padding-right:var(--gutter);
+    }
+
+    .hero{
+      padding:clamp(28px, 4vw, 44px) 0 var(--section-y);
+    }
+
+    .hero-grid{
+      display:grid;
+      grid-template-columns:minmax(0, 1.02fr) minmax(0, .98fr);
+      gap:clamp(28px, 4vw, 56px);
+      align-items:center;
+    }
+
+    .eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding:10px 14px;
+      margin-bottom:18px;
+      border:1px solid var(--border);
+      border-radius:999px;
+      background:rgba(255,255,255,.5);
+      color:var(--accent);
+      font-size:14px;
+      line-height:1;
+      letter-spacing:.02em;
+    }
+
+    h1{
+      margin:0;
+      font-size:clamp(44px, 6vw, 72px);
+      line-height:.95;
+      letter-spacing:-.05em;
+      max-width:12ch;
+      text-wrap:balance;
+    }
+
+    .hero-copy{
+      margin-top:22px;
+      max-width:56ch;
+      font-size:clamp(18px, 2vw, 20px);
+      color:var(--text);
+    }
+
+    .hero-copy p{
+      margin:0 0 14px;
+    }
+
+    .price-line{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      font-size:14px;
+      text-transform:uppercase;
+      letter-spacing:.08em;
+      color:var(--accent);
+      font-weight:700;
+      margin-top:6px;
+    }
+
+    .hero-points{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top:26px;
+      padding:0;
+      list-style:none;
+    }
+
+    .hero-points li{
+      padding:10px 14px;
+      border:1px solid var(--border);
+      border-radius:999px;
+      background:rgba(255,255,255,.62);
+      color:var(--text);
+      font-size:14px;
+      line-height:1;
+      box-shadow:0 8px 20px rgba(31,35,40,.04);
+    }
+
+    .media-card{
+      border:1px solid var(--border);
+      border-radius:var(--radius-lg);
+      overflow:hidden;
+      background:var(--surface);
+      box-shadow:var(--shadow);
+    }
+
+    .hero-media{
+      padding:14px;
+      background:linear-gradient(180deg, rgba(255,255,255,.85), rgba(255,255,255,.98));
+    }
+
+    .hero-media img{
+      width:100%;
+      aspect-ratio:1600/900;
+      object-fit:cover;
+      border-radius:calc(var(--radius-lg) - 12px);
+    }
+
+    .section-block{
+      padding:var(--section-y) 0;
+    }
+
+    .section-grid{
+      display:grid;
+      gap:clamp(22px, 3.2vw, 40px);
+      align-items:center;
+    }
+
+    .feature-left .section-grid,
+    .feature-right .section-grid,
+    .split-screen .section-grid{
+      grid-template-columns:minmax(0, .95fr) minmax(0, 1.05fr);
+    }
+
+    .feature-right .section-grid{
+      grid-template-columns:minmax(0, 1.05fr) minmax(0, .95fr);
+    }
+
+    .feature-right .section-content{
+      order:1;
+    }
+
+    .feature-right .section-media{
+      order:0;
+    }
+
+    .section-kicker{
+      font-size:14px;
+      color:var(--accent);
+      letter-spacing:.06em;
+      text-transform:uppercase;
+      margin:0 0 10px;
+    }
+
+    h2{
+      margin:0;
+      font-size:clamp(30px, 3.6vw, 44px);
+      line-height:1.02;
+      letter-spacing:-.04em;
+      text-wrap:balance;
+    }
+
+    .section-copy{
+      margin-top:18px;
+      max-width:58ch;
+      font-size:clamp(18px, 2vw, 20px);
+      color:var(--text);
+    }
+
+    .section-copy p{
+      margin:0;
+    }
+
+    .section-media img{
+      width:100%;
+      object-fit:cover;
+    }
+
+    .image-card{
+      border:1px solid var(--border);
+      border-radius:var(--radius-lg);
+      overflow:hidden;
+      background:var(--surface);
+      box-shadow:var(--shadow);
+    }
+
+    .image-card img{
+      width:100%;
+      border-radius:0;
+    }
+
+    .image-card .caption{
+      padding:16px 18px 18px;
+      color:var(--muted);
+      font-size:14px;
+      border-top:1px solid rgba(31,35,40,.08);
+      background:linear-gradient(180deg, rgba(255,255,255,.98), rgba(255,255,255,.92));
+    }
+
+    .split-screen .section-copy{
+      display:grid;
+      gap:16px;
+    }
+
+    .spec-list{
+      display:grid;
+      grid-template-columns:repeat(2, minmax(0, 1fr));
+      gap:12px;
+      margin-top:6px;
+    }
+
+    .spec{
+      padding:14px 16px;
+      border:1px solid var(--border);
+      border-radius:18px;
+      background:rgba(255,255,255,.66);
+      color:var(--accent);
+      font-size:14px;
+      line-height:1.3;
+    }
+
+    .full-bleed{
+      padding:var(--section-y) 0;
+    }
+
+    .full-bleed-wrap{
+      position:relative;
+      overflow:hidden;
+      border-radius:calc(var(--radius-lg) + 8px);
+      border:1px solid var(--border);
+      box-shadow:var(--shadow);
+      background:var(--surface);
+      min-height:clamp(520px, 70vw, 760px);
+    }
+
+    .full-bleed-wrap img{
+      position:absolute;
+      inset:0;
+      width:100%;
+      height:100%;
+      object-fit:cover;
+    }
+
+    .overlay{
+      position:relative;
+      z-index:1;
+      min-height:inherit;
+      display:flex;
+      align-items:flex-end;
+      padding:clamp(22px, 4vw, 42px);
+      background:linear-gradient(180deg, rgba(244,241,235,.08) 0%, rgba(244,241,235,.18) 40%, rgba(31,35,40,.54) 100%);
+    }
+
+    .overlay-card{
+      max-width:58ch;
+      padding:clamp(18px, 3vw, 28px);
+      border-radius:26px;
+      border:1px solid rgba(255,255,255,.22);
+      background:rgba(255,255,255,.14);
+      color:#fff;
+      backdrop-filter:blur(10px);
+      box-shadow:0 16px 34px rgba(0,0,0,.18);
+    }
+
+    .overlay-card h2{
+      color:#fff;
+    }
+
+    .overlay-card .section-copy{
+      color:rgba(255,255,255,.92);
+    }
+
+    .text-only{
+      padding:var(--section-y) 0;
+    }
+
+    .text-card{
+      max-width:860px;
+      margin:0 auto;
+      padding:clamp(24px, 4vw, 40px);
+      border:1px solid var(--border);
+      border-radius:var(--radius-lg);
+      background:rgba(255,255,255,.72);
+      box-shadow:var(--shadow);
+      text-align:left;
+    }
+
+    .text-card .section-copy{
+      max-width:none;
+    }
+
+    .cta-band{
+      padding:var(--section-y) 0 calc(var(--section-y) + 12px);
+    }
+
+    .cta-grid{
+      display:grid;
+      grid-template-columns:minmax(0, 1fr) minmax(320px, .85fr);
+      gap:clamp(24px, 3.4vw, 44px);
+      align-items:center;
+    }
+
+    .cta-panel{
+      padding:clamp(24px, 4vw, 42px);
+      border:1px solid var(--border);
+      border-radius:var(--radius-lg);
+      background:linear-gradient(180deg, rgba(255,255,255,.96), rgba(255,255,255,.84));
+      box-shadow:var(--shadow);
+    }
+
+    .cta-price{
+      display:inline-flex;
+      align-items:center;
+      margin-top:16px;
+      padding:10px 14px;
+      border-radius:999px;
+      background:rgba(73,85,102,.08);
+      color:var(--accent);
+      font-weight:700;
+      letter-spacing:.02em;
+    }
+
+    .cta-actions{
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+      margin-top:24px;
+      align-items:center;
+    }
+
+    .button{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-height:48px;
+      padding:0 18px;
+      border-radius:999px;
+      border:1px solid var(--accent);
+      background:var(--accent);
+      color:#fff;
+      font-size:14px;
+      font-weight:700;
+      letter-spacing:.03em;
+      transition:transform var(--transition), box-shadow var(--transition), background var(--transition);
+      box-shadow:0 14px 28px rgba(73,85,102,.18);
+    }
+
+    .button:hover,
+    .button:focus-visible{
+      transform:translateY(-1px);
+      outline:none;
+      box-shadow:0 16px 32px rgba(73,85,102,.22);
+      background:#404c5a;
+    }
+
+    .cta-media img{
+      width:100%;
+      aspect-ratio:1200/900;
+      object-fit:cover;
+      border-radius:var(--radius-lg);
+      border:1px solid var(--border);
+      box-shadow:var(--shadow);
+    }
+
+    footer{
+      padding:0 0 40px;
+    }
+
+    .footer-shell{
+      max-width:var(--container);
+      margin:0 auto;
+      padding:18px var(--gutter) 0;
+      border-top:1px solid rgba(31,35,40,.1);
+      color:var(--muted);
+      font-size:14px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+      flex-wrap:wrap;
+    }
+
+    .footer-shell strong{
+      color:var(--text);
+      font-weight:600;
+    }
+
+    @media (max-width: 960px){
+      .hero-grid,
+      .feature-left .section-grid,
+      .feature-right .section-grid,
+      .split-screen .section-grid,
+      .cta-grid{
+        grid-template-columns:1fr;
+      }
+
+      .feature-right .section-content,
+      .feature-right .section-media{
+        order:initial;
+      }
+
+      h1{
+        max-width:unset;
+      }
+
+      .overlay{
+        align-items:flex-end;
+      }
+    }
+
+    @media (max-width: 720px){
+      .nav-shell{
+        align-items:flex-start;
+        flex-direction:column;
+      }
+
+      nav ul{
+        justify-content:flex-start;
+      }
+
+      .spec-list{
+        grid-template-columns:1fr;
+      }
+
+      .hero{
+        padding-top:22px;
+      }
+
+      .hero-media{
+        padding:10px;
+      }
+
+      .overlay{
+        padding:16px;
+      }
+
+      .overlay-card,
+      .text-card,
+      .cta-panel{
+        padding:20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#content">Přejít na obsah</a>
+
+  <header>
+    <div class="nav-shell">
+      <div class="brand" aria-label="New Balance MADE in USA 990v6">
+        <strong>New Balance MADE in USA 990v6</strong>
+        <span>4 990 Kč</span>
+      </div>
+      <nav aria-label="Hlavní navigace">
+        <ul>
+          <li><a href="#made_in_usa">Made in USA bez kompromisů</a></li>
+          <li><a href="#materials">Materiály</a></li>
+          <li><a href="#comfort">Pohodlí</a></li>
+          <li><a href="#timeless">Nadčasová silueta</a></li>
+          <li><a href="#heritage">Řemeslo</a></li>
+          <li><a href="#cta">Vybrat velikost</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="content">
+    <section id="hero" class="hero">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-content">
+            <div class="eyebrow">Šedá ikona, která drží tvar i tempo</div>
+            <h1>Šedá ikona s americkým řemeslem a pohodlím na každý den</h1>
+            <div class="hero-copy">
+              <p>New Balance MADE in USA 990v6 spojuje ikonickou šedou barvu, robustní retro-běžeckou siluetu a pohodlí, které funguje celý den. Je vyrobená v USA s minimálně 70% domácím podílem hodnoty a navazuje na přes 75 let řemeslné výroby.</p>
+              <p class="price-line">Cena: 4 990 Kč</p>
+            </div>
+            <ul class="hero-points" aria-label="Hlavní benefity">
+              <li>ikonickou šedou barvu</li>
+              <li>pohodlí, které funguje celý den</li>
+              <li>minimálně 70% domácím podílem hodnoty</li>
+            </ul>
+          </div>
+          <div class="hero-media media-card">
+            <img src="images/img_hero.jpg" alt="Šedá ikona, která drží tvar i tempo — New Balance MADE in USA 990v6" width="1600" height="900" loading="eager" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="made_in_usa" class="section-block feature-left">
+      <div class="container">
+        <div class="section-grid">
+          <div class="section-content">
+            <p class="section-kicker">Made in USA bez kompromisů</p>
+            <h2>Made in USA bez kompromisů</h2>
+            <div class="section-copy">
+              <p>MADE in USA není jen označení, ale závazek k detailu. 990v6 je vyrobena v USA s minimálně 70% domácím podílem hodnoty, takže dostáváte model, u kterého je kvalita zpracování součástí designu, ne až poslední krok. Poctivý původ tu dává smysl i na dotek.</p>
+            </div>
+          </div>
+          <div class="section-media image-card">
+            <img src="images/img_made_in_usa.jpg" alt="Made in USA bez kompromisů — New Balance MADE in USA 990v6" width="1200" height="900" loading="lazy" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="materials" class="section-block split-screen">
+      <div class="container">
+        <div class="section-grid">
+          <div class="section-media image-card">
+            <img src="images/img_materials.jpg" alt="Materiály, které vypadají i vydrží — New Balance MADE in USA 990v6" width="1200" height="900" loading="lazy" />
+          </div>
+          <div class="section-content">
+            <p class="section-kicker">Materiály, které vypadají i vydrží</p>
+            <h2>Materiály, které vypadají i vydrží</h2>
+            <div class="section-copy">
+              <p>Svršek ze semiše a syntetických překryvů na síťovém podkladu vytváří bohatou strukturu, která působí luxusně, ale zůstává funkční. Pod tím pracuje odolná pryžová podešev, připravená na každodenní nošení bez ztráty čistého vzhledu.</p>
+            </div>
+            <div class="spec-list" aria-label="Klíčové materiálové detaily">
+              <div class="spec">semiš</div>
+              <div class="spec">syntetické překryvy</div>
+              <div class="spec">síťový podklad</div>
+              <div class="spec">odolná pryžová podešev</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="comfort" class="section-block feature-right">
+      <div class="container">
+        <div class="section-grid">
+          <div class="section-content">
+            <p class="section-kicker">Pohodlí, které poznáte hned</p>
+            <h2>Pohodlí, které poznáte hned</h2>
+            <div class="section-copy">
+              <p>V mezipodešvi pracuje tlumení FuelCell, takže krok působí měkčeji a svižněji. Konstrukce bez středového sedla podporuje stabilní a přirozený pocit pod chodidlem — přesně ten typ pohodlí, který oceníte od ranního přesunu až po večer.</p>
+            </div>
+          </div>
+          <div class="section-media image-card">
+            <img src="images/img_comfort.jpg" alt="Pohodlí, které poznáte hned — New Balance MADE in USA 990v6" width="1200" height="900" loading="lazy" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="timeless" class="full-bleed">
+      <div class="container">
+        <div class="full-bleed-wrap">
+          <img src="images/img_timeless.jpg" alt="Nadčasová silueta, která funguje s čímkoli — New Balance MADE in USA 990v6" width="1600" height="900" loading="lazy" />
+          <div class="overlay">
+            <div class="overlay-card">
+              <p class="section-kicker" style="color:rgba(255,255,255,.78);">Nadčasová silueta, která funguje s čímkoli</p>
+              <h2>Nadčasová silueta, která funguje s čímkoli</h2>
+              <div class="section-copy">
+                <p>990v6 stojí na robustní retro-běžecké siluetě s výrazným logem N, ale nepřetlačuje váš styl. Ikonická šedá barva se snadno kombinuje a funguje jako jistý základ šatníku — od denního městského looku až po uvolněnější víkend.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="heritage" class="text-only">
+      <div class="container">
+        <div class="text-card">
+          <p class="section-kicker">Řemeslo, které má hloubku</p>
+          <h2>Řemeslo, které má hloubku</h2>
+          <div class="section-copy">
+            <p>Za 990v6 stojí více než 75 let řemeslné výroby, které se tu potkávají s moderním komfortem a smyslem pro detail. Výsledek není sezónní trend, ale promyšlená teniska pro lidi, kteří chtějí nadčasové, kvalitní a opravdu nositelné řešení.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="cta" class="cta-band">
+      <div class="container">
+        <div class="cta-grid">
+          <div class="cta-panel">
+            <p class="section-kicker">Vyberte si svou šedou ikonu</p>
+            <h2>Vyberte si svou šedou ikonu</h2>
+            <div class="section-copy">
+              <p>New Balance MADE in USA 990v6 za 4 990 Kč přináší ikonickou šedou, pohodlí FuelCell, poctivé materiály a výrobu v USA s minimálně 70% domácím podílem hodnoty. Pokud hledáte tenisky, které mají styl, kvalitu i historii, je to přesně ten model, který dává smysl dlouhodobě.</p>
+            </div>
+            <div class="cta-price">4 990 Kč</div>
+            <div class="cta-actions">
+              <a class="button" href="#hero">Vybrat velikost</a>
+            </div>
+          </div>
+          <div class="cta-media">
+            <img src="images/img_cta.jpg" alt="Vyberte si svou šedou ikonu — New Balance MADE in USA 990v6" width="1200" height="900" loading="lazy" />
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-shell">
+      <strong>New Balance MADE in USA 990v6</strong>
+      <span>4 990 Kč</span>
+    </div>
+  </footer>
+</body>
+</html>

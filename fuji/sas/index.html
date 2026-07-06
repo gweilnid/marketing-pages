@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Prémiový kompakt FUJIFILM X100VI za 36 990 Kč: APS-C X-Trans CMOS 5 HR 40,2 Mpx, 23 mm F2, stabilizace až 6 EV a filmové simulace.">
+  <title>FUJIFILM X100VI | retro kompaktní ikona</title>
+  <style>
+    :root{
+      --background:#F4F1EA;
+      --surface:#FFFFFF;
+      --text:#111111;
+      --muted:#6E6A63;
+      --accent:#0B6A4A;
+      --border:rgba(17,17,17,.12);
+      --border-strong:rgba(17,17,17,.18);
+      --shadow:0 24px 60px rgba(17,17,17,.08);
+      --shadow-soft:0 10px 30px rgba(17,17,17,.06);
+      --radius:28px;
+      --radius-sm:20px;
+      --container:1180px;
+      --grid:8px;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      background:var(--background);
+      color:var(--text);
+      font-family:Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size:16px;
+      line-height:1.5;
+      -webkit-font-smoothing:antialiased;
+      text-rendering:optimizeLegibility;
+    }
+
+    img{
+      display:block;
+      max-width:100%;
+      height:auto;
+    }
+
+    a{
+      color:inherit;
+      text-decoration:none;
+    }
+
+    .container{
+      width:min(var(--container), calc(100% - 32px));
+      margin-inline:auto;
+    }
+
+    .site-header{
+      position:sticky;
+      top:0;
+      z-index:30;
+      background:rgba(244,241,234,.82);
+      backdrop-filter:saturate(120%) blur(16px);
+      border-bottom:1px solid var(--border);
+    }
+
+    .nav{
+      min-height:76px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:24px;
+      padding-block:14px;
+    }
+
+    .brand{
+      display:flex;
+      flex-direction:column;
+      gap:2px;
+      font-size:14px;
+      line-height:1.2;
+      letter-spacing:.02em;
+      color:var(--text);
+      white-space:nowrap;
+    }
+
+    .brand strong{
+      font-weight:600;
+    }
+
+    .brand span{
+      color:var(--muted);
+    }
+
+    .nav-links{
+      display:flex;
+      align-items:center;
+      gap:22px;
+      flex-wrap:wrap;
+      justify-content:center;
+    }
+
+    .nav-links a{
+      font-size:14px;
+      line-height:20px;
+      color:var(--muted);
+      transition:color .2s ease;
+    }
+
+    .nav-links a:hover,
+    .nav-links a:focus-visible{
+      color:var(--text);
+      outline:none;
+    }
+
+    .nav-cta{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:12px 18px;
+      border-radius:999px;
+      background:var(--accent);
+      color:#fff;
+      font-size:14px;
+      font-weight:600;
+      line-height:20px;
+      box-shadow:0 12px 24px rgba(11,106,74,.18);
+      white-space:nowrap;
+    }
+
+    .nav-cta:hover,
+    .nav-cta:focus-visible{
+      outline:none;
+      filter:brightness(1.04);
+    }
+
+    main{
+      display:block;
+    }
+
+    section{
+      scroll-margin-top:96px;
+    }
+
+    .section{
+      padding-block:clamp(72px, 9vw, 120px);
+    }
+
+    .section + .section{
+      border-top:1px solid var(--border);
+    }
+
+    .hero{
+      padding-top:clamp(34px, 4vw, 56px);
+    }
+
+    .hero-grid,
+    .split-grid,
+    .feature-grid{
+      display:grid;
+      gap:clamp(28px, 4vw, 56px);
+      align-items:center;
+    }
+
+    .hero-grid{
+      grid-template-columns:minmax(0, .92fr) minmax(0, 1.08fr);
+    }
+
+    .split-grid{
+      grid-template-columns:minmax(0, 1fr) minmax(0, 1fr);
+    }
+
+    .feature-grid{
+      grid-template-columns:minmax(0, 1.05fr) minmax(0, .95fr);
+    }
+
+    .hero-copy{
+      padding:clamp(12px, 1vw, 8px) 0;
+    }
+
+    .kicker{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      margin-bottom:20px;
+      font-size:14px;
+      line-height:20px;
+      letter-spacing:.16em;
+      text-transform:uppercase;
+      color:var(--accent);
+      font-weight:600;
+    }
+
+    h1,h2,h3{
+      margin:0;
+      font-family:"Source Serif 4", Georgia, serif;
+      font-weight:600;
+      letter-spacing:-.03em;
+      text-wrap:balance;
+    }
+
+    h1{
+      font-size:clamp(3.2rem, 6.2vw, 4.5rem);
+      line-height:clamp(3.5rem, 6.6vw, 4.75rem);
+      max-width:10ch;
+    }
+
+    h2{
+      font-size:clamp(2.4rem, 4vw, 3rem);
+      line-height:clamp(2.75rem, 4.4vw, 3.375rem);
+      max-width:13ch;
+    }
+
+    h3{
+      font-size:clamp(1.55rem, 2.2vw, 2rem);
+      line-height:1.15;
+    }
+
+    .lead,
+    .section p{
+      margin:0;
+      font-size:clamp(1.05rem, 1.25vw, 1.25rem);
+      line-height:1.55;
+      color:var(--text);
+      max-width:62ch;
+    }
+
+    .hero .lead{
+      margin-top:24px;
+      color:var(--muted);
+      max-width:54ch;
+    }
+
+    .specs{
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+      margin-top:28px;
+    }
+
+    .chip{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:11px 14px;
+      border-radius:999px;
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.76);
+      color:var(--text);
+      font-size:14px;
+      line-height:20px;
+      box-shadow:inset 0 1px 0 rgba(255,255,255,.72);
+    }
+
+    .chip.accent{
+      border-color:rgba(11,106,74,.22);
+      background:rgba(11,106,74,.08);
+      color:var(--accent);
+    }
+
+    .actions{
+      display:flex;
+      gap:14px;
+      flex-wrap:wrap;
+      margin-top:30px;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:15px 22px;
+      border-radius:999px;
+      background:var(--accent);
+      color:#fff;
+      border:1px solid transparent;
+      font-size:14px;
+      line-height:20px;
+      font-weight:600;
+      box-shadow:0 16px 32px rgba(11,106,74,.18);
+    }
+
+    .btn:hover,
+    .btn:focus-visible{
+      outline:none;
+      filter:brightness(1.03);
+    }
+
+    .ghost{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:15px 22px;
+      border-radius:999px;
+      border:1px solid var(--border-strong);
+      background:rgba(255,255,255,.6);
+      color:var(--text);
+      font-size:14px;
+      line-height:20px;
+      font-weight:600;
+    }
+
+    .card,
+    .media-frame{
+      background:var(--surface);
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow-soft);
+      overflow:hidden;
+    }
+
+    .media-frame{
+      padding:12px;
+    }
+
+    .media-frame img{
+      border-radius:calc(var(--radius) - 10px);
+      width:100%;
+      object-fit:cover;
+      background:#e9e4da;
+    }
+
+    .section-copy{
+      display:flex;
+      flex-direction:column;
+      gap:22px;
+    }
+
+    .section-copy .eyebrow{
+      display:inline-flex;
+      width:fit-content;
+      font-size:14px;
+      line-height:20px;
+      color:var(--accent);
+      letter-spacing:.12em;
+      text-transform:uppercase;
+      font-weight:600;
+    }
+
+    .section-copy p{
+      color:var(--muted);
+    }
+
+    .feature-notes{
+      display:grid;
+      grid-template-columns:repeat(2, minmax(0, 1fr));
+      gap:12px;
+      margin-top:6px;
+    }
+
+    .note{
+      padding:18px 18px 16px;
+      border:1px solid var(--border);
+      border-radius:22px;
+      background:rgba(255,255,255,.72);
+    }
+
+    .note strong{
+      display:block;
+      font-size:14px;
+      line-height:20px;
+      letter-spacing:.06em;
+      text-transform:uppercase;
+      color:var(--accent);
+      margin-bottom:8px;
+    }
+
+    .note span{
+      display:block;
+      font-size:16px;
+      line-height:24px;
+      color:var(--text);
+    }
+
+    .bento{
+      display:grid;
+      grid-template-columns:1.15fr .85fr;
+      gap:18px;
+      align-items:stretch;
+    }
+
+    .bento .media-frame{
+      min-height:100%;
+    }
+
+    .bento-aside{
+      display:grid;
+      grid-template-rows:auto auto;
+      gap:18px;
+    }
+
+    .bento-copy{
+      padding:28px;
+      display:flex;
+      flex-direction:column;
+      gap:18px;
+      justify-content:center;
+      min-height:100%;
+    }
+
+    .bento-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:18px;
+    }
+
+    .stat{
+      padding:24px;
+      min-height:100%;
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+      gap:18px;
+    }
+
+    .stat .label{
+      font-size:14px;
+      line-height:20px;
+      color:var(--muted);
+    }
+
+    .stat .value{
+      font-family:"Source Serif 4", Georgia, serif;
+      font-size:clamp(1.55rem, 2vw, 2rem);
+      line-height:1.15;
+      color:var(--text);
+      letter-spacing:-.02em;
+    }
+
+    .travel-card{
+      padding:28px;
+      display:flex;
+      flex-direction:column;
+      gap:18px;
+      justify-content:center;
+    }
+
+    .full-bleed{
+      padding-block:0;
+    }
+
+    .video-stage{
+      position:relative;
+      border-radius:32px;
+      overflow:hidden;
+      border:1px solid var(--border);
+      box-shadow:var(--shadow);
+      background:var(--surface);
+    }
+
+    .video-stage img{
+      width:100%;
+      object-fit:cover;
+      aspect-ratio:16/9;
+    }
+
+    .video-overlay{
+      position:absolute;
+      left:clamp(16px, 3vw, 28px);
+      bottom:clamp(16px, 3vw, 28px);
+      width:min(560px, calc(100% - 32px));
+      padding:28px;
+      border-radius:28px;
+      background:rgba(255,255,255,.88);
+      border:1px solid rgba(17,17,17,.1);
+      box-shadow:0 18px 50px rgba(17,17,17,.12);
+      backdrop-filter:blur(10px);
+    }
+
+    .video-overlay .chips{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top:18px;
+    }
+
+    .cta-card{
+      padding:clamp(28px, 4vw, 44px);
+      display:grid;
+      grid-template-columns:1.15fr .85fr;
+      gap:24px;
+      align-items:center;
+      border-radius:34px;
+      border:1px solid rgba(11,106,74,.16);
+      background:
+        linear-gradient(180deg, rgba(11,106,74,.06), rgba(11,106,74,0) 38%),
+        var(--surface);
+      box-shadow:var(--shadow);
+    }
+
+    .cta-card .section-copy p{
+      max-width:56ch;
+    }
+
+    .cta-actions{
+      display:flex;
+      flex-direction:column;
+      align-items:flex-start;
+      gap:16px;
+      padding:4px 0;
+    }
+
+    .price{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding:12px 16px;
+      border-radius:999px;
+      border:1px solid rgba(11,106,74,.2);
+      background:rgba(11,106,74,.08);
+      color:var(--accent);
+      font-size:14px;
+      line-height:20px;
+      font-weight:600;
+    }
+
+    .footer{
+      padding:28px 0 40px;
+      border-top:1px solid var(--border);
+      display:flex;
+      justify-content:space-between;
+      gap:16px;
+      flex-wrap:wrap;
+      color:var(--muted);
+      font-size:14px;
+      line-height:20px;
+    }
+
+    .footer strong{
+      color:var(--text);
+      font-weight:600;
+    }
+
+    @media (max-width: 980px){
+      .nav{
+        flex-wrap:wrap;
+        justify-content:center;
+        padding-block:16px;
+      }
+      .brand{
+        width:100%;
+        text-align:center;
+      }
+      .nav-links{
+        order:3;
+        width:100%;
+        justify-content:center;
+      }
+      .nav-cta{
+        order:2;
+      }
+      .hero-grid,
+      .split-grid,
+      .feature-grid,
+      .bento,
+      .cta-card{
+        grid-template-columns:1fr;
+      }
+      .feature-notes,
+      .bento-grid{
+        grid-template-columns:1fr;
+      }
+      h1{
+        max-width:12ch;
+      }
+      h2{
+        max-width:14ch;
+      }
+      .video-overlay{
+        position:static;
+        width:auto;
+        margin:16px;
+      }
+    }
+
+    @media (max-width: 640px){
+      .container{
+        width:min(var(--container), calc(100% - 24px));
+      }
+      .section{
+        padding-block:64px;
+      }
+      .hero{
+        padding-top:24px;
+      }
+      .media-frame{
+        padding:8px;
+        border-radius:24px;
+      }
+      .card,
+      .video-stage,
+      .cta-card{
+        border-radius:24px;
+      }
+      .note,
+      .stat,
+      .travel-card,
+      .bento-copy,
+      .video-overlay{
+        padding:20px;
+      }
+      .actions,
+      .specs{
+        gap:10px;
+      }
+      .btn,
+      .ghost,
+      .nav-cta{
+        width:100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="container nav" aria-label="Hlavní navigace">
+      <a class="brand" href="#hero" aria-label="FUJIFILM X100VI | retro kompaktní ikona">
+        <strong>FUJIFILM X100VI | retro kompaktní ikona</strong>
+        <span>36 990 Kč</span>
+      </a>
+      <div class="nav-links">
+        <a href="#crafted">Navržená pro okamžiky, ne pro kompromisy</a>
+        <a href="#image">Detail, který drží rytmus města</a>
+        <a href="#film">Barvy, které mají paměť</a>
+        <a href="#travel">Kompaktní na den, připravená na víkend</a>
+        <a href="#video">Video bez změny charakteru</a>
+      </div>
+      <a class="nav-cta" href="#cta">Zjistit dostupnost</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="hero" class="section hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="kicker">FUJIFILM X100VI</span>
+          <h1>Vidět. Rámovat. Tvořit.</h1>
+          <p class="lead">Retro dálkoměrný design, hliníková ovládací kolečka a minimalistická nadčasová estetika dělají z X100VI fotoaparát, který působí jako předmět s charakterem — ne jen jako technika. Je kompaktní, sebevědomý a připravený na street, cestování i každodenní nošení. To vše za 36 990 Kč.</p>
+          <div class="specs" aria-label="Klíčové parametry">
+            <span class="chip accent">APS-C X-Trans CMOS 5 HR</span>
+            <span class="chip">40,2 Mpx</span>
+            <span class="chip">23 mm F2</span>
+            <span class="chip">stabilizace až 6 EV</span>
+          </div>
+          <div class="actions">
+            <a class="btn" href="#cta">Zjistit dostupnost</a>
+            <a class="ghost" href="#crafted">Prohlédnout detaily</a>
+          </div>
+        </div>
+
+        <figure class="media-frame" aria-label="Produktový snímek">
+          <img src="images/img_hero.jpg" alt="X100VI. Ikona, která nezestárne. — FUJIFILM X100VI" width="1600" height="900" loading="eager" decoding="async">
+        </figure>
+      </div>
+    </section>
+
+    <section id="crafted" class="section">
+      <div class="container split-grid">
+        <figure class="media-frame">
+          <img src="images/img_crafted.jpg" alt="Navržená pro okamžiky, ne pro kompromisy — FUJIFILM X100VI" width="1200" height="900" loading="lazy" decoding="async">
+        </figure>
+
+        <div class="section-copy">
+          <span class="eyebrow">Navržená pro okamžiky, ne pro kompromisy</span>
+          <h2>Navržená pro okamžiky, ne pro kompromisy</h2>
+          <p>X100VI funguje tak přirozeně, že vás nechá soustředit se na scénu, ne na menu. Nízký profil, jistý úchop a mechanický rytmus ovladačů vytvářejí analogový pocit, který má v digitálním světě vzácnou váhu. Je to kompaktní fotoaparát pro lidi, kteří chtějí mít fotografii pořád po ruce.</p>
+          <div class="feature-notes" aria-label="Zkušenost a ergonomie">
+            <div class="note">
+              <strong>Nízký profil</strong>
+              <span>jistý úchop a přirozené nošení</span>
+            </div>
+            <div class="note">
+              <strong>Mechanický rytmus</strong>
+              <span>ovladače s analogovým pocitem</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="image" class="section">
+      <div class="container feature-grid">
+        <figure class="media-frame">
+          <img src="images/img_image.jpg" alt="Detail, který drží rytmus města — FUJIFILM X100VI" width="1200" height="900" loading="lazy" decoding="async">
+        </figure>
+
+        <div class="section-copy">
+          <span class="eyebrow">Detail, který drží rytmus města</span>
+          <h2>Detail, který drží rytmus města</h2>
+          <p>Uvnitř pracuje snímač APS-C X-Trans CMOS 5 HR s rozlišením 40,2 megapixelu a pevný objektiv 23 mm F2 (ekvivalent 35 mm). Pětiosá stabilizace v těle až 6,0 EV pomáhá udržet ostrost i v noci, v interiéru i při spontánních záběrech z ruky. Výsledek je čistý, pružný a připravený na detail i atmosféru.</p>
+          <div class="specs" aria-label="Obrazové parametry">
+            <span class="chip accent">APS-C X-Trans CMOS 5 HR</span>
+            <span class="chip">40,2 megapixelu</span>
+            <span class="chip">23 mm F2</span>
+            <span class="chip">5osá stabilizace až 6,0 EV</span>
+            <span class="chip">ekvivalent 35 mm</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="film" class="section">
+      <div class="container bento">
+        <figure class="media-frame">
+          <img src="images/img_film.jpg" alt="Barvy, které mají paměť — FUJIFILM X100VI" width="1200" height="900" loading="lazy" decoding="async">
+        </figure>
+
+        <div class="bento-aside">
+          <article class="card bento-copy">
+            <span class="eyebrow">Barvy, které mají paměť</span>
+            <h2>Barvy, které mají paměť</h2>
+            <p>X100VI nabízí 20 režimů filmových simulací včetně REALA ACE. Od decentních, přirozených tónů po výraznější analogový charakter získáte obraz, který má vlastní náladu ještě před editací. Je to ideální nástroj pro tvůrce, kteří chtějí mít výslednou estetiku pod kontrolou už při stisku spouště.</p>
+          </article>
+
+          <div class="bento-grid" aria-label="Filmové simulace">
+            <article class="card stat">
+              <div class="label">Filmové simulace</div>
+              <div class="value">20 režimů filmových simulací</div>
+            </article>
+            <article class="card stat">
+              <div class="label">Charakter obrazu</div>
+              <div class="value">včetně REALA ACE</div>
+            </article>
+            <article class="card stat">
+              <div class="label">Tón</div>
+              <div class="value">Od decentních, přirozených tónů</div>
+            </article>
+            <article class="card stat">
+              <div class="label">Pocit</div>
+              <div class="value">výraznější analogový charakter</div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="travel" class="section">
+      <div class="container split-grid">
+        <div class="section-copy">
+          <span class="eyebrow">Kompaktní na den, připravená na víkend</span>
+          <h2>Kompaktní na den, připravená na víkend</h2>
+          <p>Na denní nošení, do letadla i na dlouhou procházku je X100VI postavená tak, aby vás nezdržovala. Výdrž baterie přibližně 450 snímků stačí na běžný fotoden a slot na SD kartu UHS-I udržuje workflow jednoduché a rychlé. Je to přesně ten druh kompaktu, který vezmete s sebou bez rozmýšlení.</p>
+          <div class="specs" aria-label="Cestovní parametry">
+            <span class="chip accent">výdrž baterie přibližně 450 snímků</span>
+            <span class="chip">slot na SD kartu UHS-I</span>
+            <span class="chip">jednoduché a rychlé workflow</span>
+          </div>
+        </div>
+
+        <figure class="media-frame">
+          <img src="images/img_travel.jpg" alt="Kompaktní na den, připravená na víkend — FUJIFILM X100VI" width="1200" height="900" loading="lazy" decoding="async">
+        </figure>
+      </div>
+    </section>
+
+    <section id="video" class="section full-bleed">
+      <div class="container video-stage">
+        <img src="images/img_video.jpg" alt="Video bez změny charakteru — FUJIFILM X100VI" width="1600" height="900" loading="lazy" decoding="async">
+        <div class="video-overlay">
+          <div class="section-copy">
+            <span class="eyebrow">Video bez změny charakteru</span>
+            <h2>Video bez změny charakteru</h2>
+            <p>Když se záběr přepne z fotografie do pohybu, X100VI si drží stejnou disciplínu obrazu. Interní video 6,2K/30p 10bit dává tvůrcům prostor pro krátké filmy, backstage záběry i cestovatelské story, aniž by ztratili lehkost a nenápadnost celého systému.</p>
+          </div>
+          <div class="chips" aria-label="Video parametry">
+            <span class="chip accent">6,2K/30p</span>
+            <span class="chip">10bit</span>
+            <span class="chip">interní video</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="cta" class="section">
+      <div class="container cta-card">
+        <div class="section-copy">
+          <span class="eyebrow">Jedna kamera. Jeden přesvědčivý důvod.</span>
+          <h2>Jedna kamera. Jeden přesvědčivý důvod.</h2>
+          <p>FUJIFILM X100VI je pro ty, kdo chtějí kompaktní fotoaparát s analogovým pocitem, řemeslnou precizností a nadčasovým výrazem. Pokud hledáte ikonu, která vás bude inspirovat každý den, je čas ji přidat do výbavy. Zjistěte dostupnost a začněte fotit po svém.</p>
+        </div>
+        <div class="cta-actions">
+          <span class="price">36 990 Kč</span>
+          <a class="btn" href="#hero">Zjistit dostupnost</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="container footer">
+    <div><strong>FUJIFILM X100VI | retro kompaktní ikona</strong></div>
+    <div>36 990 Kč</div>
+  </footer>
+</body>
+</html>

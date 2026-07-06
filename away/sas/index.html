@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Away The Carry-On | minimalistický kabinový kufr</title>
+  <meta name="description" content="Minimalistický kabinový kufr Away The Carry-On za 6 490 Kč. Skořepina ze 100% polykarbonátu, vnější rozměry 55×36,5×23 cm, hmotnost 3,4 kg, objem 41 litrů, čtyři otočná kolečka 360°, kombinační zámek schválený TSA, vnitřní kompresní systém s dvojitým popruhem a doživotní záruka.">
+  <style>
+    :root {
+      --background: #0B0C0D;
+      --surface: #15181B;
+      --text: #F4F4F2;
+      --muted: #A1A7AF;
+      --accent: #C8CDD3;
+      --border: rgba(244, 244, 242, 0.08);
+      --shadow: 0 24px 60px rgba(0, 0, 0, 0.38);
+      --radius: 20px;
+      --container: min(1200px, calc(100% - 48px));
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background:
+        radial-gradient(1200px 720px at 18% 0%, rgba(200, 205, 211, 0.08), transparent 58%),
+        radial-gradient(900px 540px at 100% 0%, rgba(255, 255, 255, 0.04), transparent 52%),
+        var(--background);
+      color: var(--text);
+      font-family: Inter, "SF Pro Display", "SF Pro Text", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.5;
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+    }
+
+    .container {
+      width: var(--container);
+      margin-inline: auto;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      background: rgba(11, 12, 13, 0.74);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .header-inner {
+      min-height: 74px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      font-size: 12px;
+      line-height: 16px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--text);
+      white-space: nowrap;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    nav a {
+      font-size: 14px;
+      line-height: 20px;
+      color: var(--muted);
+      transition: color 160ms ease;
+    }
+
+    nav a:hover,
+    nav a:focus-visible {
+      color: var(--text);
+    }
+
+    .header-cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 42px;
+      padding: 0 14px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: rgba(255, 255, 255, 0.03);
+      color: var(--text);
+      font-size: 14px;
+      line-height: 20px;
+      white-space: nowrap;
+    }
+
+    .header-cta:hover,
+    .header-cta:focus-visible,
+    .btn:hover,
+    .btn:focus-visible {
+      transform: translateY(-1px);
+    }
+
+    .section {
+      padding: clamp(72px, 9vw, 120px) 0;
+    }
+
+    .section + .section {
+      border-top: 1px solid var(--border);
+    }
+
+    .hero {
+      padding-top: clamp(44px, 5vw, 76px);
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent 26%),
+        radial-gradient(900px 500px at 8% 16%, rgba(200, 205, 211, 0.08), transparent 62%);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.02fr) minmax(360px, 0.98fr);
+      gap: clamp(32px, 5vw, 64px);
+      align-items: center;
+    }
+
+    .eyebrow {
+      margin: 0 0 14px;
+      font-size: 12px;
+      line-height: 16px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    h1 {
+      margin: 0;
+      max-width: 12ch;
+      font-size: clamp(3rem, 6.5vw, 4.5rem);
+      line-height: 0.96;
+      letter-spacing: -0.05em;
+    }
+
+    .hero-copy p {
+      margin: 24px 0 0;
+      max-width: 60ch;
+      font-size: 16px;
+      line-height: 24px;
+      color: var(--text);
+    }
+
+    .specline {
+      margin-top: 22px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(244, 244, 242, 0.1);
+      color: var(--accent);
+    }
+
+    .actions {
+      margin-top: 28px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 0 18px;
+      border-radius: 14px;
+      border: 1px solid var(--border);
+      background: rgba(255, 255, 255, 0.03);
+      color: var(--text);
+      font-size: 14px;
+      line-height: 20px;
+      font-weight: 600;
+      transition: transform 160ms ease, background-color 160ms ease, border-color 160ms ease;
+    }
+
+    .btn.primary {
+      background: var(--text);
+      color: var(--background);
+      border-color: transparent;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.26);
+    }
+
+    .hero-figure,
+    .media {
+      margin: 0;
+      border-radius: var(--radius);
+      overflow: hidden;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      box-shadow: var(--shadow), inset 0 1px 0 rgba(255, 255, 255, 0.03);
+    }
+
+    .hero-figure {
+      padding: 12px;
+    }
+
+    .hero-figure img,
+    .media img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .feature-grid,
+    .split-grid,
+    .text-grid {
+      display: grid;
+      gap: 32px;
+      align-items: center;
+    }
+
+    .feature-grid {
+      grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+    }
+
+    .feature-grid.reverse {
+      grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+    }
+
+    .split-grid {
+      grid-template-columns: minmax(0, 1fr) minmax(0, 0.98fr);
+    }
+
+    .text-grid {
+      grid-template-columns: minmax(0, 1fr) minmax(320px, 0.72fr);
+    }
+
+    .copy h2,
+    .section-head h2 {
+      margin: 0 0 18px;
+      max-width: 14ch;
+      font-size: clamp(2rem, 3vw, 2.5rem);
+      line-height: 1.05;
+      letter-spacing: -0.04em;
+    }
+
+    .copy p,
+    .section-head p {
+      margin: 0;
+      max-width: 60ch;
+      font-size: 16px;
+      line-height: 24px;
+      color: var(--text);
+    }
+
+    .section-head {
+      max-width: 760px;
+      margin-bottom: 28px;
+    }
+
+    .bento-grid {
+      display: grid;
+      grid-template-columns: repeat(12, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .bento-card {
+      padding: 24px;
+      min-height: 132px;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      background: var(--surface);
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.22), inset 0 1px 0 rgba(255, 255, 255, 0.03);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .bento-card.wide {
+      grid-column: span 12;
+      min-height: auto;
+      padding: 0;
+      border: 0;
+      background: transparent;
+      box-shadow: none;
+    }
+
+    .bento-card.span-6 {
+      grid-column: span 6;
+    }
+
+    .bento-card.span-4 {
+      grid-column: span 4;
+    }
+
+    .bento-card.span-3 {
+      grid-column: span 3;
+    }
+
+    .bento-card .label {
+      margin: 0 0 12px;
+      font-size: 12px;
+      line-height: 16px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .bento-card .value {
+      margin: 0;
+      font-size: 20px;
+      line-height: 28px;
+      letter-spacing: -0.02em;
+      color: var(--text);
+    }
+
+    .bento-card.wide .value {
+      max-width: 46ch;
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    .panel {
+      padding: 28px;
+      border-radius: 24px;
+      border: 1px solid var(--border);
+      background: linear-gradient(180deg, rgba(21, 24, 27, 0.98), rgba(21, 24, 27, 0.82));
+      box-shadow: var(--shadow);
+    }
+
+    .cta-shell {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 32px;
+      align-items: center;
+      padding: 32px;
+      border-radius: 24px;
+      border: 1px solid var(--border);
+      background:
+        radial-gradient(700px 220px at 0% 0%, rgba(200, 205, 211, 0.08), transparent 60%),
+        linear-gradient(180deg, rgba(21, 24, 27, 0.98), rgba(21, 24, 27, 0.84));
+      box-shadow: var(--shadow);
+    }
+
+    .cta-shell h2 {
+      margin: 0 0 16px;
+      font-size: clamp(2rem, 3vw, 2.5rem);
+      line-height: 1.05;
+      letter-spacing: -0.04em;
+    }
+
+    .cta-shell p {
+      margin: 0;
+      max-width: 60ch;
+      font-size: 16px;
+      line-height: 24px;
+      color: var(--text);
+    }
+
+    .cta-actions {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+    }
+
+    footer {
+      padding: 28px 0 56px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+    }
+
+    .footer-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+    :focus-visible {
+      outline: 2px solid rgba(200, 205, 211, 0.9);
+      outline-offset: 3px;
+      border-radius: 10px;
+    }
+
+    @media (max-width: 960px) {
+      .hero-grid,
+      .feature-grid,
+      .feature-grid.reverse,
+      .split-grid,
+      .text-grid,
+      .cta-shell {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-figure {
+        order: 2;
+      }
+
+      .feature-grid.reverse .media {
+        order: 2;
+      }
+
+      nav {
+        display: none;
+      }
+
+      .header-inner {
+        justify-content: space-between;
+      }
+
+      .bento-card.span-6,
+      .bento-card.span-4,
+      .bento-card.span-3,
+      .bento-card.wide {
+        grid-column: span 12;
+      }
+
+      .cta-actions {
+        justify-content: flex-start;
+      }
+    }
+
+    @media (max-width: 640px) {
+      :root {
+        --container: min(1200px, calc(100% - 32px));
+      }
+
+      .site-header {
+        position: sticky;
+      }
+
+      .header-cta {
+        display: none;
+      }
+
+      .section {
+        padding: 64px 0;
+      }
+
+      h1 {
+        max-width: 13ch;
+      }
+
+      .hero-copy p,
+      .copy p,
+      .section-head p,
+      .cta-shell p {
+        font-size: 14px;
+        line-height: 22px;
+      }
+
+      .bento-card {
+        padding: 20px;
+      }
+
+      .cta-shell {
+        padding: 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#hero" aria-label="Away The Carry-On">Away The Carry-On</a>
+      <nav aria-label="Hlavní navigace">
+        <a href="#material">Materiál</a>
+        <a href="#specs">Specifikace</a>
+        <a href="#packing">Balení</a>
+        <a href="#mobility">Pohyb</a>
+        <a href="#warranty">Záruka</a>
+      </nav>
+      <a class="header-cta" href="#cta">Koupit za 6 490 Kč</a>
+    </div>
+  </header>
+
+  <main>
+    <section id="hero" class="hero section">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <h2 class="eyebrow">Kabinový kufr bez rušivých prvků</h2>
+          <h1>Minimalistický kabinový kufr pro moderní cesty.</h1>
+          <p>Away The Carry-On je kabinový kufr pro lidi, kteří chtějí cestovat čistě, rychle a bez vizuálního balastu. Jeho skořepina ze 100% polykarbonátu, lehká a odolná, drží moderní matnou siluetu a vypadá stejně dobře v coworkingu jako v odletové hale. Vnější rozměry 55×36,5×23 cm, hmotnost 3,4 kg, objem 41 litrů. Cena 6 490 Kč.</p>
+          <p class="specline">Vnější rozměry 55×36,5×23 cm, hmotnost 3,4 kg, objem 41 litrů. Cena 6 490 Kč.</p>
+          <div class="actions">
+            <a class="btn primary" href="#cta">Koupit za 6 490 Kč</a>
+          </div>
+        </div>
+
+        <figure class="hero-figure">
+          <img src="images/img_hero.jpg" alt="Kabinový kufr bez rušivých prvků — Away The Carry-On" width="1600" height="900" loading="eager">
+        </figure>
+      </div>
+    </section>
+
+    <section id="material" class="section">
+      <div class="container feature-grid">
+        <figure class="media">
+          <img src="images/img_material.jpg" alt="Čistý vzhled. Pevná skořepina. — Away The Carry-On" width="1200" height="900" loading="lazy">
+        </figure>
+        <div class="copy">
+          <h2>Čistý vzhled. Pevná skořepina.</h2>
+          <p>Minimalismus tu není jen styl, ale způsob, jak navrhnout každou cestu. Tento kufr staví na čisté jednobarevnosti, matném povrchu a přesných proporcích, takže nepoutá pozornost víc, než je nutné — jen dává prostoru, aby působil klidněji. Jeho skořepina ze 100% polykarbonátu, lehká a odolná, pomáhá udržet tvar i při častém přesouvání.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="specs" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>Parametry, které sedí na palubu</h2>
+          <p>Na palubu se počítá každý detail. Vnější rozměry 55×36,5×23 cm, hmotnost 3,4 kg, objem 41 litrů. Čtyři otočná kolečka 360° usnadní pohyb mezi terminálem, výtahem i chodníkem a kombinační zámek schválený TSA přidá jistotu při kontrole i během přestupů.</p>
+        </div>
+
+        <div class="bento-grid">
+          <article class="bento-card wide">
+            <p class="value">Na palubu se počítá každý detail.</p>
+          </article>
+
+          <article class="bento-card span-6">
+            <p class="label">Vnější rozměry</p>
+            <p class="value">55×36,5×23 cm</p>
+          </article>
+
+          <article class="bento-card span-3">
+            <p class="label">Hmotnost</p>
+            <p class="value">3,4 kg</p>
+          </article>
+
+          <article class="bento-card span-3">
+            <p class="label">Objem</p>
+            <p class="value">41 litrů</p>
+          </article>
+
+          <article class="bento-card span-4">
+            <p class="label">Kolečka</p>
+            <p class="value">Čtyři otočná kolečka 360°</p>
+          </article>
+
+          <article class="bento-card span-4">
+            <p class="label">Zámek</p>
+            <p class="value">Kombinační zámek schválený TSA</p>
+          </article>
+
+          <article class="bento-card span-4">
+            <p class="label">Materiál</p>
+            <p class="value">Skořepina ze 100% polykarbonátu</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="packing" class="section">
+      <div class="container feature-grid reverse">
+        <div class="copy">
+          <h2>Uvnitř je stejně promyšlený jako zvenku</h2>
+          <p>Vnitřní kompresní systém s dvojitým popruhem pomáhá udržet oblečení sevřené, přehledné a připravené na další zastávku — bez zbytečného přebalování a bez chaosu po otevření. Díky tomu je balení rychlejší, čistší a výrazně méně stresující.</p>
+        </div>
+        <figure class="media">
+          <img src="images/img_packing.jpg" alt="Uvnitř je stejně promyšlený jako zvenku — Away The Carry-On" width="1200" height="900" loading="lazy">
+        </figure>
+      </div>
+    </section>
+
+    <section id="mobility" class="section">
+      <div class="container split-grid">
+        <figure class="media">
+          <img src="images/img_mobility.jpg" alt="Pohybuje se tiše a jistě — Away The Carry-On" width="1200" height="900" loading="lazy">
+        </figure>
+        <div class="panel">
+          <div class="copy">
+            <h2>Pohybuje se tiše a jistě</h2>
+            <p>Pro moderní cestovatele a městské profesionály je důležitá i každodenní použitelnost. Away The Carry-On působí kompaktně, pohybuje se tiše a díky své čisté formě zapadne ke kabátu, obleku i ležérnímu travel outfitu. Je to chytré řešení, které nechává prostor vašemu stylu.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="warranty" class="section">
+      <div class="container text-grid">
+        <div class="copy">
+          <h2>Jistota na roky</h2>
+          <p>U prémiového kufru nejde jen o první dojem, ale o roky používání. Away proto doplňuje design o doživotní záruka, aby byl Carry-On stejně jistý na prvním výletě jako po desítkách dalších. Výsledek je odolný, klidný a připravený na časté cestování.</p>
+        </div>
+        <figure class="media">
+          <img src="images/img_warranty.jpg" alt="Jistota na roky — Away The Carry-On" width="1200" height="900" loading="lazy">
+        </figure>
+      </div>
+    </section>
+
+    <section id="cta" class="section">
+      <div class="container cta-shell">
+        <div>
+          <h2>Připraven na další odlet?</h2>
+          <p>Jestli hledáte minimalistický, odolný a praktický kabinový kufr, tenhle je připravený na odlet. Objednejte si Away The Carry-On za 6 490 Kč a získejte kufr, který spojuje čistý design, chytré řešení a jistotu na každý přesun.</p>
+        </div>
+        <div class="cta-actions">
+          <a class="btn primary" href="#hero">Koupit za 6 490 Kč</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-row">
+      <span>Away The Carry-On</span>
+      <span>6 490 Kč</span>
+    </div>
+  </footer>
+</body>
+</html>
