@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bowers & Wilkins PX8 | Zvuk bez kompromisů za 14 990 Kč</title>
+<meta name="description" content="Bowers & Wilkins PX8 za 14 990 Kč: 40mm karbonové měniče, aptX Adaptive s přenosem 24 bitů, 30 hodin výdrže a ručně šitá Nappa kůže.">
+<style>
+  :root{
+    --bg:#0a0a0b;
+    --surface:#141416;
+    --surface-2:#1c1c1f;
+    --text:#e8e6e1;
+    --muted:#8a8884;
+    --accent:#b8956a;
+    --accent-soft:rgba(184,149,106,0.12);
+    --line:rgba(255,255,255,0.08);
+    --line-strong:rgba(255,255,255,0.16);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:"Helvetica Neue","Helvetica","Arial",sans-serif;
+    font-size:16px;
+    line-height:1.6;
+    font-weight:300;
+    letter-spacing:0.01em;
+  }
+  h1,h2,h3,h4{
+    font-family:"Georgia","Times New Roman",serif;
+    font-weight:400;
+    letter-spacing:-0.01em;
+    line-height:1.15;
+  }
+  a{color:inherit;text-decoration:none}
+  img{display:block;max-width:100%;height:auto}
+
+  .container{max-width:1280px;margin:0 auto;padding:0 32px}
+  .wide{max-width:880px;margin:0 auto;padding:0 32px}
+
+  /* Header */
+  header{
+    position:fixed;top:0;left:0;right:0;z-index:50;
+    background:rgba(10,10,11,0.72);
+    backdrop-filter:blur(20px);
+    -webkit-backdrop-filter:blur(20px);
+    border-bottom:1px solid var(--line);
+  }
+  nav{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:20px 32px;max-width:1400px;margin:0 auto;
+  }
+  .brand{
+    font-family:"Georgia",serif;font-size:17px;letter-spacing:0.18em;
+    text-transform:uppercase;font-weight:400;
+  }
+  .brand span{color:var(--accent)}
+  .nav-links{display:flex;gap:36px;align-items:center}
+  .nav-links a{font-size:13px;color:var(--muted);letter-spacing:0.06em;transition:color .3s}
+  .nav-links a:hover{color:var(--text)}
+  .nav-cta{
+    font-size:13px;letter-spacing:0.06em;color:var(--text);
+    padding:9px 18px;border:1px solid var(--line-strong);
+    transition:all .3s;
+  }
+  .nav-cta:hover{border-color:var(--accent);color:var(--accent)}
+
+  /* Hero */
+  #hero{
+    min-height:100vh;position:relative;
+    display:flex;align-items:flex-end;
+    overflow:hidden;
+  }
+  .hero-bg{
+    position:absolute;inset:0;
+    background:url('images/img_hero.jpg') center/cover no-repeat;
+    filter:brightness(0.62) contrast(1.05);
+  }
+  .hero-overlay{
+    position:absolute;inset:0;
+    background:linear-gradient(180deg,rgba(10,10,11,0.55) 0%,rgba(10,10,11,0.1) 35%,rgba(10,10,11,0.92) 100%);
+  }
+  .hero-content{
+    position:relative;z-index:2;
+    padding:120px 32px 80px;max-width:1400px;margin:0 auto;width:100%;
+  }
+  .hero-eyebrow{
+    font-size:12px;letter-spacing:0.28em;text-transform:uppercase;
+    color:var(--accent);margin-bottom:24px;
+  }
+  #hero h1{
+    font-size:clamp(40px,7vw,84px);
+    line-height:1.05;
+    max-width:18ch;
+    margin-bottom:28px;
+  }
+  .hero-text{
+    font-size:clamp(15px,1.4vw,18px);
+    color:rgba(232,230,225,0.78);
+    max-width:560px;
+    line-height:1.7;
+    font-weight:300;
+  }
+
+  /* Philosophy */
+  #philosophy{
+    padding:140px 32px;
+    background:var(--bg);
+    text-align:center;
+  }
+  #philosophy h2{
+    font-size:clamp(30px,4vw,46px);
+    max-width:22ch;margin:0 auto 40px;
+    line-height:1.2;
+  }
+  #philosophy p{
+    font-size:clamp(16px,1.3vw,19px);
+    color:rgba(232,230,225,0.72);
+    max-width:680px;margin:0 auto;
+    line-height:1.85;
+  }
+  .divider{
+    width:1px;height:60px;background:var(--line-strong);
+    margin:0 auto 60px;
+  }
+
+  /* Split sections */
+  .split{
+    display:grid;grid-template-columns:1fr 1fr;
+    min-height:100vh;align-items:stretch;
+  }
+  .split .media{
+    position:relative;overflow:hidden;background:#000;
+  }
+  .split .media img{
+    width:100%;height:100%;object-fit:cover;
+    transition:transform 1.4s ease;
+  }
+  .split .media:hover img{transform:scale(1.03)}
+  .split .content{
+    display:flex;flex-direction:column;justify-content:center;
+    padding:96px 80px;
+  }
+  .split.left .media{order:1}
+  .split.left .content{order:2}
+  .split.right .media{order:2}
+  .split.right .content{order:1}
+  .section-num{
+    font-size:11px;letter-spacing:0.32em;text-transform:uppercase;
+    color:var(--accent);margin-bottom:28px;
+  }
+  .split h2{
+    font-size:clamp(28px,3.4vw,44px);
+    margin-bottom:32px;line-height:1.15;
+  }
+  .split p{
+    font-size:17px;color:rgba(232,230,225,0.72);
+    line-height:1.85;max-width:46ch;
+  }
+  .spec-row{
+    margin-top:48px;padding-top:32px;
+    border-top:1px solid var(--line);
+    display:flex;gap:48px;
+  }
+  .spec{display:flex;flex-direction:column;gap:6px}
+  .spec .v{font-family:"Georgia",serif;font-size:24px;color:var(--text)}
+  .spec .l{font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:var(--muted)}
+
+  /* On person fullbleed */
+  #on_person{
+    position:relative;min-height:90vh;
+    display:flex;align-items:flex-end;
+    overflow:hidden;
+  }
+  #on_person .bg{
+    position:absolute;inset:0;
+    background:url('images/img_on_person.jpg') center/cover no-repeat;
+    filter:brightness(0.7);
+  }
+  #on_person .ovl{
+    position:absolute;inset:0;
+    background:linear-gradient(0deg,rgba(10,10,11,0.95) 0%,rgba(10,10,11,0.1) 60%);
+  }
+  #on_person .inner{
+    position:relative;z-index:2;
+    padding:120px 32px 96px;max-width:1400px;margin:0 auto;width:100%;
+  }
+  #on_person h2{
+    font-size:clamp(32px,4.4vw,54px);
+    max-width:18ch;margin-bottom:32px;line-height:1.1;
+  }
+  #on_person p{
+    font-size:clamp(15px,1.3vw,18px);
+    color:rgba(232,230,225,0.78);max-width:580px;line-height:1.8;
+  }
+
+  /* Bento */
+  #features_bento{padding:140px 32px;background:var(--bg)}
+  .bento-head{max-width:1280px;margin:0 auto 64px}
+  .bento-head h2{
+    font-size:clamp(30px,4vw,46px);max-width:20ch;line-height:1.15;
+  }
+  .bento-grid{
+    max-width:1280px;margin:0 auto;
+    display:grid;grid-template-columns:repeat(6,1fr);
+    grid-auto-rows:minmax(180px,auto);
+    gap:1px;background:var(--line);
+    border:1px solid var(--line);
+  }
+  .cell{
+    background:var(--surface);
+    padding:36px 32px;
+    display:flex;flex-direction:column;justify-content:space-between;
+    transition:background .4s;
+  }
+  .cell:hover{background:var(--surface-2)}
+  .cell .ico{
+    width:34px;height:34px;
+    border:1px solid var(--accent);
+    color:var(--accent);
+    display:flex;align-items:center;justify-content:center;
+    font-family:"Georgia",serif;font-size:15px;
+    margin-bottom:auto;
+  }
+  .cell h3{
+    font-size:20px;margin:28px 0 12px;
+    font-family:"Georgia",serif;font-weight:400;
+  }
+  .cell p{
+    font-size:14px;color:var(--muted);line-height:1.65;
+  }
+  .cell.lg{grid-column:span 3;grid-row:span 2}
+  .cell.md{grid-column:span 3}
+  .cell.sm{grid-column:span 2}
+  .cell.wide{grid-column:span 6}
+
+  /* Sound authority */
+  #sound_authority{
+    display:grid;grid-template-columns:1fr 1fr;
+    min-height:100vh;align-items:stretch;background:var(--surface);
+  }
+  #sound_authority .media{overflow:hidden}
+  #sound_authority .media img{width:100%;height:100%;object-fit:cover}
+  #sound_authority .content{
+    padding:96px 80px;
+    display:flex;flex-direction:column;justify-content:center;
+  }
+  #sound_authority h2{
+    font-size:clamp(28px,3.4vw,44px);
+    margin-bottom:32px;line-height:1.15;
+  }
+  #sound_authority p{
+    font-size:17px;color:rgba(232,230,225,0.72);
+    line-height:1.85;max-width:46ch;
+  }
+  .heritage{
+    margin-top:48px;padding-top:32px;border-top:1px solid var(--line);
+    display:flex;gap:56px;
+  }
+  .heritage .v{font-family:"Georgia",serif;font-size:28px;color:var(--accent)}
+  .heritage .l{font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:var(--muted);margin-top:4px}
+
+  /* Gallery */
+  #gallery{padding:140px 32px;background:var(--bg)}
+  .gallery-head{max-width:1280px;margin:0 auto 64px;text-align:center}
+  .gallery-head h2{
+    font-size:clamp(30px,4vw,46px);max-width:18ch;margin:0 auto 24px;line-height:1.15;
+  }
+  .gallery-head p{
+    color:rgba(232,230,225,0.65);max-width:620px;margin:0 auto;line-height:1.8;
+  }
+  .gallery-grid{
+    max-width:1280px;margin:0 auto;
+    display:grid;grid-template-columns:repeat(3,1fr);gap:24px;
+  }
+  .gallery-grid figure{
+    overflow:hidden;background:#000;position:relative;
+    aspect-ratio:4/3;
+  }
+  .gallery-grid figure img{
+    width:100%;height:100%;object-fit:cover;
+    transition:transform 1.2s ease,filter .6s;
+    filter:brightness(0.85);
+  }
+  .gallery-grid figure:hover img{transform:scale(1.05);filter:brightness(1)}
+
+  /* CTA */
+  #cta{
+    padding:160px 32px 140px;
+    text-align:center;
+    background:radial-gradient(ellipse at center,var(--surface) 0%,var(--bg) 70%);
+    border-top:1px solid var(--line);
+  }
+  #cta .price-label{
+    font-size:12px;letter-spacing:0.28em;text-transform:uppercase;
+    color:var(--accent);margin-bottom:32px;
+  }
+  #cta h2{
+    font-size:clamp(38px,5vw,64px);
+    line-height:1.1;margin-bottom:32px;
+  }
+  #cta p{
+    max-width:620px;margin:0 auto 56px;
+    color:rgba(232,230,225,0.7);line-height:1.8;font-size:17px;
+  }
+  .btn-primary{
+    display:inline-block;
+    padding:20px 48px;
+    background:var(--accent);color:#0a0a0b;
+    font-size:14px;letter-spacing:0.12em;text-transform:uppercase;
+    font-weight:500;font-family:"Helvetica Neue",sans-serif;
+    border:1px solid var(--accent);
+    transition:all .35s ease;
+  }
+  .btn-primary:hover{
+    background:transparent;color:var(--accent);
+    transform:translateY(-2px);
+  }
+
+  /* Footer */
+  footer{
+    background:var(--bg);
+    border-top:1px solid var(--line);
+    padding:64px 32px 40px;
+  }
+  .footer-inner{
+    max-width:1280px;margin:0 auto;
+    display:flex;justify-content:space-between;align-items:flex-start;
+    flex-wrap:wrap;gap:32px;
+  }
+  .footer-brand{
+    font-family:"Georgia",serif;font-size:17px;letter-spacing:0.18em;
+    text-transform:uppercase;
+  }
+  .footer-brand span{color:var(--accent)}
+  .footer-meta{
+    font-size:12px;color:var(--muted);letter-spacing:0.06em;line-height:1.9;
+  }
+  .footer-copy{
+    max-width:1280px;margin:48px auto 0;
+    padding-top:24px;border-top:1px solid var(--line);
+    font-size:11px;color:var(--muted);letter-spacing:0.1em;
+    display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;
+  }
+
+  /* Responsive */
+  @media (max-width:960px){
+    .split,#sound_authority{grid-template-columns:1fr;min-height:auto}
+    .split.left .media,.split.right .media{order:1;aspect-ratio:4/3}
+    .split.left .content,.split.right .content{order:2;padding:64px 32px}
+    .split .content{padding:64px 32px}
+    #sound_authority .content{padding:64px 32px}
+    .bento-grid{grid-template-columns:repeat(2,1fr)}
+    .cell.lg,.cell.md,.cell.sm,.cell.wide{grid-column:span 2}
+    .gallery-grid{grid-template-columns:1fr}
+    .nav-links{display:none}
+    .spec-row,.heritage{gap:24px;flex-wrap:wrap}
+    .hero-content,#on_person .inner{padding-top:140px;padding-bottom:64px}
+    .container,.wide{padding:0 24px}
+  }
+  @media (max-width:560px){
+    .bento-grid{grid-template-columns:1fr}
+    .cell.lg,.cell.md,.cell.sm,.cell.wide{grid-column:span 1}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <a class="brand" href="#hero">Bowers &amp; Wilkins <span>PX8</span></a>
+    <div class="nav-links">
+      <a href="#philosophy">Filozofie</a>
+      <a href="#carbon_detail">Materiály</a>
+      <a href="#features_bento">Vlastnosti</a>
+      <a href="#sound_authority">Zvuk</a>
+    </div>
+    <a class="nav-cta" href="#cta">14 990 Kč</a>
+  </nav>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="hero-overlay" aria-hidden="true"></div>
+    <div class="hero-content">
+      <div class="hero-eyebrow">Bowers &amp; Wilkins · PX8</div>
+      <h1>Zvuk bez kompromisů. Řemeslo bez ústupků.</h1>
+      <p class="hero-text">Bowers &amp; Wilkins PX8 spojují minimalistický britský design, ručně šitou Nappa kůži a zvuk bez kompromisů do jednoho přesného celku. Jsou navržené pro náročné posluchače, kteří chtějí prémiový zvuk i prémiový vzhled bez zbytečných gest.</p>
+    </div>
+    <img src="images/img_hero.jpg" alt="Zvuk bez kompromisů. — Bowers & Wilkins PX8" width="1200" height="900" loading="eager" style="display:none">
+  </section>
+
+  <!-- PHILOSOPHY -->
+  <section id="philosophy">
+    <div class="divider"></div>
+    <h2>Britská elegance není efekt. Je to přístup.</h2>
+    <p>PX8 nejsou pro každého. Jsou pro ty, kdo slyší rozdíl a oceňují detail, klid i řemeslo. Hmotnost 320 gramů pomáhá vyváženému, pohodlnému nošení a minimalistická forma nechává vyniknout to podstatné: hudbu.</p>
+  </section>
+
+  <!-- CARBON DETAIL -->
+  <section id="carbon_detail" class="split left">
+    <div class="media">
+      <img src="images/img_carbon_detail.jpg" alt="Carbon fibre. Tam, kde záleží na každém gramu. — Bowers & Wilkins PX8" width="1200" height="900" loading="lazy">
+    </div>
+    <div class="content">
+      <div class="section-num">01 — Konstrukce</div>
+      <h2>Carbon fibre. Tam, kde záleží na každém gramu.</h2>
+      <p>Srdcem PX8 jsou 40mm karbonové měniče, které přinášejí přesnost, pevnost a dynamiku bez zbytečného zkreslení. Bezdrátový poslech s aptX Adaptive a přenosem 24 bitů drží nahrávku čistou, čitelnou a soustředěnou.</p>
+      <div class="spec-row">
+        <div class="spec"><span class="v">40mm</span><span class="l">Karbonový měnič</span></div>
+        <div class="spec"><span class="v">24 bit</span><span class="l">aptX Adaptive</span></div>
+        <div class="spec"><span class="v">320 g</span><span class="l">Hmotnost</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NAPPA DETAIL -->
+  <section id="nappa_detail" class="split right">
+    <div class="content">
+      <div class="section-num">02 — Řemeslo</div>
+      <h2>Ručně šitá Nappa kůže. Dotek, který se pozná.</h2>
+      <p>Ručně šitá Nappa kůže dodává PX8 měkkost na dotek, odolnost v každodenním používání a nadčasový prémiový výraz. Je to řemeslo, které není na odiv — je cítit při každém nasazení.</p>
+      <div class="spec-row">
+        <div class="spec"><span class="v">Nappa</span><span class="l">Ruční šití</span></div>
+        <div class="spec"><span class="v">Pevnost</span><span class="l">Při každém nasazení</span></div>
+      </div>
+    </div>
+    <div class="media">
+      <img src="images/img_nappa_detail.jpg" alt="Ručně šitá Nappa kůže. Dotek, který se pozná. — Bowers & Wilkins PX8" width="1200" height="900" loading="lazy">
+    </div>
+  </section>
+
+  <!-- ON PERSON -->
+  <section id="on_person">
+    <div class="bg" aria-hidden="true"></div>
+    <div class="ovl" aria-hidden="true"></div>
+    <div class="inner">
+      <h2>Pro ty, kteří slyší rozdíl a vidí detail.</h2>
+      <p>Na cestách i v soustředění se opřete o výdrž baterie 30 hodin. Když spěcháte, 7 hodin přehrávání získáte už z 15minutového nabití. Aktivní potlačení hluku se 6 mikrofony pomáhá udržet okolí stranou.</p>
+    </div>
+    <img src="images/img_on_person.jpg" alt="Pro ty, kteří slyší rozdíl a vidí detail. — Bowers & Wilkins PX8" width="1200" height="900" loading="lazy" style="display:none">
+  </section>
+
+  <!-- FEATURES BENTO -->
+  <section id="features_bento">
+    <div class="bento-head">
+      <div class="section-num">03 — Výkon</div>
+      <h2>Výkon, který není potřeba dokazovat.</h2>
+    </div>
+    <div class="bento-grid">
+      <div class="cell lg">
+        <div class="ico">A</div>
+        <div>
+          <h3>Aktivní potlačení hluku</h3>
+          <p>6 mikrofonů udržuje okolí stranou a soustředí vás na hudbu.</p>
+        </div>
+      </div>
+      <div class="cell md">
+        <div class="ico">B</div>
+        <div>
+          <h3>30 hodin výdrže</h3>
+          <p>Klidné poslouchání bez neustálého dobíjení na cestách.</p>
+        </div>
+      </div>
+      <div class="cell md">
+        <div class="ico">C</div>
+        <div>
+          <h3>Rychlé nabíjení</h3>
+          <p>15 minut = 7 hodin přehrávání, když spěcháte.</p>
+        </div>
+      </div>
+      <div class="cell sm">
+        <div class="ico">D</div>
+        <div>
+          <h3>aptX Adaptive</h3>
+          <p>24bitový bezdrátový přenos.</p>
+        </div>
+      </div>
+      <div class="cell sm">
+        <div class="ico">E</div>
+        <div>
+          <h3>USB-C &amp; 3,5mm</h3>
+          <p>Svoboda podle zdroje.</p>
+        </div>
+      </div>
+      <div class="cell sm">
+        <div class="ico">F</div>
+        <div>
+          <h3>B&amp;W Music</h3>
+          <p>Přehledné ovládání.</p>
+        </div>
+      </div>
+      <div class="cell wide">
+        <div class="ico">G</div>
+        <div>
+          <h3>Komfort, který vydrží</h3>
+          <p>Poslech přes USB-C i 3,5mm kabel dává svobodu podle situace a zdroje. Aplikace Bowers &amp; Wilkins Music přidává přehledné ovládání a jednoduché nastavení bez zbytečné složitosti.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOUND AUTHORITY -->
+  <section id="sound_authority">
+    <div class="content">
+      <div class="section-num">04 — Heritage</div>
+      <h2>Zvuk navržený v Steyning Research Centre.</h2>
+      <p>U PX8 je zvuk bez kompromisů zásadou, ne sloganem. Bowers &amp; Wilkins staví na kontrole, čistotě detailu a kultivovaném projevu, který nechává hudbu znít přesně a přirozeně.</p>
+      <div class="heritage">
+        <div><div class="v">Steyning</div><div class="l">Research Centre</div></div>
+        <div><div class="v">1966</div><div class="l">Britský původ</div></div>
+        <div><div class="v">Audiofilní DNA</div><div class="l">Bez kompromisů</div></div>
+      </div>
+    </div>
+    <div class="media">
+      <img src="images/img_sound_authority.jpg" alt="Zvuk navržený v Steyning Research Centre. — Bowers & Wilkins PX8" width="1200" height="900" loading="lazy">
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="gallery">
+    <div class="gallery-head">
+      <div class="section-num">05 — Detaily</div>
+      <h2>Objekt, který vydrží.</h2>
+      <p>V galerii vynikne kontrast materiálů i čistota tvarů: karbonová konstrukce, ručně šitá Nappa kůže, precizní linie a elegantní profil. PX8 působí jako předmět, který si všimnete i bez slov.</p>
+    </div>
+    <div class="gallery-grid">
+      <figure><img src="images/img_gallery.jpg" alt="Objekt, který vydrží. — detail 1 — Bowers & Wilkins PX8" width="1200" height="900" loading="lazy"></figure>
+      <figure><img src="images/img_gallery.jpg" alt="Objekt, který vydrží. — detail 2 — Bowers & Wilkins PX8" width="1200" height="900" loading="lazy"></figure>
+      <figure><img src="images/img_gallery.jpg" alt="Objekt, který vydrží. — detail 3 — Bowers & Wilkins PX8" width="1200" height="900" loading="lazy"></figure>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section id="cta">
+    <div class="price-label">Cena · Bowers &amp; Wilkins PX8</div>
+    <h2>14 990 Kč. Investice do poslechu.</h2>
+    <p>Bowers &amp; Wilkins PX8 za 14 990 Kč jsou připravené pro posluchače, kteří chtějí prémiový zvuk, ručně šitou Nappa kůži a klidný britský design v jednom. Objednejte si Bowers &amp; Wilkins PX8 za 14 990 Kč.</p>
+    <a href="#" class="btn-primary">Objednat Bowers &amp; Wilkins PX8 za 14 990 Kč</a>
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">Bowers &amp; Wilkins <span>PX8</span></div>
+      <div class="footer-meta" style="margin-top:14px">Britský prémiový zvuk od roku 1966.</div>
+    </div>
+    <div class="footer-meta">
+      Steyning Research Centre<br>
+      West Sussex, Spojené království<br>
+      Navrženo a laděno pro náročné posluchače.
+    </div>
+    <div class="footer-meta">
+      Cena: 14 990 Kč<br>
+      Dostupnost: Skladem<br>
+      <a href="#cta" style="color:var(--accent)">Objednat →</a>
+    </div>
+  </div>
+  <div class="footer-copy">
+    <span>© Bowers &amp; Wilkins. PX8 — Zvuk bez kompromisů.</span>
+    <span>14 990 Kč · včetně DPH</span>
+  </div>
+</footer>
+
+</body>
+</html>

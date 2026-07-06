@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Glossier You Eau de Parfum 50 ml | osobní skin-scent vůně | 1 990 Kč</title>
+<meta name="description" content="Jemná osobní vůně Glossier You Eau de Parfum 50 ml: skin-scent blízko pokožky, růžový pepř, kosatec, ambrette a Ambrox.">
+<style>
+  :root{
+    --bg:#ffffff;
+    --surface:#f3f1f3;
+    --text:#1a1a1a;
+    --muted:#6b6b6b;
+    --accent:#944257;
+    --blush:#f4dde6;
+    --serif: "Cormorant Garamond", "Times New Roman", Georgia, serif;
+    --sans: "Helvetica Neue", Helvetica, Arial, system-ui, sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:var(--sans);
+    font-size:16px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  img{display:block;max-width:100%;height:auto}
+  a{color:inherit;text-decoration:none}
+
+  /* HEADER */
+  header.site{
+    position:sticky;top:0;z-index:50;
+    background:rgba(255,255,255,0.88);
+    backdrop-filter:saturate(180%) blur(12px);
+    -webkit-backdrop-filter:saturate(180%) blur(12px);
+    border-bottom:1px solid rgba(0,0,0,0.06);
+  }
+  nav.site{
+    max-width:1280px;margin:0 auto;
+    padding:18px 32px;
+    display:flex;align-items:center;justify-content:space-between;gap:24px;
+  }
+  .brand{
+    font-family:var(--serif);
+    font-size:22px;letter-spacing:0.02em;font-weight:500;
+  }
+  .nav-links{display:flex;gap:28px;list-style:none}
+  .nav-links a{
+    font-size:14px;letter-spacing:0.04em;
+    color:#1a1a1a;transition:color .2s ease;
+  }
+  .nav-links a:hover{color:var(--accent)}
+
+  /* STANDARDIZED CTA BUTTONS */
+  .nav-cta,
+  .hero-cta,
+  .btn-buy{
+    display:inline-block;
+    font-family:var(--sans);
+    font-size:14px;
+    font-weight:400;
+    letter-spacing:0.05em;
+    line-height:1;
+    padding:14px 32px;
+    border-radius:999px;
+    border:1px solid;
+    transition:all .25s ease;
+    text-align:center;
+    cursor:pointer;
+    white-space:nowrap;
+  }
+  .nav-cta{
+    background:#000;color:#fff;border-color:#000;
+  }
+  .nav-cta:hover{background:var(--accent);border-color:var(--accent)}
+  .hero-cta{
+    background:#fff;color:#000;border-color:#fff;
+  }
+  .hero-cta:hover{background:var(--accent);color:#fff;border-color:var(--accent)}
+  .btn-buy{
+    background:#000;color:#fff;border-color:#000;
+  }
+  .btn-buy:hover{background:var(--accent);border-color:var(--accent)}
+
+  /* CTA on dark overlay */
+  .cta-inner .btn-buy{
+    background:#fff;color:#000;border-color:#fff;
+  }
+  .cta-inner .btn-buy:hover{background:var(--accent);color:#fff;border-color:var(--accent)}
+
+  /* LAYOUT */
+  main{display:block}
+  section{padding:96px 24px}
+  .wrap{max-width:1280px;margin:0 auto}
+  .wrap-narrow{max-width:760px;margin:0 auto}
+
+  .eyebrow{
+    font-size:12px;letter-spacing:0.22em;text-transform:uppercase;
+    color:var(--muted);margin-bottom:20px;
+  }
+  .section-title{
+    font-family:var(--serif);
+    font-weight:400;
+    font-size:clamp(28px,4vw,40px);
+    line-height:1.15;letter-spacing:0.005em;
+  }
+  .lead{font-size:18px;line-height:1.7;color:#1a1a1a}
+  .body-text{font-size:16px;line-height:1.75;color:#333}
+
+  /* HERO */
+  .hero{
+    position:relative;
+    padding:0;
+    min-height:92vh;
+    display:flex;align-items:center;justify-content:center;
+    overflow:hidden;
+    background:var(--surface);
+  }
+  .hero-img{
+    position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+    filter:saturate(0.92) brightness(0.96);
+  }
+  .hero-overlay{
+    position:absolute;inset:0;
+    background:linear-gradient(180deg, rgba(255,255,255,0.35) 0%, rgba(255,255,255,0.15) 40%, rgba(0,0,0,0.25) 100%);
+  }
+  .hero-inner{
+    position:relative;z-index:2;
+    max-width:1000px;padding:0 32px;text-align:center;
+  }
+  .hero h1{
+    font-family:var(--serif);font-weight:400;
+    font-size:clamp(40px,7vw,72px);
+    line-height:1.05;letter-spacing:0.005em;
+    color:#fff;
+    text-shadow:0 2px 24px rgba(0,0,0,0.25);
+    margin-bottom:28px;
+  }
+  .hero p{
+    color:#fff;font-size:clamp(16px,1.4vw,20px);line-height:1.6;
+    max-width:640px;margin:0 auto 36px;
+    text-shadow:0 1px 12px rgba(0,0,0,0.3);
+  }
+
+  /* INTRO */
+  .intro{padding:96px 24px}
+  .intro-grid{
+    display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;
+  }
+  .intro-img{
+    width:100%;aspect-ratio:4/3;object-fit:cover;
+    border-radius:2px;
+  }
+  .intro-text h2{
+    font-family:var(--serif);font-weight:400;
+    font-size:clamp(32px,4.5vw,52px);line-height:1.12;
+    margin-bottom:24px;
+  }
+  .intro-text .lead{color:#333}
+
+  /* NOTES */
+  .notes{background:var(--surface);padding:96px 24px}
+  .notes-grid{
+    display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;
+  }
+  .notes-img{
+    width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:2px;
+  }
+  .note-list{list-style:none;margin-top:32px}
+  .note-item{
+    padding:24px 0;border-bottom:1px solid rgba(0,0,0,0.08);
+  }
+  .note-item:first-child{border-top:1px solid rgba(0,0,0,0.08)}
+  .note-label{
+    font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:var(--muted);
+    margin-bottom:6px;
+  }
+  .note-name{
+    font-family:var(--serif);font-size:26px;font-weight:400;margin-bottom:6px;
+  }
+  .note-desc{font-size:15px;color:#444;line-height:1.6}
+
+  /* PHILOSOPHY */
+  .philosophy{padding:96px 24px;text-align:center}
+  .philosophy .eyebrow{margin-bottom:28px}
+  .philosophy .quote{
+    font-family:var(--serif);font-weight:400;
+    font-size:clamp(30px,5vw,56px);line-height:1.2;letter-spacing:0.005em;
+    max-width:1000px;margin:0 auto 40px;
+  }
+  .philosophy .quote .accent{color:var(--accent);font-style:italic}
+  .philosophy .body-text{max-width:680px;margin:0 auto;color:#555}
+
+  /* PRODUCT */
+  .product{
+    padding:96px 24px;background:var(--blush);
+  }
+  .product-inner{
+    max-width:1100px;margin:0 auto;
+    display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;
+  }
+  .product-img-wrap{
+    background:#fff;border-radius:2px;padding:0;overflow:hidden;
+  }
+  .product-img{
+    width:100%;aspect-ratio:4/3;object-fit:cover;
+  }
+  .product-info{text-align:left}
+  .product-info .eyebrow{color:var(--accent)}
+  .product-info h2{
+    font-family:var(--serif);font-weight:400;
+    font-size:clamp(32px,4vw,48px);line-height:1.1;margin-bottom:18px;
+  }
+  .product-info .body-text{margin-bottom:28px;color:#333}
+  .price{
+    font-size:24px;font-family:var(--serif);margin-bottom:24px;display:block;
+  }
+
+  /* RITUAL */
+  .ritual{padding:96px 24px}
+  .ritual-grid{
+    display:grid;grid-template-columns:5fr 6fr;gap:64px;align-items:center;
+  }
+  .ritual-img{
+    width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:2px;
+  }
+  .ritual-text h2{
+    font-family:var(--serif);font-weight:400;
+    font-size:clamp(30px,4vw,44px);line-height:1.12;margin-bottom:24px;
+  }
+  .ritual-text .body-text{color:#333}
+
+  /* CTA */
+  .cta{
+    padding:0;position:relative;
+    background:var(--surface);overflow:hidden;
+  }
+  .cta-img{
+    position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+    filter:brightness(0.85);
+  }
+  .cta-overlay{
+    position:absolute;inset:0;
+    background:linear-gradient(180deg, rgba(40,30,35,0.5), rgba(0,0,0,0.5));
+  }
+  .cta-inner{
+    position:relative;z-index:2;
+    padding:128px 32px;text-align:center;color:#fff;
+  }
+  .cta-inner h2{
+    font-family:var(--serif);font-weight:400;
+    font-size:clamp(36px,6vw,64px);line-height:1.1;margin-bottom:24px;
+    text-shadow:0 2px 18px rgba(0,0,0,0.3);
+  }
+  .cta-inner .price-light{
+    font-family:var(--serif);font-size:22px;margin-bottom:32px;display:inline-block;
+    text-shadow:0 1px 10px rgba(0,0,0,0.3);
+  }
+  .cta-inner .eyebrow{color:rgba(255,255,255,0.85)}
+
+  /* FOOTER */
+  footer.site{
+    border-top:1px solid rgba(0,0,0,0.08);
+    padding:48px 32px;background:#fff;
+  }
+  .footer-inner{
+    max-width:1280px;margin:0 auto;
+    display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;
+  }
+  .footer-brand{font-family:var(--serif);font-size:18px}
+  .footer-meta{font-size:12px;color:var(--muted);letter-spacing:0.04em}
+
+  /* RESPONSIVE */
+  @media (max-width:860px){
+    .nav-links{display:none}
+    .intro-grid,.notes-grid,.product-inner,.ritual-grid{
+      grid-template-columns:1fr;gap:40px;
+    }
+    .ritual-grid{grid-template-columns:1fr}
+    section{padding:64px 20px}
+    .intro,.notes,.product,.ritual,.philosophy{padding:64px 20px}
+    .cta-inner{padding:96px 24px}
+    nav.site{padding:16px 20px}
+  }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <nav class="site">
+    <a class="brand" href="#hero">Glossier You</a>
+    <ul class="nav-links">
+      <li><a href="#intro">Vůně</a></li>
+      <li><a href="#notes">Složení</a></li>
+      <li><a href="#philosophy">Filozofie</a></li>
+      <li><a href="#product">Produkt</a></li>
+      <li><a href="#ritual">Rituál</a></li>
+    </ul>
+    <a class="nav-cta" href="#product">Objednat — 1 990 Kč</a>
+  </nav>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <img class="hero-img" src="images/img_hero.jpg" alt="Vaše osobní vůně — Glossier You Eau de Parfum" width="1200" height="900" loading="eager" fetchpriority="high">
+    <div class="hero-overlay"></div>
+    <div class="hero-inner">
+      <h1>Glossier You. Tvá vůně, nikoli prohlášení.</h1>
+      <p>Jemná, moderní a neokázalá. Glossier You Eau de Parfum je osobní vůně pro ty, kdo chtějí působit přirozeně, čistě a s lehkostí. Je to skin-scent vůně nesoucí se blízko pokožky, která se snoubí s vlastní kůží a nechává vyniknout právě tebe.</p>
+      <a class="hero-cta" href="#product">Objednej Glossier You Eau de Parfum 50 ml za 1 990 Kč</a>
+    </div>
+  </section>
+
+  <!-- INTRO -->
+  <section class="intro" id="intro">
+    <div class="wrap intro-grid">
+      <img class="intro-img" src="images/img_intro.jpg" alt="Vůně, která se přizpůsobí vám — Glossier You Eau de Parfum" width="1200" height="900" loading="lazy">
+      <div class="intro-text">
+        <div class="eyebrow">Skin-scent</div>
+        <h2>Vůně, která se přizpůsobí vám</h2>
+        <p class="lead">Pro lidi hledající osobní, decentní parfém a pro mladší městskou generaci milující minimalismus je Glossier You přirozená volba. Staví na jemnosti, minimalismu a pocitu, že vůně je součástí tebe — ne něco, co tě přehluší. Výsledkem je osobní vůně s tichou, čistou přítomností.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- NOTES -->
+  <section class="notes" id="notes">
+    <div class="wrap notes-grid">
+      <img class="notes-img" src="images/img_notes.jpg" alt="Iris, ambrette, pepř — složení, které zůstává — Glossier You Eau de Parfum" width="1200" height="900" loading="lazy">
+      <div class="notes-text">
+        <div class="eyebrow">Složení</div>
+        <h2 class="section-title">Iris, ambrette, pepř — složení, které zůstává</h2>
+        <p class="body-text" style="margin-top:20px">Kompozice stojí na vrchní notě růžový pepř, v srdci je kosatec a základ tvoří ambrette a Ambrox. Tato kombinace vytváří skin-scent vůni nesoucí se blízko pokožky: měkkou, intimní a velmi osobní.</p>
+        <ul class="note-list">
+          <li class="note-item">
+            <div class="note-label">Vrchní nota</div>
+            <div class="note-name">Růžový pepř</div>
+            <div class="note-desc">Otevření vůně — svěží, lehce kořeněný záblesk, který rychle zjemní.</div>
+          </li>
+          <li class="note-item">
+            <div class="note-label">Srdce</div>
+            <div class="note-name">Kosatec (iris)</div>
+            <div class="note-desc">Jemně pudrový, květinový střed — tichý, elegantní, téměř na kůži.</div>
+          </li>
+          <li class="note-item">
+            <div class="note-label">Základ</div>
+            <div class="note-name">Ambrette &amp; Ambrox</div>
+            <div class="note-desc">Teplo, hřejivost a hladkost — to, co zůstává blízko a osobně.</div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- PHILOSOPHY -->
+  <section class="philosophy" id="philosophy">
+    <div class="wrap-narrow">
+      <div class="eyebrow">Filozofie</div>
+      <h2 class="quote">Minimalismus jako <span class="accent">podpis</span>.</h2>
+      <p class="body-text">Glossier You vychází z myšlenky, že vůně má podpořit přirozenost, ne ji překrýt. Minimalismus tu není prázdnota, ale soustředění na jemnost, čistotu a vlastní identitu. I proto působí jako osobní vůně pro každodenní nošení, které zůstává blízko a decentní.</p>
+    </div>
+  </section>
+
+  <!-- PRODUCT -->
+  <section class="product" id="product">
+    <div class="product-inner">
+      <div class="product-img-wrap">
+        <img class="product-img" src="images/img_product.jpg" alt="Glossier You Eau de Parfum — Glossier You Eau de Parfum" width="1200" height="900" loading="lazy">
+      </div>
+      <div class="product-info">
+        <div class="eyebrow">Eau de Parfum · 50 ml</div>
+        <h2>Glossier You Eau de Parfum</h2>
+        <p class="body-text">Glossier You Eau de Parfum o velikosti 50 ml přichází v znovuplnitelné lahvičce, jejíž jemně růžová, oblá pilulková silueta ladí s pastelově čistými vizuály. Je vegan a cruelty-free. Jde o vůni pro ty, kdo chtějí minimalismus, jemnost a parfém, který se přirozeně snoubí s pokožkou.</p>
+        <span class="price">1 990 Kč</span>
+        <a class="btn-buy" href="#">Objednej Glossier You Eau de Parfum 50 ml za 1 990 Kč</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- RITUAL -->
+  <section class="ritual" id="ritual">
+    <div class="wrap ritual-grid">
+      <img class="ritual-img" src="images/img_ritual.jpg" alt="Pro každý den, pro každý okamžik — Glossier You Eau de Parfum" width="1200" height="900" loading="lazy">
+      <div class="ritual-text">
+        <div class="eyebrow">Rituál</div>
+        <h2>Pro každý den, pro každý okamžik</h2>
+        <p class="body-text">Nanášej Glossier You na pulzní body a nech ho pracovat s teplem pokožky. Právě na kůži se rozvine do své nejtišší, nejpřirozenější podoby a zůstane blízko — jako osobní podpis, který je cítit hlavně pro tebe a pro ty, kdo jsou ti opravdu blízko.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta" id="cta">
+    <img class="cta-img" src="images/img_cta.jpg" alt="Najděte svůj podpis — Glossier You Eau de Parfum" width="1200" height="900" loading="lazy">
+    <div class="cta-overlay"></div>
+    <div class="cta-inner">
+      <div class="eyebrow">Glossier You</div>
+      <h2>Najděte svůj podpis</h2>
+      <span class="price-light">1 990 Kč</span>
+      <div>
+        <a class="btn-buy" href="#">Objednej Glossier You Eau de Parfum 50 ml za 1 990 Kč</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site">
+  <div class="footer-inner">
+    <div class="footer-brand">Glossier You</div>
+    <div class="footer-meta">Eau de Parfum 50 ml · 1 990 Kč</div>
+  </div>
+</footer>
+
+</body>
+</html>

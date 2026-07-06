@@ -1,0 +1,124 @@
+<!doctype html><html lang="cs"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI marketing pages — k připomínkám</title>
+<style>
+  :root{--bg:#f6f7f9;--panel:#fff;--ink:#161b22;--soft:#5a6675;--faint:#8b96a5;--line:#e5e9ef;--line2:#eef1f5;--mas:#2f6f4f;--sas:#8a6d1f;--accent:#2f6f4f;--sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;--mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace}
+  @media (prefers-color-scheme:dark){:root{--bg:#0d1117;--panel:#151b23;--ink:#e8edf4;--soft:#a6b1c0;--faint:#6b7686;--line:#232c38;--line2:#1c242e;--mas:#59c08a;--sas:#d6b45a;--accent:#59c08a}}
+  *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);line-height:1.5;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:1120px;margin:0 auto;padding:44px 22px 72px}
+  .eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);margin:0 0 10px}
+  h1{font-size:clamp(24px,4vw,34px);letter-spacing:-.02em;margin:0 0 12px;text-wrap:balance}
+  .lede{max-width:66ch;color:var(--soft);margin:0 0 8px}
+  .legend{display:flex;gap:8px 20px;flex-wrap:wrap;margin-top:18px;padding-top:16px;border-top:1px solid var(--line);font-size:13px;color:var(--soft)}
+  .dot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:7px;vertical-align:middle}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:20px;margin-top:30px}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column}
+  .thumb{display:block;background:var(--bg);max-height:230px;overflow:hidden;border-bottom:1px solid var(--line2)}
+  .thumb img{width:100%;display:block}
+  .body{padding:14px 16px 16px;display:flex;flex-direction:column;gap:11px;flex:1}
+  .top{display:flex;align-items:baseline;justify-content:space-between;gap:10px}
+  .top h2{font-size:17px;margin:0;letter-spacing:-.01em}
+  .cat{font-family:var(--mono);font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:var(--faint);white-space:nowrap}
+  .scores{display:flex;gap:8px}
+  .sc{font-family:var(--mono);font-size:12px;font-weight:600;padding:2px 9px;border-radius:20px;border:1px solid var(--line)}
+  .sc.mas{color:var(--mas);border-color:var(--mas)}.sc.sas{color:var(--sas);border-color:var(--sas)}
+  .links{display:flex;gap:9px;margin-top:auto}
+  .btn{flex:1;text-align:center;text-decoration:none;font-family:var(--mono);font-size:13px;font-weight:600;padding:9px 0;border-radius:9px;border:1px solid}
+  .btn.mas{color:#fff;background:var(--mas);border-color:var(--mas)}
+  .btn.sas{color:var(--sas);background:transparent;border-color:var(--sas)}
+  .foot{font-size:12.5px}
+  .src{color:var(--accent);text-decoration:none;font-weight:500}.src:hover{text-decoration:underline}.src.muted{color:var(--faint);font-weight:400}
+  footer{margin-top:48px;padding-top:20px;border-top:1px solid var(--line);font-size:12.5px;color:var(--faint);font-family:var(--mono)}
+</style></head><body><div class="wrap">
+  <p class="eyebrow">AI generované landing pages · k připomínkám</p>
+  <h1>Marketingové stránky z jedné fotky &amp; odkazu na výrobce</h1>
+  <p class="lede">Každý produkt vygenerovaný z reálné produktové fotky a webu výrobce. <b>MAS</b> = multi-agentní pipeline (strategie, contest copywriterů, kritici, reflexní smyčka), <b>SAS</b> = jeden agent (baseline). Čísla jsou nezávislý DeepEval panel (0–100). Klikni na produkt.</p>
+  <div class="legend">
+    <span><span class="dot" style="background:var(--mas)"></span><b>MAS</b> — multi-agentní</span>
+    <span><span class="dot" style="background:var(--sas)"></span><b>SAS</b> — single-agent</span>
+  </div>
+  <div class="grid">
+  <article class="card">
+      <a class="thumb" href="px8/mas/"><img loading="lazy" alt="Bowers & Wilkins PX8" src="thumbs/px8.jpg"></a>
+      <div class="body">
+        <div class="top"><h2>Bowers & Wilkins PX8</h2><span class="cat">sluchátka</span></div>
+        <div class="scores"><span class="sc mas">MAS 90</span></div>
+        <div class="links"><a class="btn mas" href="px8/mas/">MAS ↗</a><a class="btn sas" href="px8/sas/">SAS ↗</a></div>
+        <div class="foot"><span class="src muted">interní příklad</span></div>
+      </div>
+    </article>
+  <article class="card">
+      <a class="thumb" href="kettle/mas/"><img loading="lazy" alt="Fellow Stagg EKG konvice" src="thumbs/kettle.jpg"></a>
+      <div class="body">
+        <div class="top"><h2>Fellow Stagg EKG konvice</h2><span class="cat">kuchyně</span></div>
+        <div class="scores"><span class="sc mas">MAS 92</span></div>
+        <div class="links"><a class="btn mas" href="kettle/mas/">MAS ↗</a><a class="btn sas" href="kettle/sas/">SAS ↗</a></div>
+        <div class="foot"><a class="src" href="https://fellowproducts.com/products/stagg-ekg-electric-pour-over-kettle" target="_blank" rel="noopener">web výrobce ↗</a></div>
+      </div>
+    </article>
+  <article class="card">
+      <a class="thumb" href="ob4/mas/"><img loading="lazy" alt="teenage engineering OB–4" src="thumbs/ob4.jpg"></a>
+      <div class="body">
+        <div class="top"><h2>teenage engineering OB–4</h2><span class="cat">audio</span></div>
+        <div class="scores"><span class="sc mas">MAS 88</span></div>
+        <div class="links"><a class="btn mas" href="ob4/mas/">MAS ↗</a><a class="btn sas" href="ob4/sas/">SAS ↗</a></div>
+        <div class="foot"><a class="src" href="https://teenage.engineering/products/ob-4" target="_blank" rel="noopener">web výrobce ↗</a></div>
+      </div>
+    </article>
+  <article class="card">
+      <a class="thumb" href="glossier/mas/"><img loading="lazy" alt="Glossier You Eau de Parfum" src="thumbs/glossier.jpg"></a>
+      <div class="body">
+        <div class="top"><h2>Glossier You Eau de Parfum</h2><span class="cat">parfém</span></div>
+        <div class="scores"><span class="sc mas">MAS 89</span></div>
+        <div class="links"><a class="btn mas" href="glossier/mas/">MAS ↗</a><a class="btn sas" href="glossier/sas/">SAS ↗</a></div>
+        <div class="foot"><a class="src" href="https://www.glossier.com/products/glossier-you" target="_blank" rel="noopener">web výrobce ↗</a></div>
+      </div>
+    </article>
+  <article class="card">
+      <a class="thumb" href="fuji/mas/"><img loading="lazy" alt="FUJIFILM X100VI" src="thumbs/fuji.jpg"></a>
+      <div class="body">
+        <div class="top"><h2>FUJIFILM X100VI</h2><span class="cat">fotoaparát</span></div>
+        <div class="scores"><span class="sc mas">MAS 89</span></div>
+        <div class="links"><a class="btn mas" href="fuji/mas/">MAS ↗</a></div>
+        <div class="foot"><a class="src" href="https://www.fujifilm-x.com/en-us/products/cameras/x100vi/" target="_blank" rel="noopener">web výrobce ↗</a></div>
+      </div>
+    </article>
+  <article class="card">
+      <a class="thumb" href="aeron/mas/"><img loading="lazy" alt="Herman Miller Aeron" src="thumbs/aeron.jpg"></a>
+      <div class="body">
+        <div class="top"><h2>Herman Miller Aeron</h2><span class="cat">židle</span></div>
+        <div class="scores"><span class="sc mas">MAS 92</span></div>
+        <div class="links"><a class="btn mas" href="aeron/mas/">MAS ↗</a></div>
+        <div class="foot"><a class="src" href="https://store.hermanmiller.com/office-chairs-aeron/aeron-chair/2195348.html" target="_blank" rel="noopener">web výrobce ↗</a></div>
+      </div>
+    </article>
+  <article class="card">
+      <a class="thumb" href="lecreuset/mas/"><img loading="lazy" alt="Le Creuset Signature" src="thumbs/lecreuset.jpg"></a>
+      <div class="body">
+        <div class="top"><h2>Le Creuset Signature</h2><span class="cat">nádobí</span></div>
+        <div class="scores"><span class="sc mas">MAS 70</span></div>
+        <div class="links"><a class="btn mas" href="lecreuset/mas/">MAS ↗</a></div>
+        <div class="foot"><a class="src" href="https://www.lecreuset.com/round-dutch-oven/21177US.html" target="_blank" rel="noopener">web výrobce ↗</a></div>
+      </div>
+    </article>
+  <article class="card">
+      <a class="thumb" href="away/mas/"><img loading="lazy" alt="Away The Carry-On" src="thumbs/away.jpg"></a>
+      <div class="body">
+        <div class="top"><h2>Away The Carry-On</h2><span class="cat">kufr</span></div>
+        <div class="scores"><span class="sc mas">MAS 89</span></div>
+        <div class="links"><a class="btn mas" href="away/mas/">MAS ↗</a></div>
+        <div class="foot"><a class="src" href="https://www.awaytravel.com/products/carry-on-jet-black" target="_blank" rel="noopener">web výrobce ↗</a></div>
+      </div>
+    </article>
+  <article class="card">
+      <a class="thumb" href="nb/mas/"><img loading="lazy" alt="New Balance 990v6" src="thumbs/nb.jpg"></a>
+      <div class="body">
+        <div class="top"><h2>New Balance 990v6</h2><span class="cat">tenisky</span></div>
+        <div class="scores"><span class="sc mas">MAS 87</span></div>
+        <div class="links"><a class="btn mas" href="nb/mas/">MAS ↗</a></div>
+        <div class="foot"><a class="src" href="https://www.newbalance.com/pd/made-in-usa-990v6/M990V6-43094-PMG-NA.html" target="_blank" rel="noopener">web výrobce ↗</a></div>
+      </div>
+    </article>
+  </div>
+  <footer>9 produktů · MAS vs SAS · DeepEval G-Eval</footer>
+</div></body></html>

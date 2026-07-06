@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fellow Stagg EKG konvice – precizní kontrola teploty pro pour-over | 4 990 Kč</title>
+<meta name="description" content="Fellow Stagg EKG je konvice pro domácí baristy a milovníky filtrované kávy. Nabízí kontrolu teploty 40–100 °C po 1 °C, úzký husí krk, objem 0,9 l, udržení teploty 15/30/45/60 minut a minimalistický design.">
+<style>
+  :root{
+    --bg:#ffffff;
+    --surface:#f5f5f5;
+    --text:#000000;
+    --muted:#808080;
+    --accent:#000000;
+    --border:#e6e6e6;
+    --font-display: 'Fellow Solar', Georgia, 'Times New Roman', serif;
+    --font-sans: 'Sohne', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:var(--font-sans);
+    font-size:16px;
+    line-height:24px;
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+  }
+  img{display:block;max-width:100%;height:auto}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1320px;margin:0 auto;padding:0 32px}
+  .meta{font-size:12px;line-height:16px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+  .eyebrow{font-size:12px;line-height:16px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+  .body-sm{font-size:14px;line-height:20px;color:#333}
+  .lead{font-size:20px;line-height:28px}
+  .display{font-family:var(--font-display);font-weight:400;letter-spacing:-.01em}
+
+  /* Header */
+  header.site{
+    position:sticky;top:0;z-index:50;
+    background:rgba(255,255,255,.92);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--border);
+  }
+  header.site nav{
+    display:flex;align-items:center;justify-content:space-between;
+    height:64px;
+  }
+  .brand{
+    font-family:var(--font-display);
+    font-size:20px;line-height:24px;letter-spacing:.02em;
+    text-transform:uppercase;
+  }
+  .brand span{color:var(--muted)}
+  nav ul{list-style:none;display:flex;gap:28px}
+  nav ul a{font-size:14px;line-height:20px;color:#1a1a1a;transition:opacity .2s}
+  nav ul a:hover{opacity:.55}
+  .nav-cta{
+    font-size:12px;line-height:16px;letter-spacing:.1em;text-transform:uppercase;
+    border:1px solid var(--accent);padding:10px 18px;
+    transition:background .2s,color .2s;
+  }
+  .nav-cta:hover{background:var(--accent);color:#fff}
+
+  /* Buttons */
+  .btn{
+    display:inline-block;font-family:var(--font-sans);
+    font-size:14px;line-height:20px;letter-spacing:.04em;
+    padding:16px 28px;cursor:pointer;border:1px solid var(--accent);
+    background:var(--accent);color:#fff;transition:opacity .2s;
+  }
+  .btn:hover{opacity:.8}
+  .btn.ghost{background:transparent;color:var(--text)}
+
+  /* Hero */
+  .hero{padding:64px 0 120px}
+  .hero-top{display:flex;justify-content:space-between;align-items:flex-end;gap:48px;margin-bottom:56px}
+  .hero h1{
+    font-family:var(--font-display);
+    font-size:56px;line-height:60px;font-weight:400;
+    letter-spacing:-.015em;max-width:14ch;
+  }
+  .hero-aside{max-width:340px}
+  .hero-aside p{font-size:14px;line-height:20px;color:#333;margin-bottom:24px}
+  .price-tag{font-size:16px;line-height:24px}
+  .price-tag strong{font-weight:600}
+  .hero-img-wrap{position:relative}
+  .hero-img-wrap img{width:100%;height:auto}
+  .hero-caption{
+    display:flex;justify-content:space-between;align-items:baseline;
+    margin-top:20px;gap:24px;
+  }
+  .hero-caption .left{font-size:14px;line-height:20px;max-width:480px;color:#333}
+
+  /* Ritual - full bleed */
+  .ritual{position:relative;background:var(--surface)}
+  .ritual .bleed-img{
+    width:100%;height:78vh;min-height:520px;object-fit:cover;
+  }
+  .ritual .ritual-copy{
+    max-width:760px;margin:0 auto;padding:80px 32px 110px;text-align:center;
+  }
+  .ritual h2{
+    font-family:var(--font-display);font-weight:400;
+    font-size:40px;line-height:44px;letter-spacing:-.01em;margin-bottom:24px;
+  }
+  .ritual p{font-size:20px;line-height:28px;color:#222}
+
+  /* Control - split screen */
+  .control{padding:120px 0}
+  .control .split{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+  .control .copy h2{
+    font-family:var(--font-display);font-weight:400;
+    font-size:40px;line-height:44px;letter-spacing:-.01em;margin-bottom:24px;
+  }
+  .control .copy p{font-size:20px;line-height:28px;color:#222;margin-bottom:28px}
+  .control .specs-inline{display:flex;gap:32px;flex-wrap:wrap;border-top:1px solid var(--border);padding-top:24px}
+  .control .specs-inline div{min-width:120px}
+  .control .specs-inline .num{font-family:var(--font-display);font-size:28px;line-height:34px}
+  .control .specs-inline .lbl{font-size:12px;line-height:16px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-top:4px}
+  .control img{width:100%;height:auto}
+
+  /* Gooseneck - feature right macro */
+  .gooseneck{padding:120px 0;background:var(--surface)}
+  .gooseneck .grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+  .gooseneck .img-wrap{order:2}
+  .gooseneck .copy{order:1}
+  .gooseneck .copy .eyebrow{margin-bottom:16px}
+  .gooseneck h2{
+    font-family:var(--font-display);font-weight:400;
+    font-size:40px;line-height:44px;letter-spacing:-.01em;margin-bottom:24px;
+  }
+  .gooseneck p{font-size:20px;line-height:28px;color:#222}
+
+  /* Design object - bento */
+  .design-object{padding:120px 0}
+  .design-object .head{margin-bottom:64px;max-width:640px}
+  .design-object .head h2{
+    font-family:var(--font-display);font-weight:400;
+    font-size:40px;line-height:44px;letter-spacing:-.01em;margin-bottom:20px;
+  }
+  .design-object .head p{font-size:20px;line-height:28px;color:#333}
+  .bento{display:grid;grid-template-columns:repeat(6,1fr);gap:16px}
+  .bento .cell{background:var(--surface);border:1px solid var(--border);padding:32px;display:flex;flex-direction:column;justify-content:space-between;min-height:200px}
+  .bento .cell .num{font-family:var(--font-display);font-size:40px;line-height:44px}
+  .bento .cell .lbl{font-size:12px;line-height:16px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-top:8px}
+  .bento .cell.tall{grid-column:span 3;grid-row:span 2;min-height:416px;padding:0;overflow:hidden;position:relative}
+  .bento .cell.tall img{width:100%;height:100%;object-fit:cover}
+  .bento .cell.wide{grid-column:span 3}
+  .bento .cell.span2{grid-column:span 2}
+  .bento .cell .desc{font-size:14px;line-height:20px;color:#333;margin-top:16px}
+
+  /* Specs - clean text */
+  .specs{padding:120px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+  .specs .grid{display:grid;grid-template-columns:1fr 2fr;gap:80px}
+  .specs h2{
+    font-family:var(--font-display);font-weight:400;
+    font-size:40px;line-height:44px;letter-spacing:-.01em;
+  }
+  .specs-list{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:0}
+  .specs-list li{
+    display:flex;justify-content:space-between;align-items:baseline;
+    padding:20px 0;border-bottom:1px solid var(--border);font-size:16px;line-height:24px;
+  }
+  .specs-list li:nth-child(odd){padding-right:24px}
+  .specs-list li .k{color:var(--muted)}
+  .specs-list li .v{font-weight:500;text-align:right;max-width:60%}
+
+  /* Comparison - feature left editorial */
+  .comparison{padding:120px 0}
+  .comparison .grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+  .comparison .copy h2{
+    font-family:var(--font-display);font-weight:400;
+    font-size:40px;line-height:44px;letter-spacing:-.01em;margin-bottom:24px;
+  }
+  .comparison .copy p{font-size:20px;line-height:28px;color:#222;margin-bottom:32px}
+  .comparison .copy .vs{display:flex;flex-direction:column;gap:0;border-top:1px solid var(--border)}
+  .comparison .copy .vs .row{display:grid;grid-template-columns:1fr 1fr;padding:18px 0;border-bottom:1px solid var(--border);gap:24px;align-items:baseline}
+  .comparison .copy .vs .row .a{font-size:14px;line-height:20px;color:var(--muted)}
+  .comparison .copy .vs .row .b{font-size:14px;line-height:20px;font-weight:500}
+  .comparison img{width:100%;height:auto}
+
+  /* Reviews */
+  .reviews{padding:120px 0;background:var(--surface)}
+  .reviews h2{
+    font-family:var(--font-display);font-weight:400;
+    font-size:40px;line-height:44px;letter-spacing:-.01em;margin-bottom:16px;
+  }
+  .reviews .intro{font-size:20px;line-height:28px;color:#333;max-width:680px;margin-bottom:64px}
+  .reviews .quote-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
+  .review-card{background:#fff;border:1px solid var(--border);padding:36px 32px;display:flex;flex-direction:column;justify-content:space-between;min-height:280px}
+  .review-card .q{font-family:var(--font-display);font-size:20px;line-height:28px;color:#111;margin-bottom:24px}
+  .review-card .who{font-size:12px;line-height:16px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+  .review-card .who strong{display:block;color:var(--text);font-weight:500;text-transform:none;letter-spacing:0;font-size:14px;line-height:20px;margin-bottom:4px}
+
+  /* CTA dark */
+  .cta{background:#0a0a0a;color:#fff;padding:120px 0}
+  .cta .grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+  .cta .copy h2{
+    font-family:var(--font-display);font-weight:400;
+    font-size:56px;line-height:60px;letter-spacing:-.015em;margin-bottom:24px;
+  }
+  .cta .copy p{font-size:14px;line-height:20px;color:#bbb;margin-bottom:32px}
+  .cta .cta-btn{
+    display:inline-block;background:#fff;color:#000;
+    font-size:14px;line-height:20px;letter-spacing:.04em;
+    padding:18px 32px;border:1px solid #fff;transition:background .2s,color .2s;
+  }
+  .cta .cta-btn:hover{background:transparent;color:#fff}
+  .cta .price-line{font-size:16px;line-height:24px;color:#fff;margin-top:24px}
+  .cta .price-line strong{font-weight:600}
+  .cta img{width:100%;height:auto;filter:grayscale(.15)}
+
+  /* Footer */
+  footer.site{padding:64px 0 40px;border-top:1px solid var(--border)}
+  footer.site .grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;margin-bottom:48px}
+  footer.site h3{font-size:12px;line-height:16px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:16px}
+  footer.site ul{list-style:none}
+  footer.site ul li{margin-bottom:8px}
+  footer.site ul li a{font-size:14px;line-height:20px;color:#333}
+  footer.site ul li a:hover{opacity:.6}
+  footer.site .brand-block .brand{margin-bottom:12px}
+  footer.site .brand-block p{font-size:14px;line-height:20px;color:var(--muted);max-width:280px}
+  footer.site .bottom{display:flex;justify-content:space-between;align-items:center;padding-top:32px;border-top:1px solid var(--border);font-size:12px;line-height:16px;color:var(--muted)}
+
+  /* Responsive */
+  @media (max-width:980px){
+    .hero h1{font-size:40px;line-height:44px}
+    .hero-top{flex-direction:column;align-items:flex-start;gap:32px}
+    .control .split,.gooseneck .grid,.comparison .grid,.cta .grid{grid-template-columns:1fr;gap:48px}
+    .gooseneck .img-wrap{order:1}
+    .gooseneck .copy{order:2}
+    .bento{grid-template-columns:repeat(2,1fr)}
+    .bento .cell.tall{grid-column:span 2;grid-row:auto;min-height:300px}
+    .bento .cell.wide{grid-column:span 2}
+    .bento .cell.span2{grid-column:span 2}
+    .specs .grid{grid-template-columns:1fr;gap:32px}
+    .specs-list{grid-template-columns:1fr}
+    .reviews .quote-grid{grid-template-columns:1fr;gap:24px}
+    footer.site .grid{grid-template-columns:1fr 1fr;gap:32px}
+    nav ul{display:none}
+  }
+  @media (max-width:560px){
+    .wrap{padding:0 20px}
+    .hero{padding:32px 0 64px}
+    .hero h1{font-size:32px;line-height:38px}
+    .ritual .ritual-copy{padding:56px 20px 72px}
+    .ritual h2,.control .copy h2,.gooseneck h2,.design-object .head h2,.specs h2,.comparison .copy h2,.reviews h2{font-size:28px;line-height:34px}
+    .cta .copy h2{font-size:36px;line-height:42px}
+    .cta{padding:80px 0}
+    .control,.gooseneck,.design-object,.specs,.comparison,.reviews{padding:72px 0}
+    footer.site .grid{grid-template-columns:1fr}
+    .cta .grid{gap:40px}
+  }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <nav>
+      <a href="#" class="brand">Fellow <span>Stagg EKG</span></a>
+      <ul>
+        <li><a href="#ritual">Rituál</a></li>
+        <li><a href="#control">Kontrola teploty</a></li>
+        <li><a href="#gooseneck">Husí krk</a></li>
+        <li><a href="#specs">Parametry</a></li>
+        <li><a href="#reviews">Recenze</a></li>
+      </ul>
+      <a href="#cta" class="nav-cta">Koupit — 4 990 Kč</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section id="hero" class="hero">
+    <div class="wrap">
+      <div class="hero-top">
+        <div>
+          <p class="eyebrow" style="margin-bottom:24px">Fellow Stagg EKG · Pour-over konvice</p>
+          <h1 class="display">Preciznost, která patří na linku</h1>
+        </div>
+        <div class="hero-aside">
+          <p>Voda přesně na stupeň. Káva přesně podle vás.</p>
+          <p class="price-tag"><strong>4 990 Kč</strong> · skladem</p>
+        </div>
+      </div>
+      <div class="hero-img-wrap">
+        <img src="images/img_hero.jpg" alt="Preciznost, která patří na linku — Fellow Stagg EKG konvice" width="1200" height="900" loading="eager">
+      </div>
+      <div class="hero-caption">
+        <p class="left">Fellow Stagg EKG je konvice pro domácí baristy a milovníky filtrované kávy, kteří chtějí přesnou kontrolu teploty i designový kus na linku. Matné kovové tělo z nerezové oceli 304, kruhový displej a úzký husí krk spojují minimalismus, preciznost a prémiový dojem.</p>
+        <a href="#cta" class="btn">Zajistit si Fellow Stagg EKG za 4 990 Kč</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- RITUAL -->
+  <section id="ritual" class="ritual">
+    <img class="bleed-img" src="images/img_ritual.jpg" alt="Každé ráno. Přesně tak. — Fellow Stagg EKG konvice" width="1200" height="900" loading="lazy">
+    <div class="ritual-copy">
+      <p class="eyebrow" style="margin-bottom:20px">Rituál</p>
+      <h2 class="display">Každé ráno. Přesně tak.</h2>
+      <p>Příprava kávy začíná klidem a přesností. S Fellow Stagg EKG nastavíte vodu na přesnou teplotu v rozsahu 40–100 °C po 1 °C a při přípravě pour-over se můžete spolehnout na udržení teploty po dobu 15, 30, 45 nebo 60 minut.</p>
+    </div>
+  </section>
+
+  <!-- CONTROL -->
+  <section id="control" class="control">
+    <div class="wrap">
+      <div class="split">
+        <div class="copy">
+          <p class="eyebrow" style="margin-bottom:16px">Kontrola teploty</p>
+          <h2 class="display">Teplota není detail</h2>
+          <p>Kontrola teploty je v této konvici hlavní předností. Výkon 1000–1200 W pomáhá rychlému ohřevu, objem 0,9 litru je ideální pro každodenní přípravu a přesné nastavení po jednom stupni dává jistotu při každém nalití.</p>
+          <div class="specs-inline">
+            <div>
+              <div class="num">1000–1200 W</div>
+              <div class="lbl">Výkon</div>
+            </div>
+            <div>
+              <div class="num">0,9 l</div>
+              <div class="lbl">Objem</div>
+            </div>
+            <div>
+              <div class="num">1 °C</div>
+              <div class="lbl">Přesnost</div>
+            </div>
+          </div>
+        </div>
+        <div class="img-wrap">
+          <img src="images/img_control.jpg" alt="Teplota není detail — Fellow Stagg EKG konvice" width="1200" height="900" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GOOSENECK -->
+  <section id="gooseneck" class="gooseneck">
+    <div class="wrap">
+      <div class="grid">
+        <div class="img-wrap">
+          <img src="images/img_gooseneck.jpg" alt="Husí krk pro čistý pour-over — Fellow Stagg EKG konvice" width="1200" height="900" loading="lazy">
+        </div>
+        <div class="copy">
+          <p class="eyebrow">Ergonomie</p>
+          <h2 class="display">Husí krk pro čistý pour-over</h2>
+          <p>Úzký husí krk pro přesné nalévání je klíčem k rovnoměrnému proudu vody. Díky němu máte nad naléváním větší kontrolu, což je při pour-over zásadní pro konzistentní výsledek v šálku.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DESIGN OBJECT -->
+  <section id="design_object" class="design-object">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow" style="margin-bottom:16px">Designový objekt</p>
+        <h2 class="display">Forma, která nezastarí</h2>
+        <p>Minimalistické industriální pojetí podtrhuje matné kovové tělo, kruhový displej a proporce 282×172×196 mm. Hmotnost 1 400 g dodává konvici pevný, kvalitní pocit a z Fellow Stagg EKG dělá výrazný, ale čistý prvek moderní kuchyně.</p>
+      </div>
+      <div class="bento">
+        <div class="cell tall">
+          <img src="images/img_design_object.jpg" alt="Forma, která nezastarí — Fellow Stagg EKG konvice" width="1200" height="900" loading="lazy">
+        </div>
+        <div class="cell wide">
+          <div>
+            <div class="num">304</div>
+            <div class="lbl">Nerezová ocel</div>
+          </div>
+          <p class="desc">Matné kovové tělo s industriálním, nadčasovým charakterem.</p>
+        </div>
+        <div class="cell span2">
+          <div>
+            <div class="num">1 400 g</div>
+            <div class="lbl">Hmotnost</div>
+          </div>
+          <p class="desc">Pevný, kvalitní pocit v ruce.</p>
+        </div>
+        <div class="cell span2">
+          <div>
+            <div class="num">282×172×196</div>
+            <div class="lbl">Rozměry (mm)</div>
+          </div>
+          <p class="desc">Kompaktní proporce pro moderní linku.</p>
+        </div>
+        <div class="cell span2">
+          <div>
+            <div class="num">360°</div>
+            <div class="lbl">Kruhový displej</div>
+          </div>
+          <p class="desc">Čistý ovládací bod bez vizuálního šumu.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SPECS -->
+  <section id="specs" class="specs">
+    <div class="wrap">
+      <div class="grid">
+        <div>
+          <p class="eyebrow" style="margin-bottom:16px">Technické parametry</p>
+          <h2 class="display">Navrženo pro přesnost</h2>
+        </div>
+        <ul class="specs-list">
+          <li><span class="k">Výkon</span><span class="v">1000–1200 W</span></li>
+          <li><span class="k">Objem</span><span class="v">0,9 litru</span></li>
+          <li><span class="k">Tělo</span><span class="v">Nerezová ocel 304</span></li>
+          <li><span class="k">Rozsah teploty</span><span class="v">40–100 °C po 1 °C</span></li>
+          <li><span class="k">Udržení teploty</span><span class="v">15 / 30 / 45 / 60 min</span></li>
+          <li><span class="k">Husí krk</span><span class="v">Úzký, pro přesné nalévání</span></li>
+          <li><span class="k">Rozměry</span><span class="v">282×172×196 mm</span></li>
+          <li><span class="k">Hmotnost</span><span class="v">1 400 g</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMPARISON -->
+  <section id="comparison" class="comparison">
+    <div class="wrap">
+      <div class="grid">
+        <div class="copy">
+          <p class="eyebrow" style="margin-bottom:16px">Proč Stagg EKG?</p>
+          <h2 class="display">Proč Stagg EKG?</h2>
+          <p>Běžná konvice vám vodu jen ohřeje. Fellow Stagg EKG přidává přesnou kontrolu teploty, úzký husí krk pro přesné nalévání a možnost držet zvolenou teplotu po dobu, kterou potřebujete. Pro filtrovanou kávu je to rozdíl, který poznáte hned při přípravě.</p>
+          <div class="vs">
+            <div class="row"><span class="a">Běžná konvice</span><span class="b">Fellow Stagg EKG</span></div>
+            <div class="row"><span class="a">Jen ohřev</span><span class="b">Přesná teplota po 1 °C</span></div>
+            <div class="row"><span class="a">Široká stopka</span><span class="b">Úzký husí krk</span></div>
+            <div class="row"><span class="a">Teplota klesá</span><span class="b">Udržení 15–60 min</span></div>
+          </div>
+        </div>
+        <div class="img-wrap">
+          <img src="images/img_comparison.jpg" alt="Proč Stagg EKG? — Fellow Stagg EKG konvice" width="1200" height="900" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section id="reviews" class="reviews">
+    <div class="wrap">
+      <p class="eyebrow" style="margin-bottom:16px">Recenze</p>
+      <h2 class="display">Co říkají domácí baristé</h2>
+      <p class="intro">Domácí baristé ocení, že Fellow Stagg EKG spojuje preciznost, husí krk, kontrolu teploty a čistý design do jednoho nástroje. Milovníkům filtrované kávy přináší jistotu, že každý detail přípravy má pod kontrolou.</p>
+      <div class="quote-grid">
+        <div class="review-card">
+          <p class="q">„Konečně konvice, kde teplota není hádanka. Pour-over mám ráno po ránu stejný — přesně tak, jak jsem ho nastavil.“</p>
+          <div class="who"><strong>Tomáš K.</strong>Domácí barista · Praha</div>
+        </div>
+        <div class="review-card">
+          <p class="q">„Husí krk dává kontrolu, kterou jsem u běžné konvice neznal. Design je navíc na lince poctivý kus.“</p>
+          <div class="who"><strong>Veronika M.</strong>Milovnice filtrované kávy · Brno</div>
+        </div>
+        <div class="review-card">
+          <p class="q">„Udržení teploty 60 minut znamená, že si kávu udělám ve vlastním tempu. Žádný spěch, žádný kompromis.“</p>
+          <div class="who"><strong>Marek D.</strong>Specialty coffee nadšenec · Ostrava</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section id="cta" class="cta">
+    <div class="wrap">
+      <div class="grid">
+        <div class="copy">
+          <p class="eyebrow" style="margin-bottom:20px;color:#888">Fellow Stagg EKG</p>
+          <h2 class="display">Udělejte z přípravy kávy rituál</h2>
+          <p>Objednejte si Fellow Stagg EKG za 4 990 Kč a dopřejte si konvici s kontrolou teploty, úzkým husím krkem, objemem 0,9 litru, výkonem 1000–1200 W, tělem z nerezové oceli 304, rozsahem 40–100 °C po 1 °C, udržením teploty 15/30/45/60 minut, rozměry 282×172×196 mm a hmotností 1 400 g.</p>
+          <a href="#" class="cta-btn">Zajistit si Fellow Stagg EKG za 4 990 Kč</a>
+          <p class="price-line"><strong>4 990 Kč</strong> · Doprava zdarma · 2 roky záruky</p>
+        </div>
+        <div class="img-wrap">
+          <img src="images/img_cta.jpg" alt="Udělejte z přípravy kávy rituál — Fellow Stagg EKG konvice" width="1200" height="900" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="grid">
+      <div class="brand-block">
+        <a href="#" class="brand">Fellow <span>Stagg EKG</span></a>
+        <p>Precizní konvice pro domácí baristy a milovníky filtrované kávy. Design, který patří na linku.</p>
+      </div>
+      <div>
+        <h3>Produkt</h3>
+        <ul>
+          <li><a href="#control">Kontrola teploty</a></li>
+          <li><a href="#gooseneck">Husí krk</a></li>
+          <li><a href="#specs">Parametry</a></li>
+          <li><a href="#cta">Koupit</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Nápověda</h3>
+        <ul>
+          <li><a href="#">Doprava a dodání</a></li>
+          <li><a href="#">Záruka</a></li>
+          <li><a href="#">Reklamace</a></li>
+          <li><a href="#">Kontakt</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Kontakt</h3>
+        <ul>
+          <li><a href="#">hello@fellow.cz</a></li>
+          <li><a href="#">+420 000 000 000</a></li>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">Newsletter</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="bottom">
+      <span>© 2025 Fellow. Všechna práva vyhrazena.</span>
+      <span>Fellow Stagg EKG · 4 990 Kč</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

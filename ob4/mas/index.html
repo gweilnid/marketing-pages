@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>teenage engineering OB–4 magic radio – orthobook za 13 990 Kč</title>
+<meta name="description" content="OB–4 magic radio od teenage engineering: magické rádio s ultratenkým tělem z frézovaného hliníku, nosnou rukojetí jako stojanem, smyčkovou páskou, hi-fi zvukem a výdrží až 72 hodin na FM.">
+<style>
+  :root{
+    --bg:#0a0e1a;
+    --surface:#1a1f2e;
+    --text:#e8e8e8;
+    --muted:#7a7a7a;
+    --accent:#ffc800;
+    --gutter:45px;
+    --content:980px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:'UniversNextPro-Thin','UniversNextPro Thin','Helvetica Neue',Helvetica,Arial,sans-serif;
+    font-weight:200;
+    font-size:19.5px;
+    line-height:1.5;
+    letter-spacing:0.01em;
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+  }
+  img{display:block;max-width:100%;height:auto;}
+  a{color:inherit;text-decoration:none;}
+  .container{
+    max-width:var(--content);
+    margin:0 auto;
+    padding:0 var(--gutter);
+  }
+  .label{
+    font-size:9px;
+    letter-spacing:0.25em;
+    text-transform:uppercase;
+    color:var(--muted);
+    font-weight:400;
+  }
+  .accent{color:var(--accent);}
+  .hairline{height:1px;background:#2a2f3e;width:100%;}
+  .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}
+
+  /* NAV */
+  header.nav{
+    position:sticky;
+    top:0;
+    z-index:50;
+    background:rgba(10,14,26,0.85);
+    backdrop-filter:blur(12px);
+    -webkit-backdrop-filter:blur(12px);
+    border-bottom:1px solid #1c2233;
+  }
+  .nav-inner{
+    max-width:var(--content);
+    margin:0 auto;
+    padding:0 var(--gutter);
+    height:60px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:30px;
+  }
+  .brand{
+    font-size:9px;
+    letter-spacing:0.28em;
+    text-transform:uppercase;
+    color:var(--text);
+    white-space:nowrap;
+  }
+  .brand .dot{color:var(--accent);}
+  .nav-links{
+    display:flex;
+    gap:28px;
+    list-style:none;
+  }
+  .nav-links a{
+    font-size:9px;
+    letter-spacing:0.22em;
+    text-transform:uppercase;
+    color:var(--muted);
+    transition:color .25s ease;
+  }
+  .nav-links a:hover{color:var(--text);}
+  .nav-meta{
+    display:flex;
+    align-items:center;
+    gap:22px;
+  }
+  .lang{
+    display:flex;
+    gap:8px;
+    font-size:9px;
+    letter-spacing:0.22em;
+    text-transform:uppercase;
+  }
+  .lang span{color:var(--muted);cursor:pointer;}
+  .lang span.active{color:var(--text);}
+  .cart{
+    font-size:9px;
+    letter-spacing:0.22em;
+    text-transform:uppercase;
+    color:var(--text);
+    border:1px solid #2a2f3e;
+    padding:9px 14px;
+    transition:border-color .25s ease, color .25s ease;
+  }
+  .cart:hover{border-color:var(--accent);color:var(--accent);}
+
+  /* HERO */
+  .hero{
+    padding:80px 0 110px;
+    position:relative;
+    overflow:hidden;
+  }
+  .hero-grid{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:60px;
+  }
+  .hero-eyebrow{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    margin-bottom:40px;
+  }
+  .hero-eyebrow .bar{width:42px;height:1px;background:var(--accent);}
+  .hero h1{
+    font-size:clamp(48px,7.5vw,72px);
+    line-height:1.02;
+    font-weight:200;
+    letter-spacing:-0.02em;
+    max-width:14ch;
+  }
+  .hero h1 .em{color:var(--accent);font-style:normal;}
+  .hero-lead{
+    margin-top:36px;
+    max-width:62ch;
+    color:#c9c9c9;
+    font-weight:200;
+  }
+  .hero-image-wrap{
+    margin-top:20px;
+    position:relative;
+    border:1px solid #1c2233;
+  }
+  .hero-image-wrap img{
+    width:100%;
+    height:auto;
+    filter:grayscale(8%) contrast(1.02);
+  }
+  .hero-tag{
+    position:absolute;
+    left:18px;
+    bottom:18px;
+    background:var(--bg);
+    border:1px solid #2a2f3e;
+    padding:10px 14px;
+    display:flex;
+    flex-direction:column;
+    gap:4px;
+  }
+  .hero-tag .price{color:var(--accent);font-size:19.5px;font-weight:200;}
+
+  /* SECTION BASE */
+  section{padding:90px 0;}
+  .section-head{
+    display:flex;
+    align-items:baseline;
+    justify-content:space-between;
+    margin-bottom:48px;
+    gap:30px;
+  }
+  .section-head .num{
+    font-size:9px;
+    letter-spacing:0.3em;
+    color:var(--muted);
+  }
+  h2{
+    font-size:clamp(32px,4vw,36px);
+    font-weight:200;
+    line-height:1.1;
+    letter-spacing:-0.015em;
+    max-width:22ch;
+  }
+
+  /* OVERVIEW SPLIT */
+  .overview-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:50px;
+    align-items:center;
+  }
+  .overview-text p{color:#cfcfcf;}
+  .overview-specs{
+    margin-top:34px;
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:18px 30px;
+    border-top:1px solid #1c2233;
+    padding-top:26px;
+  }
+  .spec .k{font-size:9px;letter-spacing:0.22em;text-transform:uppercase;color:var(--muted);margin-bottom:6px;}
+  .spec .v{font-size:19.5px;color:var(--text);font-weight:200;}
+  .overview-image{
+    border:1px solid #1c2233;
+    overflow:hidden;
+  }
+  .overview-image img{width:100%;height:auto;}
+
+  /* FEATURE SPOTLIGHTS */
+  .feature{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:50px;
+    align-items:center;
+  }
+  .feature.left .feature-img{order:1;}
+  .feature.left .feature-copy{order:2;}
+  .feature.right .feature-copy{order:1;}
+  .feature.right .feature-img{order:2;}
+  .feature-img{border:1px solid #1c2233;overflow:hidden;}
+  .feature-img img{width:100%;height:auto;filter:grayscale(6%);}
+  .feature-copy .label{margin-bottom:18px;display:block;}
+  .feature-copy h2{margin-bottom:24px;}
+  .feature-copy p{color:#cfcfcf;max-width:42ch;}
+  .feature-copy .tag{
+    margin-top:28px;
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    font-size:9px;
+    letter-spacing:0.22em;
+    text-transform:uppercase;
+    color:var(--muted);
+  }
+  .feature-copy .tag .bar{width:24px;height:1px;background:var(--accent);}
+
+  /* FULL BLEED SOUND */
+  .sound{
+    position:relative;
+    padding:0;
+  }
+  .sound-wrap{
+    position:relative;
+    width:100%;
+    overflow:hidden;
+  }
+  .sound-wrap img{
+    width:100%;
+    height:auto;
+    filter:brightness(0.45) grayscale(15%);
+  }
+  .sound-overlay{
+    position:absolute;
+    inset:0;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    padding:0 var(--gutter);
+  }
+  .sound-overlay .inner{
+    max-width:var(--content);
+    margin:0 auto;
+    width:100%;
+  }
+  .sound-overlay .label{margin-bottom:24px;}
+  .sound-overlay h2{
+    font-size:clamp(40px,6vw,64px);
+    color:var(--text);
+    font-weight:200;
+    line-height:1.05;
+    max-width:18ch;
+  }
+  .sound-overlay h2 .em{color:var(--accent);}
+  .sound-tech{
+    background:var(--bg);
+    border-top:1px solid #1c2233;
+  }
+  .sound-tech-inner{
+    max-width:var(--content);
+    margin:0 auto;
+    padding:50px var(--gutter);
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:30px;
+  }
+  .sound-tech-inner .spec .v{font-size:22px;}
+
+  /* BENTO OBJECT */
+  .bento{
+    display:grid;
+    grid-template-columns:repeat(6,1fr);
+    grid-auto-rows:120px;
+    gap:14px;
+  }
+  .bento .tile{
+    background:var(--surface);
+    border:1px solid #1c2233;
+    overflow:hidden;
+    position:relative;
+  }
+  .bento .tile img{width:100%;height:100%;object-fit:cover;}
+  .bento .tile.big{grid-column:span 4;grid-row:span 3;}
+  .bento .tile.tall{grid-column:span 2;grid-row:span 3;}
+  .bento .tile.wide{grid-column:span 4;grid-row:span 2;}
+  .bento .tile.small{grid-column:span 2;grid-row:span 2;}
+  .bento .tile.text-only{
+    grid-column:span 2;
+    grid-row:span 2;
+    padding:24px;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    background:var(--surface);
+  }
+  .bento .tile.text-only .label{margin-bottom:10px;}
+  .bento .tile.text-only p{font-size:15px;color:#cfcfcf;line-height:1.4;}
+  .object-intro{
+    margin-bottom:48px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:50px;
+    align-items:end;
+  }
+  .object-intro p{color:#cfcfcf;max-width:48ch;}
+
+  /* CTA */
+  .cta{
+    text-align:center;
+    padding:120px 0 130px;
+    border-top:1px solid #1c2233;
+  }
+  .cta .label{margin-bottom:30px;}
+  .cta h2{
+    margin:0 auto 24px;
+    font-size:clamp(40px,6vw,64px);
+    font-weight:200;
+    letter-spacing:-0.02em;
+    max-width:16ch;
+  }
+  .cta .price-block{
+    margin:0 auto 44px;
+    display:inline-flex;
+    align-items:baseline;
+    gap:14px;
+    border-top:1px solid #2a2f3e;
+    border-bottom:1px solid #2a2f3e;
+    padding:18px 36px;
+  }
+  .cta .price-block .amount{
+    font-size:42px;
+    color:var(--accent);
+    font-weight:200;
+    letter-spacing:-0.01em;
+  }
+  .cta .price-block .note{
+    font-size:9px;
+    letter-spacing:0.22em;
+    text-transform:uppercase;
+    color:var(--muted);
+  }
+  .cta-btn{
+    display:inline-block;
+    background:var(--accent);
+    color:var(--bg);
+    font-size:9px;
+    letter-spacing:0.28em;
+    text-transform:uppercase;
+    padding:20px 38px;
+    border:1px solid var(--accent);
+    transition:background .25s ease, color .25s ease;
+    font-weight:400;
+  }
+  .cta-btn:hover{background:transparent;color:var(--accent);}
+  .cta-img{
+    margin:60px auto 0;
+    max-width:var(--content);
+    padding:0 var(--gutter);
+  }
+  .cta-img img{
+    width:100%;
+    border:1px solid #1c2233;
+    filter:grayscale(10%);
+  }
+
+  /* FOOTER */
+  footer{
+    border-top:1px solid #1c2233;
+    padding:60px 0 50px;
+  }
+  .footer-top{
+    display:grid;
+    grid-template-columns:1fr 2fr;
+    gap:40px;
+    margin-bottom:50px;
+  }
+  .footer-brand{font-size:13px;letter-spacing:0.12em;color:var(--text);}
+  .footer-brand .dot{color:var(--accent);}
+  .footer-tags{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+  }
+  .footer-tags span{
+    font-size:9px;
+    letter-spacing:0.22em;
+    text-transform:uppercase;
+    color:var(--muted);
+    border:1px solid #2a2f3e;
+    padding:9px 12px;
+  }
+  .footer-meta{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    border-top:1px solid #1c2233;
+    padding-top:26px;
+    flex-wrap:wrap;
+    gap:20px;
+  }
+  .footer-meta .links{
+    display:flex;
+    gap:24px;
+    list-style:none;
+  }
+  .footer-meta .links a{
+    font-size:9px;
+    letter-spacing:0.22em;
+    text-transform:uppercase;
+    color:var(--muted);
+    transition:color .25s ease;
+  }
+  .footer-meta .links a:hover{color:var(--text);}
+  .footer-meta .copy{
+    font-size:9px;
+    letter-spacing:0.22em;
+    text-transform:uppercase;
+    color:var(--muted);
+  }
+
+  /* RESPONSIVE */
+  @media (max-width:880px){
+    body{font-size:17px;}
+    .nav-links{display:none;}
+    .hero{padding:50px 0 70px;}
+    .hero h1{font-size:46px;}
+    section{padding:60px 0;}
+    .overview-grid,.feature,.object-intro,.footer-top{grid-template-columns:1fr;gap:34px;}
+    .feature.left .feature-img,.feature.right .feature-img{order:1;}
+    .feature.left .feature-copy,.feature.right .feature-copy{order:2;}
+    .sound-tech-inner{grid-template-columns:repeat(2,1fr);gap:24px;}
+    .overview-specs{grid-template-columns:1fr 1fr;}
+    .bento{grid-auto-rows:90px;}
+    .bento .tile.big{grid-column:span 6;grid-row:span 3;}
+    .bento .tile.tall{grid-column:span 6;grid-row:span 3;}
+    .bento .tile.wide{grid-column:span 6;grid-row:span 2;}
+    .bento .tile.small,.bento .tile.text-only{grid-column:span 6;grid-row:span 2;}
+    .sound-overlay{padding:0 28px;}
+    .cta{padding:80px 0 90px;}
+  }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="#" class="brand">teenage engineering<span class="dot"> · </span>OB–4</a>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#hero">OB–4 magic radio</a></li>
+        <li><a href="#feature_form">Konstrukce</a></li>
+        <li><a href="#feature_loop">Smyčka</a></li>
+        <li><a href="#feature_portable">Přenosnost</a></li>
+        <li><a href="#feature_radio">Rádio</a></li>
+        <li><a href="#feature_sound">Zvuk</a></li>
+        <li><a href="#object">Objekt</a></li>
+      </ul>
+    </nav>
+    <div class="nav-meta">
+      <div class="lang">
+        <span class="active">CS</span>
+        <span>EN</span>
+      </div>
+      <a href="#cta" class="cart">Košík · 0</a>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section id="hero" class="hero">
+    <div class="container">
+      <div class="hero-eyebrow">
+        <span class="bar"></span>
+        <span class="label">magic radio · orthobook</span>
+      </div>
+      <h1>OB–4 magic radio. <span class="em">Přenosný reproduktor</span> jako objekt i nástroj.</h1>
+      <span class="sr-only">OB–4 magic radio. Přenosný reproduktor jako objekt i nástroj.</span>
+      <p class="hero-lead">Ultratenké tělo z frézovaného hliníku, nosná rukojeť jako stojan a ikonický skandinávský industriální design ve stylu knihy. teenage engineering OB–4 magic radio je magické rádio pro designové nadšence, hudebníky a milovníky hi-fi, kteří chtějí přenosný reproduktor jako objekt i nástroj.</p>
+      <div class="hero-image-wrap">
+        <img src="images/img_hero.jpg" alt="Magické rádio — teenage engineering OB–4 magic radio" width="1200" height="900" loading="eager">
+        <div class="hero-tag">
+          <span class="label">cena</span>
+          <span class="price">13 990 Kč</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OVERVIEW -->
+  <section id="overview">
+    <div class="container">
+      <div class="section-head">
+        <span class="label">overview · 01</span>
+        <span class="num">orthobook</span>
+      </div>
+      <div class="overview-grid">
+        <div class="overview-text">
+          <h2>Orthobook pro váš zvukový prostor</h2>
+          <div style="height:24px"></div>
+          <p>OB–4 magic radio spojuje formu, funkci a poslech v jednom orthobooku. Nabízí Bluetooth 5 LE, FM a 3,5mm line-in, takže se přizpůsobí moderním zdrojům i klasickému připojení. Jeho tělo z frézovaného hliníku má rozměry 232,5×284×57,5 mm a hmotnost 1,7 kg.</p>
+          <div class="overview-specs">
+            <div class="spec"><div class="k">materiál</div><div class="v">frézovaný hliník</div></div>
+            <div class="spec"><div class="k">rozměry</div><div class="v">232,5×284×57,5 mm</div></div>
+            <div class="spec"><div class="k">hmotnost</div><div class="v">1,7 kg</div></div>
+            <div class="spec"><div class="k">připojení</div><div class="v">BT 5 LE · FM · line-in</div></div>
+          </div>
+        </div>
+        <div class="overview-image">
+          <img src="images/img_overview.jpg" alt="Orthobook pro váš zvukový prostor — teenage engineering OB–4 magic radio" width="1200" height="900" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURE FORM -->
+  <section id="feature_form">
+    <div class="container">
+      <div class="section-head">
+        <span class="label">feature · 02</span>
+        <span class="num">materiál / forma</span>
+      </div>
+      <div class="feature left">
+        <div class="feature-img">
+          <img src="images/img_feature_form.jpg" alt="Frézovaný hliník. Ultratenké tělo. — teenage engineering OB–4 magic radio" width="1200" height="900" loading="lazy">
+        </div>
+        <div class="feature-copy">
+          <span class="label">konstrukce</span>
+          <h2>Frézovaný hliník. Ultratenké tělo.</h2>
+          <p>Forma je tu záměrná: ultratenké tělo z frézovaného hliníku působí jako orthobook a nosná rukojeť zároveň slouží jako stojan. OB–4 magic radio je navržené tak, aby bylo stejně výrazné na stole jako při přenášení.</p>
+          <div class="tag"><span class="bar"></span> materiálová pravdivost</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURE LOOP -->
+  <section id="feature_loop">
+    <div class="container">
+      <div class="section-head">
+        <span class="label">feature · 03</span>
+        <span class="num">smyčková páska</span>
+      </div>
+      <div class="feature right">
+        <div class="feature-copy">
+          <span class="label">rituál</span>
+          <h2>Smyčková páska jako způsob poslechu</h2>
+          <p>Uvnitř běží nepřetržitá smyčková páska s rolující 2hodinovou nahrávkou. OB–4 magic radio tak pracuje se smyčkou jako s rytmem, který se vrací a zůstává přítomný.</p>
+          <div class="tag"><span class="bar"></span> 2hodinová paměť</div>
+        </div>
+        <div class="feature-img">
+          <img src="images/img_feature_loop.jpg" alt="Smyčková páska jako způsob poslechu — teenage engineering OB–4 magic radio" width="1200" height="900" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURE PORTABLE -->
+  <section id="feature_portable">
+    <div class="container">
+      <div class="section-head">
+        <span class="label">feature · 04</span>
+        <span class="num">přenosnost</span>
+      </div>
+      <div class="feature left">
+        <div class="feature-img">
+          <img src="images/img_feature_portable.jpg" alt="Přenosný bez kompromisu — teenage engineering OB–4 magic radio" width="1200" height="900" loading="lazy">
+        </div>
+        <div class="feature-copy">
+          <span class="label">výdrž</span>
+          <h2>Přenosný bez kompromisu</h2>
+          <p>Na jedno nabití vydrží až 72 hodin na FM a až 40 hodin na Bluetooth. Díky kompaktním rozměrům 232,5×284×57,5 mm a hmotnosti 1,7 kg je OB–4 magic radio připravené na přenos i na stabilní místo v interiéru.</p>
+          <div class="tag"><span class="bar"></span> 72 h FM · 40 h BT</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURE RADIO -->
+  <section id="feature_radio">
+    <div class="container">
+      <div class="section-head">
+        <span class="label">feature · 05</span>
+        <span class="num">rádio</span>
+      </div>
+      <div class="feature right">
+        <div class="feature-copy">
+          <span class="label">poslech</span>
+          <h2>Rádio má znovu smysl</h2>
+          <p>Jako magické rádio nabízí Bluetooth 5 LE, FM a 3,5mm line-in. OB–4 magic radio tak snadno přepíná mezi bezdrátovým poslechem, rádiem a kabelovým připojením.</p>
+          <div class="tag"><span class="bar"></span> BT 5 LE · FM · line-in</div>
+        </div>
+        <div class="feature-img">
+          <img src="images/img_feature_radio.jpg" alt="Rádio má znovu smysl — teenage engineering OB–4 magic radio" width="1200" height="900" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURE SOUND -->
+  <section id="feature_sound" class="sound">
+    <div class="sound-wrap">
+      <img src="images/img_feature_sound.jpg" alt="Hi-fi zvuk s charakterem — teenage engineering OB–4 magic radio" width="1200" height="900" loading="lazy">
+      <div class="sound-overlay">
+        <div class="inner">
+          <span class="label">feature · 06 · zvuk</span>
+          <h2>Hi-fi zvuk <span class="em">s charakterem</span></h2>
+        </div>
+      </div>
+    </div>
+    <div class="sound-tech">
+      <div class="sound-tech-inner">
+        <div class="spec"><div class="k">reproduktory</div><div class="v">4 × custom</div></div>
+        <div class="spec"><div class="k">zesilovač</div><div class="v">2×38 W class D</div></div>
+        <div class="spec"><div class="k">frekvence</div><div class="v">52–25000 Hz</div></div>
+        <div class="spec"><div class="k">bass reflex</div><div class="v">ano</div></div>
+      </div>
+      <div class="container" style="padding-top:0;">
+        <p style="color:#cfcfcf;max-width:70ch;padding-bottom:20px;">O zvuk se starají 4 na míru vyvinuté reproduktory s bass reflex kanálem, zesilovač 2×38 W class D a frekvenční rozsah 52–25000 Hz. Výsledkem je hi-fi pro detailní poslech i silný prostorový dojem.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- OBJECT BENTO -->
+  <section id="object">
+    <div class="container">
+      <div class="section-head">
+        <span class="label">object · 07</span>
+        <span class="num">sběratelský rozměr</span>
+      </div>
+      <div class="object-intro">
+        <h2>Objekt, který zůstane</h2>
+        <p>OB–4 magic radio působí jako objekt, který si člověk vystaví, a zároveň jako nástroj, který se používá. Frézovaný hliník, nosná rukojeť jako stojan a tvar ve stylu knihy dávají produktu charakter, který je vidět i slyšet.</p>
+      </div>
+      <div class="bento">
+        <div class="tile big">
+          <img src="images/img_object.jpg" alt="Objekt, který zůstane — teenage engineering OB–4 magic radio" width="1200" height="900" loading="lazy">
+        </div>
+        <div class="tile text-only">
+          <span class="label">detail</span>
+          <p>Frézovaný hliník a tvar ve stylu knihy dávají produktu charakter, který je vidět i slyšet.</p>
+        </div>
+        <div class="tile small">
+          <img src="images/img_feature_form.jpg" alt="Detail hliníkového těla — teenage engineering OB–4 magic radio" width="1200" height="900" loading="lazy">
+        </div>
+        <div class="tile wide">
+          <img src="images/img_feature_loop.jpg" alt="OB–4 v ruce — teenage engineering OB–4 magic radio" width="1200" height="900" loading="lazy">
+        </div>
+        <div class="tile tall">
+          <img src="images/img_overview.jpg" alt="OB–4 v interiéru — teenage engineering OB–4 magic radio" width="1200" height="900" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section id="cta" class="cta">
+    <div class="container">
+      <span class="label">konec příběhu · začátek poslechu</span>
+      <h2>Přidejte OB–4 do své sbírky</h2>
+      <div class="price-block">
+        <span class="amount">13 990 Kč</span>
+        <span class="note">včetně DPH</span>
+      </div>
+      <div>
+        <a href="#" class="cta-btn">Zajistit si teenage engineering OB–4 magic radio za 13 990 Kč</a>
+      </div>
+    </div>
+    <div class="cta-img">
+      <img src="images/img_cta.jpg" alt="Přidejte OB–4 do své sbírky — teenage engineering OB–4 magic radio" width="1200" height="900" loading="lazy">
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">teenage engineering<span class="dot"> · </span>OB–4 magic radio</div>
+      <div class="footer-tags">
+        <span>orthobook</span>
+        <span>magické rádio</span>
+        <span>smyčková páska</span>
+        <span>hi-fi</span>
+        <span>frézovaný hliník</span>
+      </div>
+    </div>
+    <div class="footer-meta">
+      <ul class="links">
+        <li><a href="#">technické specifikace</a></li>
+        <li><a href="#">kontakt</a></li>
+        <li><a href="#">obchodní podmínky</a></li>
+      </ul>
+      <span class="copy">© teenage engineering · orthobook</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

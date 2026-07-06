@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bowers & Wilkins PX8 | prémiová sluchátka s britskou elegancí</title>
+  <meta name="description" content="Prémiová sluchátka Bowers & Wilkins PX8 za 14 990 Kč: 40mm karbonové měniče, aptX Adaptive s přenosem 24 bitů, aktivní potlačení hluku se 6 mikrofony, výdrž baterie 30 hodin a ručně šitá Nappa kůže." />
+  <style>
+    :root{
+      --bg:#0B0C0E;
+      --surface:#14161A;
+      --surface-2:#101216;
+      --text:#F3F1EC;
+      --muted:#A4A7AE;
+      --accent:#C7A46B;
+      --line:rgba(243,241,236,.12);
+      --line-strong:rgba(199,164,107,.35);
+      --shadow:0 30px 80px rgba(0,0,0,.35);
+      --radius:24px;
+      --container:1200px;
+      --grid-gap:24px;
+      --space-24:24px;
+      --space-40:40px;
+      --space-64:64px;
+      --space-96:96px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      background:
+        radial-gradient(1200px 700px at 70% -10%, rgba(199,164,107,.12), transparent 55%),
+        radial-gradient(900px 500px at 10% 10%, rgba(255,255,255,.04), transparent 55%),
+        var(--bg);
+      color:var(--text);
+      font-family:Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height:1.55;
+      text-rendering:optimizeLegibility;
+      -webkit-font-smoothing:antialiased;
+      overflow-x:hidden;
+    }
+    img{
+      display:block;
+      width:100%;
+      height:auto;
+    }
+    a{color:inherit; text-decoration:none}
+    .container{
+      width:min(var(--container), calc(100% - 48px));
+      margin-inline:auto;
+    }
+    .eyebrow{
+      font-size:14px;
+      line-height:1.6;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      color:var(--muted);
+    }
+    .serif{
+      font-family:"Cormorant Garamond", Georgia, "Times New Roman", serif;
+      letter-spacing:-.02em;
+    }
+    .display{
+      font-family:"Cormorant Garamond", Georgia, "Times New Roman", serif;
+      font-size:clamp(3.75rem, 7vw, 5rem);
+      line-height:.95;
+      margin:0;
+      letter-spacing:-.03em;
+    }
+    .hero-title{
+      font-size:clamp(3.25rem, 6vw, 4.5rem);
+      line-height:1.02;
+      margin:0;
+    }
+    .section-title{
+      font-size:clamp(2.25rem, 4vw, 3.25rem);
+      line-height:1.08;
+      margin:0;
+    }
+    p{
+      margin:0;
+      font-size:18px;
+      line-height:1.55;
+      color:var(--text);
+    }
+    .micro{
+      font-size:14px;
+      line-height:1.6;
+      color:var(--muted);
+    }
+    .pill-row{
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+      margin-top:24px;
+    }
+    .pill{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding:10px 14px;
+      border:1px solid var(--line);
+      background:rgba(20,22,26,.72);
+      border-radius:999px;
+      color:var(--text);
+      font-size:14px;
+      line-height:1.2;
+      letter-spacing:.01em;
+      backdrop-filter: blur(10px);
+    }
+    .pill.accent{
+      border-color:var(--line-strong);
+      color:var(--accent);
+      background:rgba(199,164,107,.08);
+    }
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-height:52px;
+      padding:0 20px;
+      border-radius:999px;
+      border:1px solid var(--accent);
+      background:var(--accent);
+      color:#121212;
+      font-size:14px;
+      font-weight:600;
+      letter-spacing:.01em;
+      box-shadow:0 14px 40px rgba(199,164,107,.16);
+      transition:transform .2s ease, filter .2s ease;
+    }
+    .btn:hover{transform:translateY(-1px); filter:brightness(1.03)}
+    .btn.secondary{
+      background:transparent;
+      color:var(--text);
+      border-color:var(--line);
+      box-shadow:none;
+    }
+    header{
+      position:sticky;
+      top:0;
+      z-index:20;
+      backdrop-filter: blur(16px);
+      background:linear-gradient(to bottom, rgba(11,12,14,.92), rgba(11,12,14,.72));
+      border-bottom:1px solid rgba(243,241,236,.08);
+    }
+    nav{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:24px;
+      min-height:76px;
+      padding:0 0;
+    }
+    .brand{
+      display:flex;
+      align-items:baseline;
+      gap:12px;
+      white-space:nowrap;
+    }
+    .brand strong{
+      font-size:18px;
+      letter-spacing:.02em;
+      font-weight:600;
+    }
+    .brand span{
+      color:var(--muted);
+      font-size:14px;
+    }
+    .nav-links{
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+      gap:8px;
+    }
+    .nav-links a{
+      padding:10px 12px;
+      border-radius:999px;
+      color:var(--muted);
+      font-size:14px;
+      line-height:1;
+      border:1px solid transparent;
+    }
+    .nav-links a:hover{
+      color:var(--text);
+      border-color:var(--line);
+      background:rgba(255,255,255,.03);
+    }
+    main{display:block}
+    section{
+      position:relative;
+      padding:var(--space-96) 0;
+    }
+    .hero{
+      min-height:calc(100svh - 76px);
+      display:flex;
+      align-items:center;
+      overflow:hidden;
+      padding-top:64px;
+      padding-bottom:64px;
+    }
+    .hero::before{
+      content:"";
+      position:absolute;
+      inset:-1px 0 0;
+      background:
+        radial-gradient(700px 500px at 72% 30%, rgba(199,164,107,.16), transparent 60%),
+        radial-gradient(500px 340px at 78% 38%, rgba(255,255,255,.09), transparent 62%);
+      pointer-events:none;
+    }
+    .hero-grid{
+      position:relative;
+      z-index:1;
+      display:grid;
+      grid-template-columns: 1.05fr .95fr;
+      gap:var(--space-64);
+      align-items:center;
+    }
+    .hero-copy{
+      max-width:680px;
+    }
+    .hero-copy .eyebrow{
+      margin-bottom:24px;
+    }
+    .hero-copy p{
+      max-width:56ch;
+      margin-top:24px;
+      color:var(--text);
+    }
+    .hero-actions{
+      display:flex;
+      gap:14px;
+      flex-wrap:wrap;
+      margin-top:32px;
+      align-items:center;
+    }
+    .price{
+      display:inline-flex;
+      align-items:center;
+      min-height:52px;
+      padding:0 18px;
+      border-radius:999px;
+      border:1px solid var(--line-strong);
+      color:var(--accent);
+      background:rgba(199,164,107,.08);
+      font-size:14px;
+      letter-spacing:.01em;
+    }
+    .hero-media{
+      position:relative;
+      isolation:isolate;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      min-height:560px;
+    }
+    .hero-media::before{
+      content:"";
+      position:absolute;
+      inset:10% 10% 8%;
+      background:radial-gradient(circle at 50% 35%, rgba(199,164,107,.20), rgba(199,164,107,.04) 34%, transparent 68%);
+      filter:blur(10px);
+      z-index:0;
+    }
+    .media-frame{
+      position:relative;
+      z-index:1;
+      width:min(100%, 560px);
+      border-radius:32px;
+      border:1px solid rgba(243,241,236,.10);
+      background:linear-gradient(180deg, rgba(20,22,26,.9), rgba(16,18,22,.78));
+      padding:18px;
+      box-shadow:var(--shadow);
+    }
+    .media-frame img{
+      border-radius:22px;
+      aspect-ratio:4 / 3;
+      object-fit:cover;
+      background:#111;
+    }
+    .section-grid{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:var(--space-64);
+      align-items:center;
+    }
+    .section-copy{
+      max-width:560px;
+    }
+    .section-copy .eyebrow{
+      margin-bottom:16px;
+    }
+    .section-copy h2{
+      margin-bottom:24px;
+    }
+    .section-copy p + p{
+      margin-top:18px;
+      color:var(--muted);
+    }
+    .shot{
+      border-radius:32px;
+      border:1px solid rgba(243,241,236,.10);
+      background:linear-gradient(180deg, rgba(20,22,26,.92), rgba(16,18,22,.72));
+      padding:18px;
+      box-shadow:var(--shadow);
+    }
+    .shot img{
+      border-radius:20px;
+      aspect-ratio:4 / 3;
+      object-fit:cover;
+    }
+    .section-grid.reverse .shot{
+      order:2;
+    }
+    .section-grid.reverse .section-copy{
+      order:1;
+      margin-left:auto;
+    }
+    .chips{
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+      margin-top:28px;
+    }
+    .chip{
+      padding:10px 14px;
+      border:1px solid var(--line);
+      border-radius:999px;
+      background:rgba(255,255,255,.03);
+      font-size:14px;
+      color:var(--text);
+    }
+    .bento{
+      display:grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap:24px;
+      align-items:stretch;
+    }
+    .bento-card{
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      background:linear-gradient(180deg, rgba(20,22,26,.92), rgba(16,18,22,.82));
+      box-shadow:0 14px 40px rgba(0,0,0,.22);
+      overflow:hidden;
+    }
+    .bento-card.pad{
+      padding:32px;
+    }
+    .bento-media{
+      padding:18px;
+    }
+    .bento-media img{
+      border-radius:18px;
+      aspect-ratio:4 / 3;
+      object-fit:cover;
+    }
+    .bento-stack{
+      display:grid;
+      gap:24px;
+    }
+    .spec-grid{
+      display:grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap:24px;
+    }
+    .spec{
+      padding:24px;
+      min-height:180px;
+    }
+    .spec h3{
+      margin:0 0 12px;
+      font-family:"Cormorant Garamond", Georgia, serif;
+      font-size:30px;
+      line-height:1.1;
+      letter-spacing:-.02em;
+    }
+    .spec p{
+      font-size:18px;
+      line-height:1.55;
+      color:var(--muted);
+    }
+    .stat-row{
+      display:flex;
+      flex-wrap:wrap;
+      gap:16px;
+      margin-top:28px;
+    }
+    .stat{
+      flex:1 1 180px;
+      padding:18px 20px;
+      border-radius:20px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.03);
+    }
+    .stat strong{
+      display:block;
+      font-size:30px;
+      line-height:1;
+      font-family:"Cormorant Garamond", Georgia, serif;
+      letter-spacing:-.03em;
+      color:var(--accent);
+      margin-bottom:8px;
+    }
+    .stat span{
+      color:var(--muted);
+      font-size:14px;
+      line-height:1.5;
+    }
+    .full-bleed{
+      padding:0;
+      overflow:hidden;
+    }
+    .bleed-shell{
+      position:relative;
+      width:100%;
+      min-height:620px;
+      border-top:1px solid rgba(243,241,236,.08);
+      border-bottom:1px solid rgba(243,241,236,.08);
+      background:linear-gradient(180deg, rgba(20,22,26,.6), rgba(11,12,14,.92));
+    }
+    .bleed-shell img{
+      width:100%;
+      height:min(72vh, 760px);
+      object-fit:cover;
+      display:block;
+      opacity:.88;
+    }
+    .bleed-overlay{
+      position:absolute;
+      inset:auto 0 0;
+      padding:var(--space-64) 0;
+      background:linear-gradient(to top, rgba(11,12,14,.96), rgba(11,12,14,.62) 55%, transparent);
+    }
+    .bleed-content{
+      width:min(var(--container), calc(100% - 48px));
+      margin-inline:auto;
+      display:grid;
+      grid-template-columns: 1fr;
+      gap:24px;
+      align-items:end;
+    }
+    .bleed-card{
+      max-width:760px;
+      padding:32px;
+      border-radius:28px;
+      border:1px solid rgba(243,241,236,.10);
+      background:rgba(20,22,26,.70);
+      backdrop-filter: blur(10px);
+      box-shadow:var(--shadow);
+    }
+    .bleed-card h2{
+      margin-bottom:18px;
+    }
+    .bleed-card p{
+      color:var(--text);
+      max-width:64ch;
+    }
+    .bleed-card .stat-row{
+      margin-top:24px;
+    }
+    .split-screen{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:var(--space-64);
+      align-items:center;
+    }
+    .split-card{
+      border:1px solid var(--line);
+      border-radius:32px;
+      background:linear-gradient(180deg, rgba(20,22,26,.92), rgba(16,18,22,.80));
+      padding:18px;
+      box-shadow:var(--shadow);
+    }
+    .split-card img{
+      border-radius:22px;
+      aspect-ratio:4 / 3;
+      object-fit:cover;
+    }
+    .cta{
+      padding:0;
+      overflow:hidden;
+    }
+    .cta-shell{
+      position:relative;
+      min-height:640px;
+      border-top:1px solid rgba(243,241,236,.08);
+      border-bottom:1px solid rgba(243,241,236,.08);
+      background:linear-gradient(180deg, rgba(20,22,26,.6), rgba(11,12,14,.94));
+    }
+    .cta-shell img{
+      width:100%;
+      height:min(72vh, 760px);
+      object-fit:cover;
+      display:block;
+      opacity:.84;
+    }
+    .cta-overlay{
+      position:absolute;
+      inset:0;
+      display:flex;
+      align-items:flex-end;
+      background:linear-gradient(to top, rgba(11,12,14,.96), rgba(11,12,14,.62) 48%, rgba(11,12,14,.18));
+      padding:var(--space-64) 0;
+    }
+    .cta-content{
+      width:min(var(--container), calc(100% - 48px));
+      margin-inline:auto;
+      display:grid;
+      grid-template-columns: 1fr auto;
+      gap:24px;
+      align-items:end;
+    }
+    .cta-card{
+      max-width:760px;
+      padding:32px;
+      border-radius:28px;
+      border:1px solid rgba(243,241,236,.10);
+      background:rgba(20,22,26,.72);
+      box-shadow:var(--shadow);
+      backdrop-filter: blur(10px);
+    }
+    .cta-card h2{
+      margin-bottom:18px;
+    }
+    .cta-card p{
+      color:var(--text);
+      max-width:66ch;
+      margin-bottom:24px;
+    }
+    footer{
+      padding:32px 0 56px;
+      border-top:1px solid rgba(243,241,236,.08);
+      color:var(--muted);
+      background:linear-gradient(to bottom, rgba(11,12,14,.9), rgba(11,12,14,1));
+    }
+    .footer-inner{
+      display:flex;
+      justify-content:space-between;
+      gap:24px;
+      flex-wrap:wrap;
+      align-items:center;
+      font-size:14px;
+      line-height:1.6;
+    }
+    .footer-inner strong{
+      color:var(--text);
+      font-weight:600;
+    }
+    @media (max-width: 980px){
+      .hero-grid,
+      .section-grid,
+      .bento,
+      .split-screen,
+      .cta-content{
+        grid-template-columns:1fr;
+      }
+      .section-grid.reverse .shot,
+      .section-grid.reverse .section-copy{
+        order:initial;
+        margin-left:0;
+      }
+      .hero{
+        min-height:auto;
+        padding-top:48px;
+      }
+      .hero-media{
+        min-height:auto;
+      }
+      .media-frame{
+        width:100%;
+      }
+      .bleed-shell img,
+      .cta-shell img{
+        height:min(60vh, 640px);
+      }
+      .bleed-content,
+      .cta-content{
+        width:min(var(--container), calc(100% - 32px));
+      }
+      .nav-links{
+        display:none;
+      }
+    }
+    @media (max-width: 640px){
+      .container{
+        width:min(var(--container), calc(100% - 32px));
+      }
+      section{
+        padding:64px 0;
+      }
+      .hero{
+        padding-top:32px;
+        padding-bottom:48px;
+      }
+      .hero-copy p,
+      .section-copy p,
+      .bleed-card p,
+      .cta-card p{
+        font-size:17px;
+      }
+      .display{
+        font-size:clamp(3rem, 14vw, 4rem);
+      }
+      .hero-title{
+        font-size:clamp(2.8rem, 13vw, 4rem);
+      }
+      .section-title{
+        font-size:clamp(2rem, 9vw, 2.8rem);
+      }
+      .bento-card.pad,
+      .bleed-card,
+      .cta-card{
+        padding:24px;
+      }
+      .spec-grid{
+        grid-template-columns:1fr;
+      }
+      .stat-row{
+        gap:12px;
+      }
+      .stat{
+        flex-basis:100%;
+      }
+      .split-card,
+      .shot,
+      .media-frame{
+        padding:14px;
+        border-radius:24px;
+      }
+      .split-card img,
+      .shot img,
+      .media-frame img{
+        border-radius:16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav aria-label="Hlavní navigace">
+        <a class="brand" href="#hero" aria-label="Bowers & Wilkins PX8">
+          <strong>Bowers & Wilkins PX8</strong>
+          <span>14 990 Kč</span>
+        </a>
+        <div class="nav-links">
+          <a href="#materialy">Materiály</a>
+          <a href="#detail">Detail</a>
+          <a href="#ticho">Ticho</a>
+          <a href="#baterie">Baterie</a>
+          <a href="#pripojeni">Připojení</a>
+          <a href="#cta">Koupit PX8</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="hero" class="hero" aria-labelledby="hero-heading">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <div class="eyebrow">Bowers & Wilkins PX8</div>
+            <h1 id="hero-heading" class="display hero-title">Zvuk bez kompromisů.</h1>
+            <p>Bowers &amp; Wilkins PX8 přinášejí luxusní klid pro lidi, kteří slyší rozdíl. Je to zvuk bez kompromisů, postavený na 40mm karbonových měničích, aptX Adaptive s přenosem 24 bitů a ručně šité Nappa kůži. Za 14 990 Kč získáte sluchátka, která vypadají stejně dobře, jako hrají.</p>
+            <div class="hero-actions" aria-label="Cena a akce">
+              <span class="price">14 990 Kč</span>
+              <a class="btn" href="#cta">Koupit PX8</a>
+              <a class="btn secondary" href="#materialy">Prozkoumat</a>
+            </div>
+            <div class="pill-row" aria-label="Klíčové vlastnosti">
+              <span class="pill accent">40mm karbonové měniče</span>
+              <span class="pill">aptX Adaptive s přenosem 24 bitů</span>
+              <span class="pill">ručně šité Nappa kůže</span>
+            </div>
+          </div>
+          <div class="hero-media" aria-hidden="false">
+            <figure class="media-frame">
+              <img src="images/img_hero.jpg" alt="Zvuk bez kompromisů. — Bowers & Wilkins PX8" width="1200" height="900" loading="eager" />
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="materialy" aria-labelledby="materialy-heading">
+      <div class="container">
+        <div class="section-grid">
+          <figure class="shot">
+            <img src="images/img_materialy.jpg" alt="Materiály, které si necháte na hlavě — Bowers & Wilkins PX8" width="1200" height="900" loading="lazy" />
+          </figure>
+          <div class="section-copy">
+            <div class="eyebrow">Materiály</div>
+            <h2 id="materialy-heading" class="section-title">Materiály, které si necháte na hlavě</h2>
+            <p>PX8 působí jako přesně navržený audio objekt. carbon fibre dodává moderní technickou jistotu, ručně šitá Nappa kůže zase měkkost a noblesu. S hmotností 320 gramů sedí vyváženě a sebejistě, takže obstojí při dlouhém poslechu i při pohybu městem.</p>
+            <div class="chips" aria-label="Parametry materiálů">
+              <span class="chip">carbon fibre</span>
+              <span class="chip">ručně šitá Nappa kůže</span>
+              <span class="chip">320 gramů</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="detail" aria-labelledby="detail-heading">
+      <div class="container">
+        <div class="bento">
+          <div class="bento-stack">
+            <div class="bento-card pad">
+              <div class="eyebrow">Detail</div>
+              <h2 id="detail-heading" class="section-title">Každý detail je slyšet</h2>
+              <p>V srdci PX8 pracují 40mm karbonové měniče, které drží bas, středy i výšky v pevném tvaru. Přes Bluetooth s aptX Adaptive s přenosem 24 bitů zůstává hudba čistá, plastická a přesná. Tohle je zvuk bez kompromisů, navržený pro posluchače, kteří očekávají kontrolu i emoci v jednom.</p>
+            </div>
+            <div class="spec-grid" aria-label="Specifika zvuku">
+              <article class="bento-card spec">
+                <h3>40mm karbonové měniče</h3>
+                <p>V srdci PX8 pracují 40mm karbonové měniče.</p>
+              </article>
+              <article class="bento-card spec">
+                <h3>aptX Adaptive s přenosem 24 bitů</h3>
+                <p>Přes Bluetooth s aptX Adaptive s přenosem 24 bitů.</p>
+              </article>
+              <article class="bento-card spec">
+                <h3>kontrolu i emoci v jednom</h3>
+                <p>Navržený pro posluchače, kteří očekávají kontrolu i emoci v jednom.</p>
+              </article>
+              <article class="bento-card spec">
+                <h3>Zvuk bez kompromisů.</h3>
+                <p>Hudba zůstává čistá, plastická a přesná.</p>
+              </article>
+            </div>
+          </div>
+          <figure class="bento-card bento-media">
+            <img src="images/img_detail.jpg" alt="Každý detail je slyšet — Bowers & Wilkins PX8" width="1200" height="900" loading="lazy" />
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section id="ticho" aria-labelledby="ticho-heading">
+      <div class="container">
+        <div class="section-grid reverse">
+          <figure class="shot">
+            <img src="images/img_ticho.jpg" alt="Ticho podle vás — Bowers & Wilkins PX8" width="1200" height="900" loading="lazy" />
+          </figure>
+          <div class="section-copy">
+            <div class="eyebrow">Ticho</div>
+            <h2 id="ticho-heading" class="section-title">Ticho podle vás</h2>
+            <p>aktivní potlačení hluku se 6 mikrofony pomáhá odstřihnout ruch okolí, aniž by potlačilo charakter nahrávky. PX8 tak zůstávají klidným místem pro práci, cestu i soustředěný poslech. I díky promyšlené konstrukci a hmotnosti 320 gramů je nosíte přirozeně a bez zbytečné únavy.</p>
+            <div class="chips" aria-label="Potlačení hluku a komfort">
+              <span class="chip">aktivní potlačení hluku se 6 mikrofony</span>
+              <span class="chip">klidným místem pro práci</span>
+              <span class="chip">320 gramů</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="baterie" class="full-bleed" aria-labelledby="baterie-heading">
+      <div class="bleed-shell">
+        <img src="images/img_baterie.jpg" alt="Výdrž pro celý den — Bowers & Wilkins PX8" width="1600" height="900" loading="lazy" />
+        <div class="bleed-overlay">
+          <div class="bleed-content">
+            <div class="bleed-card">
+              <div class="eyebrow">Výdrž</div>
+              <h2 id="baterie-heading" class="section-title">Výdrž pro celý den</h2>
+              <p>výdrž baterie 30 hodin znamená, že PX8 zvládnou pracovní den, večerní album i víkendový přesun bez kompromisů. A když spěcháte, 7 hodin přehrávání z 15minutového nabití vrátí hudbu zpět rychleji, než stihnete připravit kávu.</p>
+              <div class="stat-row" aria-label="Klíčové hodnoty výdrže">
+                <div class="stat">
+                  <strong>30 hodin</strong>
+                  <span>výdrž baterie 30 hodin</span>
+                </div>
+                <div class="stat">
+                  <strong>7 hodin</strong>
+                  <span>7 hodin přehrávání z 15minutového nabití</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="pripojeni" aria-labelledby="pripojeni-heading">
+      <div class="container">
+        <div class="split-screen">
+          <figure class="split-card">
+            <img src="images/img_pripojeni.jpg" alt="Připojení bez omezení — Bowers & Wilkins PX8" width="1200" height="900" loading="lazy" />
+          </figure>
+          <div class="section-copy">
+            <div class="eyebrow">Připojení</div>
+            <h2 id="pripojeni-heading" class="section-title">Připojení bez omezení</h2>
+            <p>Když chcete absolutní jistotu signálu, poslouchejte přes USB-C i 3,5mm kabel. Pro správu nastavení, jemné doladění a každodenní používání je tu aplikace Bowers &amp; Wilkins Music, která drží celý zážitek přehledný a pod kontrolou.</p>
+            <div class="chips" aria-label="Možnosti připojení">
+              <span class="chip">USB-C</span>
+              <span class="chip">3,5mm kabel</span>
+              <span class="chip">Bowers &amp; Wilkins Music</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="cta" class="cta" aria-labelledby="cta-heading">
+      <div class="cta-shell">
+        <img src="images/img_cta.jpg" alt="Připraveni na první poslech? — Bowers & Wilkins PX8" width="1200" height="900" loading="lazy" />
+        <div class="cta-overlay">
+          <div class="cta-content">
+            <div class="cta-card">
+              <div class="eyebrow">Konečný krok</div>
+              <h2 id="cta-heading" class="section-title">Připraveni na první poslech?</h2>
+              <p>Bowers &amp; Wilkins PX8 jsou pro ty, kdo chtějí britskou eleganci, tichý komfort a špičkový zvuk v jednom celku. Za 14 990 Kč dostáváte sluchátka, která z každého poslechu udělají událost. Objednejte si je a poslechněte si rozdíl hned napoprvé.</p>
+              <div class="hero-actions">
+                <a class="btn" href="#hero">Koupit PX8</a>
+                <span class="price">14 990 Kč</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <strong>Bowers &amp; Wilkins PX8</strong>
+        <span>prémiová sluchátka s britskou elegancí</span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
