@@ -1,438 +1,141 @@
 <!doctype html><html lang="cs"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Párové hodnocení MAS vs SAS</title>
+<title>Marketing AI Agency</title>
 <style>
   :root{--bg:#f6f7f9;--panel:#fff;--ink:#161b22;--soft:#5a6675;--faint:#8b96a5;--line:#e5e9ef;--line2:#eef1f5;--mas:#2f6f4f;--sas:#8a6d1f;--accent:#2f6f4f;--sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;--mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace}
   @media (prefers-color-scheme:dark){:root{--bg:#0d1117;--panel:#151b23;--ink:#e8edf4;--soft:#a6b1c0;--faint:#6b7686;--line:#232c38;--line2:#1c242e;--mas:#59c08a;--sas:#d6b45a;--accent:#59c08a}}
-  *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);line-height:1.55;-webkit-font-smoothing:antialiased}
-  .wrap{max-width:1040px;margin:0 auto;padding:40px 22px 72px}
-  a{color:var(--accent)}
-  .back{font-family:var(--mono);font-size:12px;color:var(--faint);text-decoration:none}
-  .eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);margin:18px 0 10px}
-  h1{font-size:clamp(23px,4vw,33px);letter-spacing:-.02em;margin:0 0 12px;text-wrap:balance}
-  .lede{max-width:70ch;color:var(--soft);margin:0 0 6px}
-  .verdict{display:flex;align-items:center;gap:16px;margin:26px 0 6px;padding:18px 22px;background:var(--panel);border:1px solid var(--line);border-radius:14px}
-  .vscore{font-family:var(--mono);font-size:clamp(26px,6vw,40px);font-weight:700;letter-spacing:-.02em}
-  .vscore .m{color:var(--mas)}.vscore .s{color:var(--sas)}.vscore .x{color:var(--faint);margin:0 8px}
-  .vtext{color:var(--soft);font-size:14px}
-  h2{font-size:15px;font-family:var(--mono);text-transform:uppercase;letter-spacing:.08em;color:var(--faint);margin:38px 0 12px;font-weight:600}
-  .tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:12px;background:var(--panel)}
-  table{border-collapse:collapse;width:100%;font-size:14px;min-width:520px}
-  th,td{padding:10px 12px;text-align:left;border-bottom:1px solid var(--line2)}
-  thead th{font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:var(--faint);font-weight:600;white-space:nowrap}
-  tr:last-child td{border-bottom:none}
-  .prod a{color:var(--ink);text-decoration:none;font-weight:600}.prod a:hover{color:var(--accent)}
-  .ctr{text-align:center;white-space:nowrap}.num{font-family:var(--mono)}.muted{color:var(--faint)}
-  .pill{display:inline-block;font-family:var(--mono);font-size:12px;font-weight:700;padding:2px 9px;border-radius:20px;border:1px solid}
-  .pill.mas{color:#fff;background:var(--mas);border-color:var(--mas)}
-  .pill.sas{color:#fff;background:var(--sas);border-color:var(--sas)}
-  .pill.tie{color:var(--faint);background:transparent;border-color:var(--line)}
-  .warn{color:var(--sas);font-size:12px}
-  .netcell{display:flex;align-items:center;gap:10px;min-width:150px}
-  .bar{position:relative;flex:1;height:7px;background:var(--line2);border-radius:4px;overflow:hidden}
-  .bar::before{content:"";position:absolute;left:50%;top:0;bottom:0;width:1px;background:var(--faint);opacity:.5}
-  .fill{position:absolute;top:0;bottom:0}.fill.mas{background:var(--mas)}.fill.sas{background:var(--sas)}
-  .netnum{font-family:var(--mono);font-size:12px;font-weight:600;width:32px;text-align:right}
-  .netnum.mas{color:var(--mas)}.netnum.sas{color:var(--sas)}.netnum.tie{color:var(--faint)}
-  .rcard{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px 18px;margin-bottom:14px}
-  .rhead{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:12px;flex-wrap:wrap}
-  .rhead h3{margin:0;font-size:17px;letter-spacing:-.01em}
-  .rlinks{display:flex;align-items:center;gap:8px}
-  .mini{font-family:var(--mono);font-size:12px;text-decoration:none;color:var(--faint);border:1px solid var(--line);padding:2px 8px;border-radius:7px}
-  .rrow{display:grid;grid-template-columns:150px 80px 1fr;gap:12px;padding:9px 0;border-top:1px solid var(--line2);align-items:baseline}
-  .rmetric{font-weight:600;font-size:13.5px}
-  .rreason{color:var(--soft);font-size:13.5px}
-  @media (max-width:640px){.rrow{grid-template-columns:1fr;gap:4px}.rbadge{margin:2px 0}}
-  .method{margin-top:34px;padding:16px 18px;background:var(--panel);border:1px solid var(--line);border-radius:12px;font-size:13px;color:var(--soft)}
-  .method b{color:var(--ink)}
-  footer{margin-top:30px;font-size:12px;color:var(--faint);font-family:var(--mono)}
+  *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);line-height:1.5;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:1120px;margin:0 auto;padding:44px 22px 72px}
+  .eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);margin:0 0 10px}
+  h1{font-size:clamp(24px,4vw,34px);letter-spacing:-.02em;margin:0 0 12px;text-wrap:balance}
+  .lede{max-width:66ch;color:var(--soft);margin:0 0 8px}
+  .legend{display:flex;gap:8px 20px;flex-wrap:wrap;margin-top:18px;padding-top:16px;border-top:1px solid var(--line);font-size:13px;color:var(--soft)}
+  .dot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:7px;vertical-align:middle}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:20px;margin-top:30px}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column}
+  .thumb{display:block;background:var(--bg);max-height:230px;overflow:hidden;border-bottom:1px solid var(--line2)}
+  .thumb img{width:100%;display:block}
+  .body{padding:14px 16px 16px;display:flex;flex-direction:column;gap:11px;flex:1}
+  .top{display:flex;align-items:baseline;justify-content:space-between;gap:10px}
+  .top h2{font-size:17px;margin:0;letter-spacing:-.01em}
+  .cat{font-family:var(--mono);font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:var(--faint);white-space:nowrap}
+  .scores{display:flex;gap:8px}
+  .sc{font-family:var(--mono);font-size:12px;font-weight:600;padding:2px 9px;border-radius:20px;border:1px solid var(--line)}
+  .sc.mas{color:var(--mas);border-color:var(--mas)}.sc.sas{color:var(--sas);border-color:var(--sas)}
+  .links{display:flex;gap:9px;margin-top:auto}
+  .btn{flex:1;text-align:center;text-decoration:none;font-family:var(--mono);font-size:13px;font-weight:600;padding:9px 0;border-radius:9px;border:1px solid}
+  .btn.mas{color:#fff;background:var(--mas);border-color:var(--mas)}
+  .btn.sas{color:var(--sas);background:transparent;border-color:var(--sas)}
+  .foot{font-size:12.5px}
+  .src{color:var(--accent);text-decoration:none;font-weight:500}.src:hover{text-decoration:underline}.src.muted{color:var(--faint);font-weight:400}
+  .eval-banner{display:flex;align-items:center;gap:16px;margin:24px 0 10px;padding:16px 20px;background:var(--panel);border:1px solid var(--line);border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,0.03)}
+  .eval-icon{font-size:24px;display:flex;align-items:center;justify-content:center;background:var(--line2);width:44px;height:44px;border-radius:10px}
+  .eval-content{flex:1;display:flex;flex-direction:column;font-size:13.5px}
+  .eval-content strong{color:var(--ink);font-size:14px;margin-bottom:2px}
+  .eval-content span{color:var(--soft)}
+  .eval-btn{font-family:var(--mono);font-size:12px;font-weight:700;text-decoration:none;color:#fff;background:var(--accent);padding:8px 16px;border-radius:8px;white-space:nowrap;transition:opacity 0.2s}
+  .eval-btn:hover{opacity:0.9}
+  @media (max-width:640px){.eval-banner{flex-direction:column;align-items:flex-start;gap:12px}.eval-btn{width:100%;text-align:center}}
+  footer{margin-top:48px;padding-top:20px;border-top:1px solid var(--line);font-size:12.5px;color:var(--faint);font-family:var(--mono)}
 </style></head><body><div class="wrap">
-  <a class="back" href="../">← zpět na přehled</a>
-  <p class="eyebrow">Nezávislé párové hodnocení · MAS vs SAS</p>
-  <h1>Kterou stránku vybral soudce — přímý souboj</h1>
-  <p class="lede">Místo absolutních známek dostane soudce OBĚ verze stránky (text + screenshot) a u každé
-  metriky vybere lepší z nich. Každý pár se hodnotí 2× s prohozenými pozicemi, aby se vyrušil
-  position-bias — metrika se počítá jako výhra jen když drží v obou pořadích.</p>
-
-  <div class="verdict">
-    <div class="vscore"><span class="m">MAS 7</span><span class="x">–</span><span class="s">2 SAS</span></div>
-    <div class="vtext">MAS (multi-agentní pipeline) vyhrál <b>7 z 9</b> produktů v přímém souboji.
-    Níže je rozpad po metrikách a zdůvodnění soudce u každého produktu.</div>
+  <p class="eyebrow">AI generované landing pages</p>
+  <h1>Marketingové stránky z jedné fotky &amp; odkazu na výrobce</h1>
+  <p class="lede">Každý produkt vygenerovaný z reálné produktové fotky a webu výrobce. <b>MAS</b> = multi-agentní pipeline (strategie, contest copywriterů, kritici, reflexní smyčka), <b>SAS</b> = jeden agent (baseline). Čísla jsou nezávislý DeepEval panel (0–100). Klikni na produkt.</p>
+  
+  <div class="eval-banner">
+    <div class="eval-content">
+      <strong>Nezávislé hodnocení kvality (DeepEval G-Eval)</strong>
+      <span>Všechny stránky byly podrobně otestovány nezávislým LLM-as-judge panelem. Zobrazte si kompletní porovnání a slovní zdůvodnění.</span>
+    </div>
+    <a href="srovnani/" class="eval-btn">Zobrazit hodnocení ↗</a>
   </div>
 
-  <h2>Souhrn</h2>
-  <div class="tablewrap"><table>
-    <thead><tr><th>Produkt</th><th class="ctr">Vítěz</th><th class="ctr">Metriky (z 6)</th><th>Náskok (net)</th></tr></thead>
-    <tbody><tr>
-      <td class="prod"><a href="../px8/mas/">Bowers &amp; Wilkins PX8</a></td>
-      <td class="ctr"><span class="pill sas">SAS</span></td>
-      <td class="ctr num">2–3<span class="muted"> (1 rem.)</span></td>
-      <td class="netcell"><div class="bar"><div class="fill sas" style="width:12%;right:50%"></div></div><span class="netnum sas">-6</span></td>
-    </tr><tr>
-      <td class="prod"><a href="../kettle/mas/">Fellow Stagg EKG konvice</a></td>
-      <td class="ctr"><span class="pill mas">MAS</span></td>
-      <td class="ctr num">6–0<span class="muted"> (0 rem.)</span></td>
-      <td class="netcell"><div class="bar"><div class="fill mas" style="width:40%;left:50%"></div></div><span class="netnum mas">+19</span></td>
-    </tr><tr>
-      <td class="prod"><a href="../ob4/mas/">teenage engineering OB–4</a></td>
-      <td class="ctr"><span class="pill mas">MAS</span></td>
-      <td class="ctr num">4–2<span class="muted"> (0 rem.)</span></td>
-      <td class="netcell"><div class="bar"><div class="fill mas" style="width:17%;left:50%"></div></div><span class="netnum mas">+8</span></td>
-    </tr><tr>
-      <td class="prod"><a href="../glossier/mas/">Glossier You EDP</a></td>
-      <td class="ctr"><span class="pill mas">MAS</span></td>
-      <td class="ctr num">5–0<span class="muted"> (1 rem.)</span></td>
-      <td class="netcell"><div class="bar"><div class="fill mas" style="width:29%;left:50%"></div></div><span class="netnum mas">+14</span></td>
-    </tr><tr>
-      <td class="prod"><a href="../fuji/mas/">FUJIFILM X100VI</a></td>
-      <td class="ctr"><span class="pill mas">MAS</span></td>
-      <td class="ctr num">5–1<span class="muted"> (0 rem.)</span></td>
-      <td class="netcell"><div class="bar"><div class="fill mas" style="width:21%;left:50%"></div></div><span class="netnum mas">+10</span></td>
-    </tr><tr>
-      <td class="prod"><a href="../aeron/mas/">Herman Miller Aeron</a></td>
-      <td class="ctr"><span class="pill mas">MAS</span></td>
-      <td class="ctr num">6–0<span class="muted"> (0 rem.)</span></td>
-      <td class="netcell"><div class="bar"><div class="fill mas" style="width:48%;left:50%"></div></div><span class="netnum mas">+23</span></td>
-    </tr><tr>
-      <td class="prod"><a href="../lecreuset/mas/">Le Creuset Signature</a></td>
-      <td class="ctr"><span class="pill mas">MAS</span></td>
-      <td class="ctr num">5–1<span class="muted"> (0 rem.)</span></td>
-      <td class="netcell"><div class="bar"><div class="fill mas" style="width:23%;left:50%"></div></div><span class="netnum mas">+11</span></td>
-    </tr><tr>
-      <td class="prod"><a href="../away/mas/">Away The Carry-On</a></td>
-      <td class="ctr"><span class="pill mas">MAS</span></td>
-      <td class="ctr num">3–1<span class="muted"> (2 rem.)</span></td>
-      <td class="netcell"><div class="bar"><div class="fill mas" style="width:10%;left:50%"></div></div><span class="netnum mas">+5</span></td>
-    </tr><tr>
-      <td class="prod"><a href="../nb/mas/">New Balance 990v6</a></td>
-      <td class="ctr"><span class="pill sas">SAS</span></td>
-      <td class="ctr num">1–4<span class="muted"> (1 rem.)</span></td>
-      <td class="netcell"><div class="bar"><div class="fill sas" style="width:25%;right:50%"></div></div><span class="netnum sas">-12</span></td>
-    </tr></tbody>
-  </table></div>
-
-  <h2>Po metrikách</h2>
-  <div class="tablewrap"><table>
-    <thead><tr><th>Produkt</th><th>Hlas značky</th><th>Profesionalita textu</th><th>Přesvědčivost</th><th>Struktura &amp; CTA</th><th>Věrnost zadání</th><th>Vizuální kvalita</th></tr></thead>
-    <tbody><tr><td class="prod"><a href="../px8/mas/">Bowers &amp; Wilkins PX8</a></td><td class="ctr"><span class="pill mas">MAS 4</span></td><td class="ctr"><span class="pill tie">remíza</span></td><td class="ctr"><span class="pill sas">SAS 2</span></td><td class="ctr"><span class="pill sas">SAS 6</span></td><td class="ctr"><span class="pill sas">SAS 3</span></td><td class="ctr"><span class="pill mas">MAS 1</span></td></tr><tr><td class="prod"><a href="../kettle/mas/">Fellow Stagg EKG konvice</a></td><td class="ctr"><span class="pill mas">MAS 4</span></td><td class="ctr"><span class="pill mas">MAS 4</span></td><td class="ctr"><span class="pill mas">MAS 1</span></td><td class="ctr"><span class="pill mas">MAS 5</span></td><td class="ctr"><span class="pill mas">MAS 4</span></td><td class="ctr"><span class="pill mas">MAS 1</span></td></tr><tr><td class="prod"><a href="../ob4/mas/">teenage engineering OB–4</a></td><td class="ctr"><span class="pill mas">MAS 4</span></td><td class="ctr"><span class="pill mas">MAS 4</span></td><td class="ctr"><span class="pill sas">SAS 2</span></td><td class="ctr"><span class="pill sas">SAS 5</span></td><td class="ctr"><span class="pill mas">MAS 3</span></td><td class="ctr"><span class="pill mas">MAS 4</span></td></tr><tr><td class="prod"><a href="../glossier/mas/">Glossier You EDP</a></td><td class="ctr"><span class="pill mas">MAS 4</span></td><td class="ctr"><span class="pill mas">MAS 1</span></td><td class="ctr"><span class="pill mas">MAS 3</span></td><td class="ctr"><span class="pill tie">remíza</span></td><td class="ctr"><span class="pill mas">MAS 2</span></td><td class="ctr"><span class="pill mas">MAS 4</span></td></tr><tr><td class="prod"><a href="../fuji/mas/">FUJIFILM X100VI</a></td><td class="ctr"><span class="pill mas">MAS 4</span></td><td class="ctr"><span class="pill mas">MAS 1</span></td><td class="ctr"><span class="pill mas">MAS 1</span></td><td class="ctr"><span class="pill sas">SAS 4</span></td><td class="ctr"><span class="pill mas">MAS 4</span></td><td class="ctr"><span class="pill mas">MAS 4</span></td></tr><tr><td class="prod"><a href="../aeron/mas/">Herman Miller Aeron</a></td><td class="ctr"><span class="pill mas">MAS 4</span></td><td class="ctr"><span class="pill mas">MAS 1</span></td><td class="ctr"><span class="pill mas">MAS 4</span></td><td class="ctr"><span class="pill mas">MAS 4</span></td><td class="ctr"><span class="pill mas">MAS 5</span></td><td class="ctr"><span class="pill mas">MAS 5</span></td></tr><tr><td class="prod"><a href="../lecreuset/mas/">Le Creuset Signature</a></td><td class="ctr"><span class="pill mas">MAS 4</span></td><td class="ctr"><span class="pill mas">MAS 2</span></td><td class="ctr"><span class="pill mas">MAS 1</span></td><td class="ctr"><span class="pill sas">SAS 4</span></td><td class="ctr"><span class="pill mas">MAS 2</span></td><td class="ctr"><span class="pill mas">MAS 6</span></td></tr><tr><td class="prod"><a href="../away/mas/">Away The Carry-On</a></td><td class="ctr"><span class="pill tie">remíza</span></td><td class="ctr"><span class="pill mas">MAS 2</span></td><td class="ctr"><span class="pill sas">SAS 2</span></td><td class="ctr"><span class="pill mas">MAS 4</span></td><td class="ctr"><span class="pill mas">MAS 1</span></td><td class="ctr"><span class="pill tie">remíza</span></td></tr><tr><td class="prod"><a href="../nb/mas/">New Balance 990v6</a></td><td class="ctr"><span class="pill sas">SAS 3</span></td><td class="ctr"><span class="pill sas">SAS 4</span></td><td class="ctr"><span class="pill sas">SAS 2</span></td><td class="ctr"><span class="pill tie">remíza</span></td><td class="ctr"><span class="pill mas">MAS 1</span></td><td class="ctr"><span class="pill sas">SAS 4</span></td></tr></tbody>
-  </table></div>
-  <p class="lede" style="font-size:13px;margin-top:10px">Číslo v odznaku = velikost náskoku (0–6).</p>
-
-  <h2>Zdůvodnění soudce po produktech</h2>
-  <article class="rcard">
-      <div class="rhead">
-        <h3>Bowers &amp; Wilkins PX8</h3>
-        <div class="rlinks">
-          <span class="pill sas">SAS</span>
-          <a class="mini" href="../px8/mas/">MAS ↗</a>
-          <a class="mini" href="../px8/sas/">SAS ↗</a>
-        </div>
+  <div class="legend">
+    <span><span class="dot" style="background:var(--mas)"></span><b>MAS</b> — multi-agentní</span>
+    <span><span class="dot" style="background:var(--sas)"></span><b>SAS</b> — single-agent</span>
+  </div>
+  <div class="grid">
+  <article class="card">
+      <a class="thumb" href="px8/mas/"><img loading="lazy" alt="Bowers & Wilkins PX8" src="thumbs/px8.jpg"></a>
+      <div class="body">
+        <div class="top"><h2>Bowers & Wilkins PX8</h2><span class="cat">sluchátka</span></div>
+        <div class="scores"><span class="sc mas">MAS 90</span></div>
+        <div class="links"><a class="btn mas" href="px8/mas/">MAS ↗</a><a class="btn sas" href="px8/sas/">SAS ↗</a></div>
+        <div class="foot"><span class="src muted">interní příklad</span></div>
       </div>
-      <div class="rrow">
-          <div class="rmetric">Hlas značky</div>
-          <div class="rbadge"><span class="pill mas">MAS 4</span></div>
-          <div class="rreason">Verze A drží konzistentněji prémiový, minimalistický a britsky elegantní tón, zatímco B místy sklouzává k běžnějšímu e-commerce stylu a méně kultivovaným formulacím.</div>
-        </div><div class="rrow">
-          <div class="rmetric">Profesionalita textu</div>
-          <div class="rbadge"><span class="pill tie">remíza</span></div>
-          <div class="rreason">Obě verze jsou převážně česky, ale A působí redakčně uhlazeněji, zatímco B má rušivé anglicismy a slabší formulace jako nepočeštěné „carbon fibre“ či opakování konstrukcí.</div>
-        </div><div class="rrow">
-          <div class="rmetric">Přesvědčivost</div>
-          <div class="rbadge"><span class="pill sas">SAS 2</span></div>
-          <div class="rreason">Verze B prodává přímočařeji díky jasnému hero bloku s benefity, cenou a CTA hned nahoře, i když A je emocionálně vytříbenější.</div>
-        </div><div class="rrow">
-          <div class="rmetric">Struktura &amp; CTA</div>
-          <div class="rbadge"><span class="pill sas">SAS 6</span></div>
-          <div class="rreason">B má výrazně jasnější konverzní cestu s opakovaným a viditelným CTA „Koupit PX8“ už v úvodu i závěru, kdežto A CTA odkládá a více připomíná editorial.</div>
-        </div><div class="rrow">
-          <div class="rmetric">Věrnost zadání</div>
-          <div class="rbadge"><span class="pill sas">SAS 3</span></div>
-          <div class="rreason">B předává většinu povinných faktů i cenu velmi explicitně a brzy na stránce, zatímco A sice pokrývá vše podstatné, ale některé konkrétní selling pointy zpřístupňuje méně přímočaře.</div>
-        </div><div class="rrow">
-          <div class="rmetric">Vizuální kvalita</div>
-          <div class="rbadge"><span class="pill mas">MAS 1</span></div>
-          <div class="rreason">Na screenshotu působí B moderněji a komerčně dotaženěji díky čistým kartám, lepší hierarchii a konzistentnímu layoutu, i když A je také prémiová a atmosférická.</div>
-        </div>
-    </article><article class="rcard">
-      <div class="rhead">
-        <h3>Fellow Stagg EKG konvice</h3>
-        <div class="rlinks">
-          <span class="pill mas">MAS</span>
-          <a class="mini" href="../kettle/mas/">MAS ↗</a>
-          <a class="mini" href="../kettle/sas/">SAS ↗</a>
-        </div>
-      </div>
-      <div class="rrow">
-          <div class="rmetric">Hlas značky</div>
-          <div class="rbadge"><span class="pill mas">MAS 4</span></div>
-          <div class="rreason">Verze A drží konzistentněji minimalistický industriální premium tón a působí blíž designové značce, zatímco B místy sklouzává k obecnějším formulacím a hovorovějšímu „vidíš i cítíš“ či „dopřej si“.</div>
-        </div><div class="rrow">
-          <div class="rmetric">Profesionalita textu</div>
-          <div class="rbadge"><span class="pill mas">MAS 4</span></div>
-          <div class="rreason">A působí jako hotovější profesionální česká produktová copy s menším množstvím rušivých anglicismů, zatímco B obsahuje více cizích výrazů jako „bloom“, „brew“ a lehce neuhlazené obraty.</div>
-        </div><div class="rrow">
-          <div class="rmetric">Přesvědčivost</div>
-          <div class="rbadge"><span class="pill mas">MAS 1</span></div>
-          <div class="rreason">B o něco lépe převádí parametry do konkrétních užitků pro domácí baristy (extrakce, kontrola proudu, chuť), takže je přesvědčivější než místy repetitivní A.</div>
-        </div><div class="rrow">
-          <div class="rmetric">Struktura &amp; CTA</div>
-          <div class="rbadge"><span class="pill mas">MAS 5</span></div>
-          <div class="rreason">A má jasnější konverzní cestu díky viditelnému hornímu CTA, opakovanému tlačítku s cenou a sekci „Koupit“, zatímco B je více magazínová a CTA je méně dominantní.</div>
-        </div><div class="rrow">
-          <div class="rmetric">Věrnost zadání</div>
-          <div class="rbadge"><span class="pill mas">MAS 4</span></div>
-          <div class="rreason">A věrněji a úplněji pokrývá všechna povinná fakta i seed words včetně ceny, husího krku, materiálu, rozměrů, hmotnosti, výkonu a kruhového displeje, které jsou zákazníkovi zřetelně sdělené.</div>
-        </div><div class="rrow">
-          <div class="rmetric">Vizuální kvalita</div>
-          <div class="rbadge"><span class="pill mas">MAS 1</span></div>
-          <div class="rreason">B na screenshotu působí současněji a prémiověji díky vyváženější gridové kompozici, jemné barevnosti a čistým kartám, i když A je také silně značková.</div>
-        </div>
-    </article><article class="rcard">
-      <div class="rhead">
-        <h3>teenage engineering OB–4</h3>
-        <div class="rlinks">
-          <span class="pill mas">MAS</span>
-          <a class="mini" href="../ob4/mas/">MAS ↗</a>
-          <a class="mini" href="../ob4/sas/">SAS ↗</a>
-        </div>
-      </div>
-      <div class="rrow">
-          <div class="rmetric">Hlas značky</div>
-          <div class="rbadge"><span class="pill mas">MAS 4</span></div>
-          <div class="rreason">Verze A působí konzistentněji jako prémiová teenage engineering copy díky střídmému, designově ukotvenému jazyku a přesnému použití motivů orthobooku, objektu a nástroje, zatímco B místy sklouzává k reklamnímu tónu typu „Vezměte si magii domů“.</div>
-        </div><div class="rrow">
-          <div class="rmetric">Profesionalita textu</div>
-          <div class="rbadge"><span class="pill mas">MAS 4</span></div>
-          <div class="rreason">Verze A je profesionálnější a čistší jednojazyčná čeština, zatímco B obsahuje neobratnosti a slabší formulace jako „bass reflex kanálem“, „orthoformát“ či repetitivní mezititulky, které působí méně dotaženě.</div>
-        </div><div class="rrow">
-          <div class="rmetric">Přesvědčivost</div>
-          <div class="rbadge"><span class="pill sas">SAS 2</span></div>
-          <div class="rreason">Verze B lépe prodává hodnotu pro cílové publikum díky výraznějším headlineům, benefitům zasazeným do kontextu používání a dvojici CTA už v hero sekci, i když místy přidává lehce vágní obrazný jazyk.</div>
-        </div><div class="rrow">
-          <div class="rmetric">Struktura &amp; CTA</div>
-          <div class="rbadge"><span class="pill sas">SAS 5</span></div>
-          <div class="rreason">Verze B má mnohem jasnější a dostupnější konverzní cestu díky opakovanému tlačítku „Koupit OB–4“, sekundárnímu CTA a viditelnému sticky/header CTA, zatímco A končí spíš textovým odkazem.</div>
-        </div><div class="rrow">
-          <div class="rmetric">Věrnost zadání</div>
-          <div class="rbadge"><span class="pill mas">MAS 3</span></div>
-          <div class="rreason">Verze A přesněji a úplněji pokrývá povinná fakta i seed words včetně ceny, výdrže, konektivity, rozměrů, hmotnosti, smyčkové pásky, reproduktorů, výkonu a frekvenčního rozsahu bez domýšlení navíc.</div>
-        </div><div class="rrow">
-          <div class="rmetric">Vizuální kvalita</div>
-          <div class="rbadge"><span class="pill mas">MAS 4</span></div>
-          <div class="rreason">Verze A na screenshotu lépe vystihuje ikonický skandinávský industriální luxus díky vzdušnému layoutu, typografii a art direction s výrazným produktem, zatímco B je moderní, ale působí o něco víc jako generický dark-tech ecommerce.</div>
-        </div>
-    </article><article class="rcard">
-      <div class="rhead">
-        <h3>Glossier You EDP</h3>
-        <div class="rlinks">
-          <span class="pill mas">MAS</span>
-          <a class="mini" href="../glossier/mas/">MAS ↗</a>
-          <a class="mini" href="../glossier/sas/">SAS ↗</a>
-        </div>
-      </div>
-      <div class="rrow">
-          <div class="rmetric">Hlas značky</div>
-          <div class="rbadge"><span class="pill mas">MAS 4</span></div>
-          <div class="rreason">Verze A drží měkký, poetický a minimalistický tón blíž estetice Glossieru, zatímco B je místy příliš výkonová a formulace jako „Připni si ji k sobě“ působí méně přirozeně pro značku.</div>
-        </div><div class="rrow">
-          <div class="rmetric">Profesionalita textu</div>
-          <div class="rbadge"><span class="pill mas">MAS 1</span></div>
-          <div class="rreason">Verze A působí jako hotovější a konzistentnější česká copy, kdežto B má jazykové nedostatky typu „ve velikost 50 ml“, opakované nadpisy a lehce kostrbaté formulace.</div>
-        </div><div class="rrow">
-          <div class="rmetric">Přesvědčivost</div>
-          <div class="rbadge"><span class="pill mas">MAS 3</span></div>
-          <div class="rreason">Verze A lépe prodává emocionální hodnotu osobní skin-scent vůně a propojuje benefity s identitou nositele, i když B je praktická a dobře rozepisuje použití.</div>
-        </div><div class="rrow">
-          <div class="rmetric">Struktura &amp; CTA</div>
-          <div class="rbadge"><span class="pill tie">remíza</span></div>
-          <div class="rreason">Verze B má přehlednější konverzní cestu s jasně odděleným hlavním CTA, podpůrnými štítky ceny/objemu a čistou sekvenční strukturou sekcí.</div>
-        </div><div class="rrow">
-          <div class="rmetric">Věrnost zadání</div>
-          <div class="rbadge"><span class="pill mas">MAS 2</span></div>
-          <div class="rreason">Obě verze obsahují většinu povinných faktů, ale A je podává úplněji a explicitněji včetně eau de parfum, 50 ml, ceny, not, skin-scent charakteru, znovuplnitelnosti i vegan/cruelty-free atributů.</div>
-        </div><div class="rrow">
-          <div class="rmetric">Vizuální kvalita</div>
-          <div class="rbadge"><span class="pill mas">MAS 4</span></div>
-          <div class="rreason">Verze A vizuálně lépe odpovídá prémiové jemně růžové Glossier estetice díky vzdušné editorial kompozici a luxusnějším hero fotografiím, zatímco B je čistá, ale více kartová a UI-ově generická.</div>
-        </div>
-    </article><article class="rcard">
-      <div class="rhead">
-        <h3>FUJIFILM X100VI</h3>
-        <div class="rlinks">
-          <span class="pill mas">MAS</span>
-          <a class="mini" href="../fuji/mas/">MAS ↗</a>
-          <a class="mini" href="../fuji/sas/">SAS ↗</a>
-        </div>
-      </div>
-      <div class="rrow">
-          <div class="rmetric">Hlas značky</div>
-          <div class="rbadge"><span class="pill mas">MAS 4</span></div>
-          <div class="rreason">Verze A drží konzistentněji prémiový, retro-minimalistický a řemeslný tón odpovídající značce X100VI, zatímco B je místy více reklamně sloganová a méně kultivovaná.</div>
-        </div><div class="rrow">
-          <div class="rmetric">Profesionalita textu</div>
-          <div class="rbadge"><span class="pill mas">MAS 1</span></div>
-          <div class="rreason">A působí jako hotovější česká produktová copy, kdežto B používá rušivé anglicismy jako „street“, „workflow“ a „story“ a má méně uhlazený jazyk.</div>
-        </div><div class="rrow">
-          <div class="rmetric">Přesvědčivost</div>
-          <div class="rbadge"><span class="pill mas">MAS 1</span></div>
-          <div class="rreason">B lépe propojuje technické parametry s konkrétními užitky pro street a cestovatelské fotografy a pracuje s jasnějšími benefitovými hooky, i když A je také silná.</div>
-        </div><div class="rrow">
-          <div class="rmetric">Struktura &amp; CTA</div>
-          <div class="rbadge"><span class="pill sas">SAS 4</span></div>
-          <div class="rreason">B má přehlednější konverzní cestu s opakovaným a jednoznačným CTA „Zjistit dostupnost“, zatímco A používá méně obvyklé a lehce nejasné „Zajistit“.</div>
-        </div><div class="rrow">
-          <div class="rmetric">Věrnost zadání</div>
-          <div class="rbadge"><span class="pill mas">MAS 4</span></div>
-          <div class="rreason">A explicitně a opakovaně pokrývá všechny povinné parametry i seed words včetně ceny a značkového stylu, zatímco B je sice fakticky správná, ale některé prvky podává méně úplně nebo méně důrazně.</div>
-        </div><div class="rrow">
-          <div class="rmetric">Vizuální kvalita</div>
-          <div class="rbadge"><span class="pill mas">MAS 4</span></div>
-          <div class="rreason">A na screenshotu působí vizuálně bohatěji, prémiověji a více v duchu temné elegantní estetiky Fuji, zatímco B má čistý layout, ale několik velkých prázdných placeholder ploch snižuje dojem dotaženosti.</div>
-        </div>
-    </article><article class="rcard">
-      <div class="rhead">
-        <h3>Herman Miller Aeron</h3>
-        <div class="rlinks">
-          <span class="pill mas">MAS</span>
-          <a class="mini" href="../aeron/mas/">MAS ↗</a>
-          <a class="mini" href="../aeron/sas/">SAS ↗</a>
-        </div>
-      </div>
-      <div class="rrow">
-          <div class="rmetric">Hlas značky</div>
-          <div class="rbadge"><span class="pill mas">MAS 4</span></div>
-          <div class="rreason">Verze A lépe vystihuje ikonický industriálně-ergonomický charakter značky díky tmavému prémiovému podání, důrazu na siluetu, materiály a technickou funkčnost, zatímco B působí měkčeji a obecněji.</div>
-        </div><div class="rrow">
-          <div class="rmetric">Profesionalita textu</div>
-          <div class="rbadge"><span class="pill mas">MAS 1</span></div>
-          <div class="rreason">Verze A působí jako hotovější profesionální česká produktová stránka s konzistentní terminologií a menším počtem stylistických neobratností, zatímco B má místy kostrbaté formulace a screenshot ukazuje prázdné vizuální bloky.</div>
-        </div><div class="rrow">
-          <div class="rmetric">Přesvědčivost</div>
-          <div class="rbadge"><span class="pill mas">MAS 4</span></div>
-          <div class="rreason">Verze A přesvědčuje silněji kombinací konkrétních ergonomických benefitů, parametrů, velikostního průvodce, udržitelnosti a opakovaného ukotvení ceny i záruky pro náročného kupujícího.</div>
-        </div><div class="rrow">
-          <div class="rmetric">Struktura &amp; CTA</div>
-          <div class="rbadge"><span class="pill mas">MAS 4</span></div>
-          <div class="rreason">Verze A má jednoznačné produktové CTA hned u výběru velikosti i v cenové sekci a jasnější nákupní modul, zatímco B sice CTA opakuje, ale celková konverzní cesta je volnější a méně produktově konkrétní.</div>
-        </div><div class="rrow">
-          <div class="rmetric">Věrnost zadání</div>
-          <div class="rbadge"><span class="pill mas">MAS 5</span></div>
-          <div class="rreason">Verze A pokrývá téměř všechna povinná fakta ze zadání včetně 8Z Pellicle, tří velikostí s rozsahem výšek, nosnosti, Harmonic Tilt, recyklovaných materiálů, recyklovatelnosti, ceny a 12leté záruky, kdežto B část detailů zjednodušuje nebo vynechává.</div>
-        </div><div class="rrow">
-          <div class="rmetric">Vizuální kvalita</div>
-          <div class="rbadge"><span class="pill mas">MAS 5</span></div>
-          <div class="rreason">Verze A na screenshotu vypadá výrazně prémiověji a více odpovídá značce díky silné produktové fotografii, kontrastní černo-oranžové paletě a bohatšímu, dotaženému layoutu, zatímco B působí vzdušně, ale nedokončeně kvůli velkým prázdným blokům.</div>
-        </div>
-    </article><article class="rcard">
-      <div class="rhead">
-        <h3>Le Creuset Signature</h3>
-        <div class="rlinks">
-          <span class="pill mas">MAS</span>
-          <a class="mini" href="../lecreuset/mas/">MAS ↗</a>
-          <a class="mini" href="../lecreuset/sas/">SAS ↗</a>
-        </div>
-      </div>
-      <div class="rrow">
-          <div class="rmetric">Hlas značky</div>
-          <div class="rbadge"><span class="pill mas">MAS 4</span></div>
-          <div class="rreason">Verze A působí výrazněji jako prémiová francouzská řemeslná klasika díky obraznému, ale stále kultivovanému tónu a silnému akcentu na dlouhověkost, materiál a pomalé vaření.</div>
-        </div><div class="rrow">
-          <div class="rmetric">Profesionalita textu</div>
-          <div class="rbadge"><span class="pill mas">MAS 2</span></div>
-          <div class="rreason">Verze A je hotovější a čistě česká, zatímco Verze B na screenshotu zjevně obsahuje prázdné obrazové bloky místo hotového obsahu, což snižuje profesionální dojem finální stránky.</div>
-        </div><div class="rrow">
-          <div class="rmetric">Přesvědčivost</div>
-          <div class="rbadge"><span class="pill mas">MAS 1</span></div>
-          <div class="rreason">Verze B o něco lépe propojuje benefity s konkrétními situacemi použití a výsledkem vaření, takže pro cílové publikum působí o něco více jako promyšlená investice do každodenní kuchyně.</div>
-        </div><div class="rrow">
-          <div class="rmetric">Struktura &amp; CTA</div>
-          <div class="rbadge"><span class="pill sas">SAS 4</span></div>
-          <div class="rreason">Verze B má jasnější a dříve umístěné primární CTA „Vybrat velikost a barvu“, které přímo navazuje na výběrovou logiku produktu a snižuje tření v konverzní cestě.</div>
-        </div><div class="rrow">
-          <div class="rmetric">Věrnost zadání</div>
-          <div class="rbadge"><span class="pill mas">MAS 2</span></div>
-          <div class="rreason">Verze A věrněji a úplněji pokrývá povinná fakta ze zadání včetně ceny, rozsahu velikostí, 260 °C včetně knoflíku, světlého vnitřku, více než 20 barev, řemeslné výroby i širokých madel.</div>
-        </div><div class="rrow">
-          <div class="rmetric">Vizuální kvalita</div>
-          <div class="rbadge"><span class="pill mas">MAS 6</span></div>
-          <div class="rreason">Verze A na screenshotu působí mnohem prémiověji a blíže estetice Le Creuset díky bohaté fotografii skutečného produktu, barevnosti a dokončenému layoutu, zatímco Verze B vypadá nedokončeně s prázdnými kartami.</div>
-        </div>
-    </article><article class="rcard">
-      <div class="rhead">
-        <h3>Away The Carry-On</h3>
-        <div class="rlinks">
-          <span class="pill mas">MAS</span>
-          <a class="mini" href="../away/mas/">MAS ↗</a>
-          <a class="mini" href="../away/sas/">SAS ↗</a>
-        </div>
-      </div>
-      <div class="rrow">
-          <div class="rmetric">Hlas značky</div>
-          <div class="rbadge"><span class="pill tie">remíza</span></div>
-          <div class="rreason">Verze A drží čistý, klidný a prémiově minimalistický tón konzistentněji, zatímco B je místy dramatičtější a méně typicky „Away“ včetně formulací jako „vizuální balast“ či „travel outfit“.</div>
-        </div><div class="rrow">
-          <div class="rmetric">Profesionalita textu</div>
-          <div class="rbadge"><span class="pill mas">MAS 2</span></div>
-          <div class="rreason">Verze A působí hotověji a jazykově čistěji v češtině, kdežto B sráží anglicismus „travel outfit“ a gramatická chyba „doživotní záruka“ místo „doživotní záruku“.</div>
-        </div><div class="rrow">
-          <div class="rmetric">Přesvědčivost</div>
-          <div class="rbadge"><span class="pill sas">SAS 2</span></div>
-          <div class="rreason">Verze B lépe převádí vlastnosti do konkrétních užitků a situací z cestování, takže je o něco přesvědčivější pro moderní profesionály než spíše popisná A.</div>
-        </div><div class="rrow">
-          <div class="rmetric">Struktura &amp; CTA</div>
-          <div class="rbadge"><span class="pill mas">MAS 4</span></div>
-          <div class="rreason">Verze A má výraznější a opakované produktově specifické CTA „Objednat Away The Carry-On za 6 490 Kč“, zatímco B sice CTA opakuje, ale konverzní cesta je méně jednoznačně akcentovaná.</div>
-        </div><div class="rrow">
-          <div class="rmetric">Věrnost zadání</div>
-          <div class="rbadge"><span class="pill mas">MAS 1</span></div>
-          <div class="rreason">Verze A zahrnuje všechny povinné parametry i cenu a doživotní záruku bez chyb, zatímco B sice také pokrývá většinu briefu, ale má jazykovou chybu u záruky a zbytečně opakuje některé údaje.</div>
-        </div><div class="rrow">
-          <div class="rmetric">Vizuální kvalita</div>
-          <div class="rbadge"><span class="pill tie">remíza</span></div>
-          <div class="rreason">Verze A na screenshotu působí o něco prémiověji a blíže zadané značce díky světlejšímu, čistému a nerušivému minimalistickému layoutu s produktovými fotografiemi.</div>
-        </div>
-    </article><article class="rcard">
-      <div class="rhead">
-        <h3>New Balance 990v6</h3>
-        <div class="rlinks">
-          <span class="pill sas">SAS</span>
-          <a class="mini" href="../nb/mas/">MAS ↗</a>
-          <a class="mini" href="../nb/sas/">SAS ↗</a>
-        </div>
-      </div>
-      <div class="rrow">
-          <div class="rmetric">Hlas značky</div>
-          <div class="rbadge"><span class="pill sas">SAS 3</span></div>
-          <div class="rreason">Verze B působí konzistentněji prémiově a civilně pro milovníky nadčasových tenisek, zatímco A má místy těžkopádné a méně přirozené formulace jako „pohodlí, které dává smysl“ opakované napříč stránkou.</div>
-        </div><div class="rrow">
-          <div class="rmetric">Profesionalita textu</div>
-          <div class="rbadge"><span class="pill sas">SAS 4</span></div>
-          <div class="rreason">Verze B čte jako uhlazenější hotová česká copy s čistší navigací a CTA, zatímco A má neobratnosti a lehce rušivé formulace typu „sledovanějším outfitům“ či mechanické opakování názvu produktu a ceny.</div>
-        </div><div class="rrow">
-          <div class="rmetric">Přesvědčivost</div>
-          <div class="rbadge"><span class="pill sas">SAS 2</span></div>
-          <div class="rreason">B lépe spojuje emoci, řemeslo, materiály i každodenní použitelnost do srozumitelného prodejního příběhu, kdežto A je fakticky silná, ale místy působí víc jako rozšířený feature-dump.</div>
-        </div><div class="rrow">
-          <div class="rmetric">Struktura &amp; CTA</div>
-          <div class="rbadge"><span class="pill tie">remíza</span></div>
-          <div class="rreason">CTA „Vybrat velikost“ je ve verzi B konkrétnější a méně třecí než A s formulací „Zajistit...“, a celková struktura B vede uživatele k akci přímočařeji.</div>
-        </div><div class="rrow">
-          <div class="rmetric">Věrnost zadání</div>
-          <div class="rbadge"><span class="pill mas">MAS 1</span></div>
-          <div class="rreason">Verze A pokrývá povinná fakta velmi důsledně a opakovaně včetně FuelCell, bez středového sedla, semiše, syntetických překryvů, síťového podkladu, odolné pryže, ikonické šedé i 75 let výroby, zatímco B je sice také silná, ale některé prvky rozepisuje méně explicitně.</div>
-        </div><div class="rrow">
-          <div class="rmetric">Vizuální kvalita</div>
-          <div class="rbadge"><span class="pill sas">SAS 4</span></div>
-          <div class="rreason">Na screenshotu působí B výrazně prémiověji a soudržněji díky jemné paletě, velkorysému layoutu, kvalitním kartám a modernímu art direction, zatímco A je vizuálně roztříštěnější a méně luxusní.</div>
-        </div>
     </article>
-
-  <div class="method">
-    <b>Metodika.</b> Soudce <b>gpt-5.4</b> s reasoning <b>minimal</b> (bez thinkingu), nezávislý na
-    interních soudcích MAS i na absolutním DeepEval panelu. Vstup = zadání (produkt, cena, publikum,
-    styl, klíčová slova, povinná fakta) + viditelný text a screenshot obou stránek. Každý pár hodnocen
-    2× s prohozenými pozicemi A/B. Zdůvodnění výše je z pořadí 1 (A = MAS, B = SAS).
-
+  <article class="card">
+      <a class="thumb" href="kettle/mas/"><img loading="lazy" alt="Fellow Stagg EKG konvice" src="thumbs/kettle.jpg"></a>
+      <div class="body">
+        <div class="top"><h2>Fellow Stagg EKG konvice</h2><span class="cat">kuchyně</span></div>
+        <div class="scores"><span class="sc mas">MAS 92</span></div>
+        <div class="links"><a class="btn mas" href="kettle/mas/">MAS ↗</a><a class="btn sas" href="kettle/sas/">SAS ↗</a></div>
+        <div class="foot"><a class="src" href="https://fellowproducts.com/products/stagg-ekg-electric-pour-over-kettle" target="_blank" rel="noopener">web výrobce ↗</a></div>
+      </div>
+    </article>
+  <article class="card">
+      <a class="thumb" href="ob4/mas/"><img loading="lazy" alt="teenage engineering OB–4" src="thumbs/ob4.jpg"></a>
+      <div class="body">
+        <div class="top"><h2>teenage engineering OB–4</h2><span class="cat">audio</span></div>
+        <div class="scores"><span class="sc mas">MAS 88</span></div>
+        <div class="links"><a class="btn mas" href="ob4/mas/">MAS ↗</a><a class="btn sas" href="ob4/sas/">SAS ↗</a></div>
+        <div class="foot"><a class="src" href="https://teenage.engineering/products/ob-4" target="_blank" rel="noopener">web výrobce ↗</a></div>
+      </div>
+    </article>
+  <article class="card">
+      <a class="thumb" href="glossier/mas/"><img loading="lazy" alt="Glossier You Eau de Parfum" src="thumbs/glossier.jpg"></a>
+      <div class="body">
+        <div class="top"><h2>Glossier You Eau de Parfum</h2><span class="cat">parfém</span></div>
+        <div class="scores"><span class="sc mas">MAS 89</span></div>
+        <div class="links"><a class="btn mas" href="glossier/mas/">MAS ↗</a><a class="btn sas" href="glossier/sas/">SAS ↗</a></div>
+        <div class="foot"><a class="src" href="https://www.glossier.com/products/glossier-you" target="_blank" rel="noopener">web výrobce ↗</a></div>
+      </div>
+    </article>
+  <article class="card">
+      <a class="thumb" href="fuji/mas/"><img loading="lazy" alt="FUJIFILM X100VI" src="thumbs/fuji.jpg"></a>
+      <div class="body">
+        <div class="top"><h2>FUJIFILM X100VI</h2><span class="cat">fotoaparát</span></div>
+        <div class="scores"><span class="sc mas">MAS 89</span></div>
+        <div class="links"><a class="btn mas" href="fuji/mas/">MAS ↗</a><a class="btn sas" href="fuji/sas/">SAS ↗</a></div>
+        <div class="foot"><a class="src" href="https://www.fujifilm-x.com/en-us/products/cameras/x100vi/" target="_blank" rel="noopener">web výrobce ↗</a></div>
+      </div>
+    </article>
+  <article class="card">
+      <a class="thumb" href="aeron/mas/"><img loading="lazy" alt="Herman Miller Aeron" src="thumbs/aeron.jpg"></a>
+      <div class="body">
+        <div class="top"><h2>Herman Miller Aeron</h2><span class="cat">židle</span></div>
+        <div class="scores"><span class="sc mas">MAS 85</span></div>
+        <div class="links"><a class="btn mas" href="aeron/mas/">MAS ↗</a><a class="btn sas" href="aeron/sas/">SAS ↗</a></div>
+        <div class="foot"><a class="src" href="https://store.hermanmiller.com/office-chairs-aeron/aeron-chair/2195348.html" target="_blank" rel="noopener">web výrobce ↗</a></div>
+      </div>
+    </article>
+  <article class="card">
+      <a class="thumb" href="lecreuset/mas/"><img loading="lazy" alt="Le Creuset Signature" src="thumbs/lecreuset.jpg"></a>
+      <div class="body">
+        <div class="top"><h2>Le Creuset Signature</h2><span class="cat">nádobí</span></div>
+        <div class="scores"><span class="sc mas">MAS 71</span></div>
+        <div class="links"><a class="btn mas" href="lecreuset/mas/">MAS ↗</a><a class="btn sas" href="lecreuset/sas/">SAS ↗</a></div>
+        <div class="foot"><a class="src" href="https://www.lecreuset.com/round-dutch-oven/21177US.html" target="_blank" rel="noopener">web výrobce ↗</a></div>
+      </div>
+    </article>
+  <article class="card">
+      <a class="thumb" href="away/mas/"><img loading="lazy" alt="Away The Carry-On" src="thumbs/away.jpg"></a>
+      <div class="body">
+        <div class="top"><h2>Away The Carry-On</h2><span class="cat">kufr</span></div>
+        <div class="scores"><span class="sc mas">MAS 89</span></div>
+        <div class="links"><a class="btn mas" href="away/mas/">MAS ↗</a><a class="btn sas" href="away/sas/">SAS ↗</a></div>
+        <div class="foot"><a class="src" href="https://www.awaytravel.com/products/carry-on-jet-black" target="_blank" rel="noopener">web výrobce ↗</a></div>
+      </div>
+    </article>
+  <article class="card">
+      <a class="thumb" href="nb/mas/"><img loading="lazy" alt="New Balance 990v6" src="thumbs/nb.jpg"></a>
+      <div class="body">
+        <div class="top"><h2>New Balance 990v6</h2><span class="cat">tenisky</span></div>
+        <div class="scores"><span class="sc mas">MAS 87</span></div>
+        <div class="links"><a class="btn mas" href="nb/mas/">MAS ↗</a><a class="btn sas" href="nb/sas/">SAS ↗</a></div>
+        <div class="foot"><a class="src" href="https://www.newbalance.com/pd/made-in-usa-990v6/M990V6-43094-PMG-NA.html" target="_blank" rel="noopener">web výrobce ↗</a></div>
+      </div>
+    </article>
   </div>
-  <footer>9 produktů · párový souboj · soudce gpt-5.4 (minimal)</footer>
+  <footer>9 produktů · MAS vs SAS · DeepEval G-Eval</footer>
 </div></body></html>
