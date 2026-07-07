@@ -28,15 +28,32 @@
   .btn.sas{color:var(--sas);background:transparent;border-color:var(--sas)}
   .foot{font-size:12.5px}
   .src{color:var(--accent);text-decoration:none;font-weight:500}.src:hover{text-decoration:underline}.src.muted{color:var(--faint);font-weight:400}
+  .eval-banner{display:flex;align-items:center;gap:16px;margin:24px 0 10px;padding:16px 20px;background:var(--panel);border:1px solid var(--line);border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,0.03)}
+  .eval-icon{font-size:24px;display:flex;align-items:center;justify-content:center;background:var(--line2);width:44px;height:44px;border-radius:10px}
+  .eval-content{flex:1;display:flex;flex-direction:column;font-size:13.5px}
+  .eval-content strong{color:var(--ink);font-size:14px;margin-bottom:2px}
+  .eval-content span{color:var(--soft)}
+  .eval-btn{font-family:var(--mono);font-size:12px;font-weight:700;text-decoration:none;color:#fff;background:var(--accent);padding:8px 16px;border-radius:8px;white-space:nowrap;transition:opacity 0.2s}
+  .eval-btn:hover{opacity:0.9}
+  @media (max-width:640px){.eval-banner{flex-direction:column;align-items:flex-start;gap:12px}.eval-btn{width:100%;text-align:center}}
   footer{margin-top:48px;padding-top:20px;border-top:1px solid var(--line);font-size:12.5px;color:var(--faint);font-family:var(--mono)}
 </style></head><body><div class="wrap">
   <p class="eyebrow">AI generované landing pages · k připomínkám</p>
   <h1>Marketingové stránky z jedné fotky &amp; odkazu na výrobce</h1>
   <p class="lede">Každý produkt vygenerovaný z reálné produktové fotky a webu výrobce. <b>MAS</b> = multi-agentní pipeline (strategie, contest copywriterů, kritici, reflexní smyčka), <b>SAS</b> = jeden agent (baseline). Čísla jsou nezávislý DeepEval panel (0–100). Klikni na produkt.</p>
+  
+  <div class="eval-banner">
+    <div class="eval-icon">📊</div>
+    <div class="eval-content">
+      <strong>Nezávislé hodnocení kvality (DeepEval G-Eval)</strong>
+      <span>Všechny stránky byly podrobně otestovány nezávislým LLM-as-judge panelem. Zobrazte si kompletní porovnání a slovní zdůvodnění.</span>
+    </div>
+    <a href="srovnani/" class="eval-btn">Zobrazit hodnocení ↗</a>
+  </div>
+
   <div class="legend">
     <span><span class="dot" style="background:var(--mas)"></span><b>MAS</b> — multi-agentní</span>
     <span><span class="dot" style="background:var(--sas)"></span><b>SAS</b> — single-agent</span>
-    <span><a href="srovnani/" style="color:var(--accent);text-decoration:none;font-weight:600">⚖ Párové hodnocení MAS vs SAS ↗</a></span>
   </div>
   <div class="grid">
   <article class="card">
